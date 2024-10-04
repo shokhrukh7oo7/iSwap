@@ -1,8 +1,45 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: unset;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  transition: 0.2s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 
 header#main-header {
@@ -57,4 +94,4 @@ header#main-header nav #main-body-content-toggler {
 }
 #main-body-content .main-content.show-left-menu {
   width: calc(100% - 469px);
-}/*# sourceMappingURL=header.css.map */
+}

@@ -11,3 +11,5 @@ CONTENT_TOGGLER.addEventListener('click', (e) => {
     leftMenu.classList.toggle('show-left-menu')
     mainContent.classList.toggle('show-left-menu')
 })
+
+// 
