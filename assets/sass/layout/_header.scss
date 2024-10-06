@@ -6,20 +6,126 @@ main#main-body-content {
 }
 
 header#main-header {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 100px;
-
   nav {
-    @include flex(row, space-between, center, wrap);
+    @include flex(column, space-between, start, wrap, 0);
 
-    #main-body-content-toggler {
-      display: inline-block;
-      padding: 10px;
-      background-color: lightgray;
-      cursor: pointer;
+    .top-nav {
+      width: 100%;
+      @include flex(row, space-between, center, nowrap);
+      padding: 18.2px 0;
+
+      //   Burger start
+      #main-body-content-toggler {
+        display: inline-block;
+        cursor: pointer;
+        img {
+          width: 72px;
+          height: 72px;
+        }
+      }
+      //   Burger end
+
+      //   Logo start
+      .logo-wrapper {
+        img {
+          width: 85px;
+        }
+      }
+      //   Logo end
+
+      // Location start
+      .location-wrapper {
+        @include flex(row, center, center, nowrap, 5px);
+        img {
+          width: 43px;
+        }
+        .location-city {
+          @include flex(column, space-between, start, nowrap, 0);
+          @include fontSize(14px, 2vw, 20px, 400);
+          line-height: 20px;
+          color: $black;
+          margin: 0;
+          span {
+            color: $grey;
+          }
+        }
+      }
+      // Location end
+
+      //  Search start
+      .search-wrapper {
+        width: 100%;
+        max-width: 1011px;
+        position: relative;
+        input {
+          background-color: $light-blue;
+          border-radius: 15px;
+          height: 60px;
+          padding: 0 50px;
+          &::placeholder {
+            @include fontSize(14px, 1.5vw, 20px, 400);
+            color: $grey;
+          }
+          &:focus {
+            border: none;
+            box-shadow: 0 0 0 0.1rem $blue;
+          }
+        }
+        span {
+          @include flex(row, center, center, nowrap, 0);
+          background-color: $blue;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          position: absolute;
+          top: 0.5px;
+          right: 0;
+          height: 59.5px;
+          padding: 0 12px;
+          cursor: pointer;
+        }
+      }
+      //  Search end
+
+      //   Language start
+      .dropdown {
+        transition: 0s !important;
+        .dropdown-toggle {
+          background-color: transparent;
+          padding: 0;
+          border: none;
+          &::after {
+            display: none;
+          }
+        }
+        .dropdown-menu {
+          --bs-dropdown-min-width: 5rem;
+        }
+        .dropdown-menu.show {
+          transform: translate(-15px, 61px) !important;
+        }
+      }
+      //   Language end
+
+      //   Enter start
+      .enter-wrapper {
+        .enter-title {
+          @include fontSize(18px, 2.5vw, 32px, 500);
+          color: $black;
+          margin: 0;
+        }
+      }
+      //   Enter end
     }
+
+    // LINE SECTION START
+    .line {
+      width: 100%;
+      border-top: 1px solid $black;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    // LINE SECTION END
   }
 }
 
