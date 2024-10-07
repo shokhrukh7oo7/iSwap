@@ -8,7 +8,7 @@ console.log(CONTENT_TOGGLER)
 
 CONTENT_TOGGLER.addEventListener('click', (e) => {
     console.log("clicked")
-    leftMenu.classList.toggle('show-left-menu')
+    leftMenu.classList.toggle('show-left-menu');
     mainContent.classList.toggle('show-left-menu')
 })
 

@@ -1,6 +1,6 @@
-@use "./abstracts/mixin";
-@use "./abstracts/variables";
-@use "./base/reset";
-@use "./layout/container";
-@use "./layout/header";
-@use "./layout/footer";
+@import "./abstracts/mixin";
+@import "./abstracts/variables";
+@import "./base/reset";
+@import "./layout/container";
+@import "./layout/header";
+@import "./layout/footer";
