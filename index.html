@@ -13,8 +13,8 @@
     />
 
     <!-- SWIPER START -->
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
     <!-- SWIPER END -->
 
     <!-- MAIN CSS -->
@@ -162,7 +162,7 @@
             <!-- Enter end -->
           </div>
           <!-- Navbar top end -->
-          <div class="line"></div>
+          <!-- <div class="line"></div> -->
           <!-- Navbar bottom start -->
           <div class="bottom-nav">
             <ul class="bottom-nav-items">
@@ -330,29 +330,92 @@
       <!-- Sale Banner start -->
       <section>
         <div class="banner-content-wrapper">
-          <h1 class="banner-header">
-            Barcha turdagi aksesuarlar uchun
-            <span class="banner-header-bold">15% gacha chegirmalar</span>
-          </h1>
+          <div class="container">
+            <h1 class="banner-header">
+              Barcha turdagi aksesuarlar uchun
+              <span class="banner-header-bold">15% gacha chegirmalar</span>
+            </h1>
+          </div>
         </div>
       </section>
       <!-- Sale Banner end -->
 
       <!-- Swiper start -->
-      <section>
+      <section class="carousel-wrapper">
         <div class="container">
+          <div class="slider-wrapper">
+            <!-- carousel content start -->
+            <div class="carousel-content-wrapper">
+              <h1 class="carousel-header">Qabul qiladigan mahsulotlarimiz:</h1>
+              <p class="carousel-description">
+                Xizmat ko'rsatish yaroqli va zamonaviy mahsulotlarni qabul
+                qilamiz.
+              </p>
+            </div>
+            <!-- carousel content end -->
+
+            <!-- carousel -->
             <div class="owl-carousel">
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
-                <div> Your Content </div>
+              <div class="item">
+                <img src="./assets/images/swiper/laptop.png" alt="image" />
+                <p class="swiper-item-title">Kompyuterlar va noutbuklar</p>
               </div>
+              <div class="item">
+                <img src="./assets/images/swiper/phone.png" alt="image" />
+                <p class="swiper-item-title">Smartfonlar va planshetlar</p>
+              </div>
+              <div class="item">
+                <img src="./assets/images/swiper/tv.png" alt="image" />
+                <p class="swiper-item-title">Televizorlar va monitorlar</p>
+              </div>
+              <div class="item">
+                <img src="./assets/images/swiper/earpods.png" alt="image" />
+                <p class="swiper-item-title">Audio va video uskunalar</p>
+              </div>
+            </div>
+            <!-- carousel -->
+          </div>
         </div>
       </section>
       <!-- Swiper end -->
+
+      <!-- Product evaluation start -->
+      <section>
+        <div class="container">
+          <div class="product-evolution-wrapper">
+            <h1 class="product-evalution-header">
+              Mahsulotingizni baholatish uchun!
+            </h1>
+            <div class="product-evalution-card-wrapper">
+              <div class="product-evalution-card">
+                <div class="product-evalution-image-wrapper">
+                  <img src="./assets/images/home/card-phone.svg" alt="image" />
+                </div>
+                <a href="#"> Saytda telefon raqamingizni qoldiring. </a>
+              </div>
+              <div class="product-evalution-card">
+                <div class="product-evalution-image-wrapper">
+                  <img
+                    src="./assets/images/home/card-location.svg"
+                    alt="image"
+                  />
+                </div>
+                <a href="#">
+                  Baholangan mahsulotlarni bizning yaqin filialimizdan
+                  yetkazing.
+                </a>
+              </div>
+              <div class="product-evalution-card">
+                <div class="product-evalution-image-wrapper">
+                  <img src="./assets/images/home/card-cash.svg" alt="image" />
+                </div>
+                <a href="#"> Mahsulotingizni pulini oling. </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Product evaluation end -->
     </main>
 
     <!-- BOOTSTRAP CUSTOM JS START -->
@@ -383,7 +446,7 @@
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/helper.js"></script>
     <!-- owl carousel end -->
-    
+
     <!-- MAIN CUSTOM JS START -->
     <script src="./assets/js/header.js"></script>
     <!-- MAIN CUSTOM JS END -->
