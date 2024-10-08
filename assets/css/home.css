@@ -358,21 +358,15 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   position: absolute;
   left: 10%;
   bottom: 20%;
-  font-size: clamp(18px, 3vw, 36px);
+  font-size: clamp(14px, 3.5vw, 36px);
   font-weight: 400;
   width: 100%;
   max-width: 300px;
   margin: 0;
 }
 .banner-content-wrapper span {
-  position: absolute;
-  left: 10%;
-  bottom: 10%;
-  font-size: clamp(18px, 4vw, 46px);
+  font-size: clamp(14px, 3.5vw, 46px);
   font-weight: 500;
-  width: 100%;
-  max-width: 300px;
-  line-height: 40px;
 }
 
 @media (max-width: 1200px) {
@@ -394,6 +388,10 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
     flex-wrap: nowrap;
     gap: 10px;
   }
+  .banner-content-wrapper .banner-header {
+    width: 100%;
+    max-width: 200px;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -403,5 +401,9 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 @media (max-width: 450px) {
   .container {
     padding: 0 20px;
+  }
+  .banner-content-wrapper .banner-header {
+    width: 100%;
+    max-width: 100px;
   }
 }

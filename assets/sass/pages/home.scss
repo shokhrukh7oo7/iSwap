@@ -62,19 +62,13 @@
     position: absolute;
     left: 10%;
     bottom: 20%;
-    @include fontSize(18px, 3vw, 36px, 400);
+    @include fontSize(14px, 3.5vw, 36px, 400);
     width: 100%;
     max-width: 300px;
     margin: 0;
   }
   span {
-    position: absolute;
-    left: 10%;
-    bottom: 10%;
-    @include fontSize(18px, 4vw, 46px, 500);
-    width: 100%;
-    max-width: 300px;
-    line-height: 40px;
+    @include fontSize(14px, 3.5vw, 46px, 500);
   }
 }
 // Sale Banner custom css end
@@ -95,6 +89,12 @@
   .online-assessment-wrapper .form-wrapper {
     @include flex(column, center, end);
   }
+  .banner-content-wrapper {
+    .banner-header {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -105,5 +105,11 @@
 @media (max-width: 450px) {
   .container {
     padding: 0 20px;
+  }
+  .banner-content-wrapper {
+    .banner-header {
+      width: 100%;
+      max-width: 100px;
+    }
   }
 }
