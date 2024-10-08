@@ -408,7 +408,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.3) inset;
   border-radius: 26px;
   width: 100%;
-  max-width: 350px;
+  max-width: 450px;
   aspect-ratio: 350/420;
   height: auto;
 }
@@ -445,6 +445,11 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   position: absolute;
   color: rgb(255, 255, 255);
   right: 0;
+}
+
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+  display: block !important;
 }
 
 .product-evolution-wrapper {

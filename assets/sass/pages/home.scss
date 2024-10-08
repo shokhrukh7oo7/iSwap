@@ -102,7 +102,7 @@
       box-shadow: $inside-box-shadow-black;
       border-radius: 26px;
       width: 100%;
-      max-width: 350px;
+      max-width: 450px;
       aspect-ratio: 350 / 420;
       height: auto;
       img {
@@ -138,6 +138,10 @@
       }
     }
   }
+}
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+  display: block !important;
 }
 // Swiper css end
 // --------------------------------------------------------
@@ -269,7 +273,7 @@
   .product-evolution-wrapper {
     margin: 10px 0 20px 0;
     .product-evalution-header {
-        margin: 0 0 20px 0;
+      margin: 0 0 20px 0;
     }
   }
 }
