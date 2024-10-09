@@ -1,175 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iSwap</title>
+    <!-- BOOTSTRAP CUSTOM CSS START -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iSwap</title>
-  <!-- BOOTSTRAP CUSTOM CSS START -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- SWIPER START -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <!-- SWIPER END -->
 
-  <!-- SWIPER START -->
-  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
-  <!-- SWIPER END -->
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <!-- FAVICON CSS -->
 
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="./assets/css/home.css" />
-  <!-- FAVICON CSS -->
+    <link rel="shortcut icon" href="assets/images/header/iSwap03 1-modified.png" />
 
-  <link rel="shortcut icon" href="assets/images/header/iSwap03 1.svg" />
+    <script src="main.js" type="module"></script>
+  </head>
 
-  <script src="main.js" type="module"></script>
-</head>
-
-<body>
-  <!-- Header start -->
-  <header id="main-header">
-    <div class="container">
+  <body>
+    <!-- Header start -->
+    <header id="main-header">
       <nav>
-        <!-- Navbar top start -->
-        <div class="top-nav">
-          <!-- Menu burger start -->
-          <span id="main-body-content-toggler">
-            <img src="./assets/images/header/Burger.svg" alt="image" />
-          </span>
-          <!-- Menu burger end -->
-
-          <!-- Logo start -->
-          <div class="logo-wrapper">
-            <img src="./assets/images/header/iSwap03 1.svg" alt="logo" />
-          </div>
-          <!-- Logo end -->
-
-          <!-- Location start -->
-          <div class="location-wrapper">
-            <div class="selected-location">
-              <img src="./assets/images/header/Location.svg" alt="image" />
-              <p class="location-city">
-                <span data-i18n="toshkent">Toshkent</span>
-                <span>shahri</span>
-              </p>
-            </div>
-            <div class="locations-dropdown-content">
-              <p class="location-city">
-                Toshkent
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Samarqand
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Jizzax
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Sirdaryo
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Qashqadaryo
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Surxandaryo
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Xorazm
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Buxoro
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Andijon
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Farg'ona
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Namangan
-                <span data-i18n="viloyati"></span>
-              </p>
-              <p class="location-city">
-                Qoraqalpog'iston
-                <span>respublikasi</span>
-              </p>
-            </div>
-          </div>
-          <!-- Location end -->
-
-          <!-- Search start -->
-          <div class="search-wrapper">
-            <input type="search" placeholder="iSwapdan qidirish" class="form-control" />
-            <span>
-              <img src="./assets/images/header/search.svg" alt="image" />
+        <div class="container">
+          <!-- Navbar top start -->
+          <div class="top-nav">
+            <!-- Menu burger start -->
+            <span id="main-body-content-toggler">
+              <img src="./assets/images/header/Burger.svg" alt="image" />
             </span>
-          </div>
-          <!-- Search end -->
+            <!-- Menu burger end -->
 
-          <!-- Language start -->
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <img src="./assets/images/header/flag.svg" alt="img" />
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#"><img src="./assets/images/header/ru.svg" alt="image" /></a>
+            <!-- Logo start -->
+            <div class="logo-wrapper">
+              <img src="./assets/images/header/iSwap03 1-modified.png" alt="logo" />
+            </div>
+            <!-- Logo end -->
+
+            <!-- Location start -->
+            <div class="location-wrapper">
+              <div class="selected-location">
+                <img src="./assets/images/header/Location.svg" alt="image" />
+                <p class="location-city">
+                  <span data-i18n="toshkent">Toshkent</span>
+                  <span>shahri</span>
+                </p>
+              </div>
+              <div class="locations-dropdown-content">
+                <p class="location-city">
+                  Toshkent
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Samarqand
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Jizzax
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Sirdaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qashqadaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Surxandaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Xorazm
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Buxoro
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Andijon
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Farg'ona
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Namangan
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qoraqalpog'iston
+                  <span>respublikasi</span>
+                </p>
+              </div>
+            </div>
+            <!-- Location end -->
+
+            <!-- Search start -->
+            <div class="search-wrapper">
+              <input
+                type="search"
+                placeholder="iSwapdan qidirish"
+                class="form-control"
+              />
+              <span>
+                <img src="./assets/images/header/search.svg" alt="image" />
+              </span>
+            </div>
+            <!-- Search end -->
+
+            <!-- Language start -->
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="./assets/images/header/flag.svg" alt="img" />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="./assets/images/header/ru.svg" alt="image"
+                  /></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="./assets/images/header/en.svg" alt="image"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Language end -->
+
+            <!-- Notification start -->
+            <!-- <div class="add-to-cart-wrapper">
+                <img src="./assets/images/header/bell.svg" alt="image" />
+              </div> -->
+            <!-- Notification end -->
+
+            <!-- Add to cart start -->
+            <div class="add-to-cart-wrapper">
+              <img src="./assets/images/header/Mask group.svg" alt="image" />
+            </div>
+            <!-- Add to cart end -->
+
+            <!-- Enter start -->
+            <div class="enter-wrapper">
+              <a href="#" class="enter-title">Kirish</a>
+            </div>
+            <!-- Enter end -->
+          </div>
+          <!-- Navbar top end -->
+          <!-- <div class="line"></div> -->
+          <!-- Navbar bottom start -->
+          <div class="bottom-nav">
+            <ul class="bottom-nav-items">
+              <li class="item"><a href="#">Trade in haqida</a></li>
+              <li class="item">
+                <a href="#">Qabul qiladigan mahsulotlarimiz</a>
               </li>
-              <li>
-                <a class="dropdown-item" href="#"><img src="./assets/images/header/en.svg" alt="image" /></a>
-              </li>
+              <li class="item"><a href="#">Texnikani baholash</a></li>
+              <li class="item"><a href="#">Afzalliklarimiz</a></li>
+              <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
             </ul>
           </div>
-          <!-- Language end -->
-
-          <!-- Notification start -->
-          <!-- <div class="add-to-cart-wrapper">
-              <img src="./assets/images/header/bell.svg" alt="image" />
-            </div> -->
-          <!-- Notification end -->
-
-          <!-- Add to cart start -->
-          <div class="add-to-cart-wrapper">
-            <img src="./assets/images/header/Mask group.svg" alt="image" />
-          </div>
-          <!-- Add to cart end -->
-
-          <!-- Enter start -->
-          <div class="enter-wrapper">
-            <a href="#" class="enter-title">Kirish</a>
-          </div>
-          <!-- Enter end -->
+          <!-- Navbar bottom end -->
         </div>
-        <!-- Navbar top end -->
-        <!-- <div class="line"></div> -->
-        <!-- Navbar bottom start -->
-        <div class="bottom-nav">
-          <ul class="bottom-nav-items">
-            <li class="item"><a href="#">Trade in haqida</a></li>
-            <li class="item">
-              <a href="#">Qabul qiladigan mahsulotlarimiz</a>
-            </li>
-            <li class="item"><a href="#">Texnikani baholash</a></li>
-            <li class="item"><a href="#">Afzalliklarimiz</a></li>
-            <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
-          </ul>
-        </div>
-        <!-- Navbar bottom end -->
       </nav>
-    </div>
-  </header>
-  <!-- Header start -->
+    </header>
+    <!-- Header start -->
 
-  <main id="main-body-content">
-    <div class="container">
+    <main id="main-body-content">
       <div class="main-content-wrapper">
         <div class="left-menu">
           <!-- Left menu items -->
@@ -203,7 +217,10 @@
           <div class="left-menu-item">
             <a href="#">
               <span>
-                <img src="./assets/images/aside-menu/vacuum-cleaner.svg" alt="image" />
+                <img
+                  src="./assets/images/aside-menu/vacuum-cleaner.svg"
+                  alt="image"
+                />
               </span>
               <span>Kichik maishiy texikalar</span>
             </a>
@@ -248,7 +265,10 @@
           <div class="left-menu-item">
             <a href="#">
               <span>
-                <img src="./assets/images/aside-menu/vacuum-cleaner.svg" alt="image" />
+                <img
+                  src="./assets/images/aside-menu/vacuum-cleaner.svg"
+                  alt="image"
+                />
               </span>
               <span>Go'zallik va salomatlik</span>
             </a>
@@ -264,8 +284,8 @@
                   <h1 class="online-assessment-header">Online baholash</h1>
 
                   <p class="online-assessment-description">
-                    Qurilmangizga tegishli ma'lumotlarni kiriting va narxini bilib
-                    oling
+                    Qurilmangizga tegishli ma'lumotlarni kiriting va narxini
+                    bilib oling
                   </p>
                 </div>
 
@@ -273,7 +293,13 @@
                   <form action="">
                     <div class="input-wrapper">
                       <label for="tel">Telefon raqam</label>
-                      <input type="tel" name="tel" id="tel" class="form-control" placeholder="+998 9x-xxx-xx-xx" />
+                      <input
+                        type="tel"
+                        name="tel"
+                        id="tel"
+                        class="form-control"
+                        placeholder="+998 9x-xxx-xx-xx"
+                      />
                     </div>
                   </form>
                   <button type="submit" class="assessment-btn">Baholash</button>
@@ -302,7 +328,9 @@
               <div class="slider-wrapper">
                 <!-- carousel content start -->
                 <div class="carousel-content-wrapper">
-                  <h1 class="carousel-header">Qabul qiladigan mahsulotlarimiz:</h1>
+                  <h1 class="carousel-header">
+                    Qabul qiladigan mahsulotlarimiz:
+                  </h1>
                   <p class="carousel-description">
                     Xizmat ko'rsatish yaroqli va zamonaviy mahsulotlarni qabul
                     qilamiz.
@@ -345,13 +373,19 @@
                 <div class="product-evalution-card-wrapper">
                   <div class="product-evalution-card">
                     <div class="product-evalution-image-wrapper">
-                      <img src="./assets/images/home/card-phone.svg" alt="image" />
+                      <img
+                        src="./assets/images/home/card-phone.svg"
+                        alt="image"
+                      />
                     </div>
                     <a href="#"> Saytda telefon raqamingizni qoldiring. </a>
                   </div>
                   <div class="product-evalution-card">
                     <div class="product-evalution-image-wrapper">
-                      <img src="./assets/images/home/card-location.svg" alt="image" />
+                      <img
+                        src="./assets/images/home/card-location.svg"
+                        alt="image"
+                      />
                     </div>
                     <a href="#">
                       Baholangan mahsulotlarni bizning yaqin filialimizdan
@@ -360,7 +394,10 @@
                   </div>
                   <div class="product-evalution-card">
                     <div class="product-evalution-image-wrapper">
-                      <img src="./assets/images/home/card-cash.svg" alt="image" />
+                      <img
+                        src="./assets/images/home/card-cash.svg"
+                        alt="image"
+                      />
                     </div>
                     <a href="#"> Mahsulotingizni pulini oling. </a>
                   </div>
@@ -376,7 +413,9 @@
               <div class="our-preferences-wrapper">
                 <!-- our preferences head -->
                 <div class="our-preferences-header-wrapper">
-                  <h1 class="our-preferences-header">Bizning afzalliklarimiz:</h1>
+                  <h1 class="our-preferences-header">
+                    Bizning afzalliklarimiz:
+                  </h1>
                   <p class="our-preferences-description">
                     Bizning taklif, Sizning qaroringiz!
                   </p>
@@ -386,41 +425,54 @@
                 <!-- our preferences content -->
                 <div class="our-preferences-content-wrapper">
                   <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-lg-6 my-2">
                       <div class="our-preferences-item">
-                        <div class="our-perferences-image-wrapper">
-                          <img src="./assets/images/home/price.svg" alt="image" />
+                        <div class="our-perferences-image-wrapper preferences-green">
+                          <img
+                            src="./assets/images/home/price.svg"
+                            alt="image"
+                          />
                         </div>
                         <p class="our-perferences-item-title">
                           Mahsulot uchun eng yuqori narxlar taklif etamiz
                         </p>
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-lg-6 my-2">
                       <div class="our-preferences-item">
-                        <div class="our-perferences-image-wrapper">
-                          <img src="./assets/images/home/arrows.svg" alt="image" />
+                        <div class="our-perferences-image-wrapper preferences-red">
+                          <img
+                            src="./assets/images/home/arrows.svg"
+                            alt="image"
+                          />
                         </div>
                         <p class="our-perferences-item-title">
-                          Olayotgan yangi mahsulotingizni Tradi-in va bir vaqtning
-                          o'zida muddatli to'lovga olish imkonini beramiz
+                          Olayotgan yangi mahsulotingizni Tradi-in va bir
+                          vaqtning o'zida muddatli to'lovga olish imkonini
+                          beramiz
                         </p>
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-lg-6 my-2">
                       <div class="our-preferences-item">
-                        <div class="our-perferences-image-wrapper">
-                          <img src="./assets/images/home/clock.svg" alt="image" />
+                        <div class="our-perferences-image-wrapper preferences-orange">
+                          <img
+                            src="./assets/images/home/clock.svg"
+                            alt="image"
+                          />
                         </div>
                         <p class="our-perferences-item-title">
                           Baholangan mahsulot pulini shu kuniyoq olasiz
                         </p>
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-lg-6 my-2">
                       <div class="our-preferences-item">
-                        <div class="our-perferences-image-wrapper">
-                          <img src="./assets/images/header/iSwap03 1.svg" alt="image" />
+                        <div class="our-perferences-image-wrapper preferences-blue">
+                          <img
+                            src="./assets/images/header/iSwap03 1-modified.png"
+                            alt="image"
+                          />
                         </div>
                         <p class="our-perferences-item-title">
                           Sotgan mahsulotingiz evaziga biz orqali qulay va arzon
@@ -429,10 +481,13 @@
                         </p>
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-lg-6 my-2">
                       <div class="our-preferences-item">
-                        <div class="our-perferences-image-wrapper">
-                          <img src="./assets/images/home/surprise.svg" alt="image" />
+                        <div class="our-perferences-image-wrapper preferences-purple">
+                          <img
+                            src="./assets/images/home/surprise.svg"
+                            alt="image"
+                          />
                         </div>
                         <p class="our-perferences-item-title">
                           Faqat bizning mijozlargagina arzon narxlarda yangi
@@ -449,35 +504,39 @@
           <!-- our preferences end -->
         </div>
       </div>
-    </div>
+    </main>
 
+    <!-- BOOTSTRAP CUSTOM JS START -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP CUSTOM JS END -->
 
-  </main>
+    <!-- SWIPER JS START -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- SWIPER JS END -->
 
-  <!-- BOOTSTRAP CUSTOM JS START -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <!-- BOOTSTRAP CUSTOM JS END -->
+    <!-- owl carousel start -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/helper.js"></script>
+    <!-- owl carousel end -->
 
-  <!-- SWIPER JS START -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- SWIPER JS END -->
-
-  <!-- owl carousel start -->
-  <script src="./assets/js/jquery.js"></script>
-  <script src="./assets/js/owl.carousel.min.js"></script>
-  <script src="./assets/js/helper.js"></script>
-  <!-- owl carousel end -->
-
-  <!-- MAIN CUSTOM JS START -->
-  <script src="./assets/js/header.js"></script>
-  <!-- MAIN CUSTOM JS END -->
-</body>
-
+    <!-- MAIN CUSTOM JS START -->
+    <script src="./assets/js/header.js"></script>
+    <!-- MAIN CUSTOM JS END -->
+  </body>
 </html>

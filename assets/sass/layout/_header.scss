@@ -2,6 +2,11 @@
 @import "../abstracts/mixin";
 
 header#main-header {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
+  width: 100%;
   nav {
     @include flex(column, space-between, start, wrap, 0);
 
@@ -232,11 +237,11 @@ header#main-header {
 }
 
 #main-body-content {
+  padding: 150px 0;
   .main-content-wrapper {
-
     // display: none;
     .left-menu {
-      width: 0;
+      // width: 0;
       background-color: $white;
       overflow: hidden;
       position: fixed;
@@ -245,16 +250,15 @@ header#main-header {
       z-index: 999;
       left: 0;
       height: calc(100vh - 80px);
-      padding-left: 100px;
-
+      transform: translateX(-100%);
+      transition: all 0.3s;
 
       .left-menu-item {
-        padding: 10px 0;
-
-        &>a {
+        & > a {
           color: $grey;
           @include fontSize(14px, 1.5vw, 20px, 400);
           @include flex(row, start, center);
+          padding: 10px;
         }
       }
 
@@ -263,9 +267,11 @@ header#main-header {
       }
 
       &.show-left-menu {
-        border-right: 1px solid $grey;
-        width: 20%;
+        border-right: 1px solid $line-color;
+        width: 30%;
         height: calc(100vh - 80px);
+        transform: translateX(0);
+
 
         span:last-child {
           opacity: 1;
@@ -275,20 +281,9 @@ header#main-header {
   }
 
   .main-content {
-    background-color: darkgray;
+    background-color: $white;
     width: 100%;
-    overflow: auto;
     height: calc(100vh - 126px);
-
-    &::-webkit-scrollbar {
-      width: 10px;
-      background-color: lightgray;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      width: 10px;
-      background-color: gray;
-    }
   }
 
   @media (max-width: 992px) {
@@ -305,7 +300,16 @@ header#main-header {
     .main-content-wrapper {
       .left-menu {
         &.show-left-menu {
-          width: 45%;
+          width: 50%;
+        }
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    .main-content-wrapper {
+      .left-menu {
+        &.show-left-menu {
+          width: 100%;
         }
       }
     }
