@@ -2,279 +2,324 @@
 
 // Online assessment custom css start
 .online-assessment-wrapper {
-  @include flex(column, center, center, nowrap, 30px);
-  box-shadow: $inside-box-shadow;
-  margin: 30px 0;
-  padding: 30px;
-  border-radius: 24px;
-  .assessment-header-wrapper {
-    .online-assessment-header {
-      @include fontSize(22px, 4vw, 56px, 500);
-      text-align: center;
-    }
-    .online-assessment-description {
-      @include fontSize(16px, 3vw, 36px, 400);
-      width: 100%;
-      max-width: 818px;
-      text-align: center;
-    }
-  }
-  .form-wrapper {
-    width: 100%;
-    @include flex(row, center, end, nowrap);
-    form {
-      width: 100%;
-      max-width: 854px;
-      .input-wrapper {
-        @include flex(column, start, start, nowrap);
-        label {
-          @include fontSize(14px, 2vw, 18px, 500);
-          color: $black;
-          margin-left: 20px;
+    @include flex(column, center, center, nowrap, 30px);
+    box-shadow: $inside-box-shadow;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 24px;
+
+    .assessment-header-wrapper {
+        .online-assessment-header {
+            @include fontSize(22px, 4vw, 56px, 500);
+            text-align: center;
         }
-        input {
-          padding: 10px 30px;
-          max-width: 854px;
+
+        .online-assessment-description {
+            @include fontSize(16px, 3vw, 36px, 400);
+            width: 100%;
+            max-width: 818px;
+            text-align: center;
         }
-      }
     }
-    .assessment-btn {
-      border: transparent;
-      background-color: $red;
-      padding: 8px 30px;
-      border-radius: 0.375rem;
-      color: $white;
-      @include fontSize(14px, 2vw, 18px, 400);
+
+    .form-wrapper {
+        width: 100%;
+        @include flex(row, center, end, nowrap);
+
+        form {
+            width: 100%;
+            max-width: 854px;
+
+            .input-wrapper {
+                @include flex(column, start, start, nowrap);
+
+                label {
+                    @include fontSize(14px, 2vw, 18px, 500);
+                    color: $black;
+                    margin-left: 20px;
+                }
+
+                input {
+                    padding: 10px 30px;
+                    max-width: 854px;
+                }
+            }
+        }
+
+        .assessment-btn {
+            border: transparent;
+            background-color: $red;
+            padding: 8px 30px;
+            border-radius: 0.375rem;
+            color: $white;
+            @include fontSize(14px, 2vw, 18px, 400);
+        }
     }
-  }
 }
+
 // Online assessment custom css end
 // --------------------------------------------------------
 // Sale Banner custom css start
 .banner-content-wrapper {
-  background-image: url("/assets/images/home/sale-banner.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  aspect-ratio: 1920 / 1000;
-  position: relative;
-  .banner-header {
-    position: absolute;
-    // left: 10%;
-    bottom: 20%;
-    @include fontSize(14px, 3.5vw, 36px, 400);
+    background-image: url("/assets/images/home/sale-banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    max-width: 300px;
-    margin: 0;
-  }
-  span {
-    @include fontSize(14px, 3.5vw, 46px, 500);
-  }
+    aspect-ratio: 1920 / 1000;
+    position: relative;
+
+    .banner-header {
+        position: absolute;
+        // left: 10%;
+        bottom: 20%;
+        @include fontSize(14px, 3.5vw, 36px, 400);
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    span {
+        @include fontSize(14px, 3.5vw, 46px, 500);
+    }
 }
+
 // Sale Banner custom css end
 // --------------------------------------------------------
 // Swiper css start
 .slider-wrapper {
-  margin: 40px 0;
-  .carousel-content-wrapper {
-    @include flex(column, center, center);
-    margin: 0 0 20px 0;
-    .carousel-header {
-      @include fontSize(22px, 4vw, 56px, 700);
-      color: $blue;
-      text-align: center;
-      margin: 0;
+    margin: 40px 0;
+
+    .carousel-content-wrapper {
+        @include flex(column, center, center);
+        margin: 0 0 20px 0;
+
+        .carousel-header {
+            @include fontSize(22px, 4vw, 56px, 700);
+            color: $blue;
+            text-align: center;
+            margin: 0;
+        }
+
+        .carousel-description {
+            @include fontSize(16px, 3vw, 36px, 400);
+            color: $black;
+            text-align: center;
+            margin-bottom: 50px;
+        }
     }
-    .carousel-description {
-      @include fontSize(16px, 3vw, 36px, 400);
-      color: $black;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-  }
 }
+
 .carousel-wrapper {
-  padding: 40px 0;
-  .owl-carousel {
-    .item {
-      @include flex(column, center, center);
-      box-shadow: $inside-box-shadow-black;
-      border-radius: 26px;
-      width: 100%;
-      max-width: 450px;
-      aspect-ratio: 350 / 420;
-      height: auto;
-      img {
-        padding: 10px 30px 0;
-      }
-      .swiper-item-title {
-        @include fontSize(14px, 3vw, 28px, 400);
-        margin: 0;
-        text-align: center;
-        padding: 0 20px 30px;
-      }
+    padding: 40px 0;
+
+    .owl-carousel {
+        position: relative;
+
+        .item {
+            @include flex(column, center, center);
+            box-shadow: $inside-box-shadow-black;
+            border-radius: 26px;
+            width: 100%;
+            max-width: 450px;
+            aspect-ratio: 350 / 420;
+            height: auto;
+
+            img {
+                padding: 10px 30px 0;
+            }
+
+            .swiper-item-title {
+                @include fontSize(14px, 3vw, 28px, 400);
+                margin: 0;
+                text-align: center;
+                padding: 0 20px 30px;
+            }
+        }
+
+        .owl-nav {
+            position: relative;
+            padding: 20px 0;
+            top: -250px;
+
+            .owl-prev {
+                @include fontSize(14px, 2.5vw, 26px, 500);
+                background-color: $red;
+                border-radius: 50%;
+                padding: 5px 20px 10px !important;
+                position: absolute;
+                color: $white;
+                left: -30px;
+            }
+
+            .owl-next {
+                @include fontSize(14px, 2.5vw, 26px, 500);
+                background-color: $red;
+                border-radius: 50%;
+                padding: 5px 20px 10px !important;
+                position: absolute;
+                color: $white;
+                right: -30px;
+            }
+        }
     }
-    .owl-nav {
-      position: relative;
-      padding: 20px 0;
-      .owl-prev {
-        @include fontSize(14px, 2.5vw, 26px, 500);
-        background-color: $red;
-        border-radius: 50%;
-        padding: 5px 20px 10px !important;
-        position: absolute;
-        color: $white;
-        left: 0;
-      }
-      .owl-next {
-        @include fontSize(14px, 2.5vw, 26px, 500);
-        background-color: $red;
-        border-radius: 50%;
-        padding: 5px 20px 10px !important;
-        position: absolute;
-        color: $white;
-        right: 0;
-      }
-    }
-  }
 }
+
 .owl-carousel .owl-dots.disabled,
 .owl-carousel .owl-nav.disabled {
-  display: block !important;
+    display: block !important;
 }
+
 // Swiper css end
 // --------------------------------------------------------
 .product-evolution-wrapper {
-  margin: 40px 0;
-  .product-evalution-header {
-    @include fontSize(22px, 4vw, 56px, 700);
-    color: rgb(0, 140, 238);
-    text-align: center;
-    margin: 0 0 50px 0;
-  }
-  .product-evalution-card-wrapper {
-    display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 50px;
-    .product-evalution-card {
-      @include flex(column, start, center, nowrap, 30px);
-      box-shadow: $outside-box-shadow;
-      padding: 35px 25px;
-      border-radius: 26px;
-      position: relative;
-      //   aspect-ratio: 450 / 400;
-      .product-evalution-image-wrapper {
-        background-color: $light-blue;
-        border-radius: 50%;
-        padding: 20px;
-        img {
-          width: 100%;
-          max-width: 80px;
-        }
-      }
-      a {
-        @include fontSize(14px, 2vw, 24px, 500);
-        color: $black;
+    margin: 40px 0;
+
+    .product-evalution-header {
+        @include fontSize(22px, 4vw, 56px, 700);
+        color: rgb(0, 140, 238);
         text-align: center;
-        &::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-        }
-      }
-      &:hover {
-        box-shadow: $outside-box-shadow-blue;
-        transform: scale(1.03);
-      }
+        margin: 0 0 50px 0;
     }
-  }
+
+    .product-evalution-card-wrapper {
+        display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 50px;
+
+        .product-evalution-card {
+            @include flex(column, start, center, nowrap, 30px);
+            box-shadow: $outside-box-shadow;
+            padding: 35px 25px;
+            border-radius: 26px;
+            position: relative;
+
+            //   aspect-ratio: 450 / 400;
+            .product-evalution-image-wrapper {
+                background-color: $light-blue;
+                border-radius: 50%;
+                padding: 20px;
+
+                img {
+                    width: 100%;
+                    max-width: 80px;
+                }
+            }
+
+            a {
+                @include fontSize(14px, 2vw, 24px, 500);
+                color: $black;
+                text-align: center;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                }
+            }
+
+            &:hover {
+                box-shadow: $outside-box-shadow-blue;
+                transform: scale(1.03);
+            }
+        }
+    }
 }
+
 // --------------------------------------------------------
 
 // --------------------------------------------------------
 @media (max-width: 1400px) {
-  .product-evolution-wrapper {
-    .product-evalution-card-wrapper {
-      .product-evalution-card {
-        .product-evalution-image-wrapper {
-          img {
-            width: 100%;
-            max-width: 60px;
-          }
+    .product-evolution-wrapper {
+        .product-evalution-card-wrapper {
+            .product-evalution-card {
+                .product-evalution-image-wrapper {
+                    img {
+                        width: 100%;
+                        max-width: 60px;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 @media (max-width: 1200px) {
-  .container {
-    padding: 0 70px;
-  }
+    .container {
+        padding: 0 70px;
+    }
 }
 
 @media (max-width: 992px) {
-  .container {
-    padding: 0 50px;
-  }
+    .container {
+        padding: 0 50px;
+    }
 }
 
 @media (max-width: 768px) {
-  .online-assessment-wrapper .form-wrapper {
-    @include flex(column, center, end);
-  }
-  .banner-content-wrapper {
-    .banner-header {
-      width: 100%;
-      max-width: 200px;
+    .online-assessment-wrapper .form-wrapper {
+        @include flex(column, center, end);
     }
-  }
-  .product-evolution-wrapper {
-    .product-evalution-card-wrapper {
-      .product-evalution-card {
-        .product-evalution-image-wrapper {
-          img {
+
+    .banner-content-wrapper {
+        .banner-header {
             width: 100%;
-            max-width: 40px;
-          }
+            max-width: 200px;
         }
-      }
     }
-  }
+
+    .product-evolution-wrapper {
+        .product-evalution-card-wrapper {
+            .product-evalution-card {
+                .product-evalution-image-wrapper {
+                    img {
+                        width: 100%;
+                        max-width: 40px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
-  .container {
-    padding: 0 30px;
-  }
-  .slider-wrapper {
-    .carousel-content-wrapper {
-      margin: 0;
-      .carousel-description {
-        margin-bottom: 10px;
-      }
+    .container {
+        padding: 0 30px;
     }
-  }
-  .carousel-wrapper {
-    padding: 10px 0;
-  }
+
+    .slider-wrapper {
+        .carousel-content-wrapper {
+            margin: 0;
+
+            .carousel-description {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .carousel-wrapper {
+        padding: 10px 0;
+    }
 }
+
 @media (max-width: 450px) {
-  .container {
-    padding: 0 20px;
-  }
-  .banner-content-wrapper {
-    .banner-header {
-      width: 100%;
-      max-width: 100px;
+    .container {
+        padding: 0 20px;
     }
-  }
-  .product-evolution-wrapper {
-    margin: 10px 0 20px 0;
-    .product-evalution-header {
-      margin: 0 0 20px 0;
+
+    .banner-content-wrapper {
+        .banner-header {
+            width: 100%;
+            max-width: 100px;
+        }
     }
-  }
+
+    .product-evolution-wrapper {
+        margin: 10px 0 20px 0;
+
+        .product-evalution-header {
+            margin: 0 0 20px 0;
+        }
+    }
 }
