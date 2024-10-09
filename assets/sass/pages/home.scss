@@ -66,7 +66,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  aspect-ratio: 1920 / 1000;
+  //   aspect-ratio: 1920 / 1000;
+  height: 900px;
   position: relative;
 
   .banner-header {
@@ -284,6 +285,9 @@
 // --------------------------------------------------------
 // Responsive custom css start
 @media (max-width: 1400px) {
+  .banner-content-wrapper {
+    height: 600px;
+  }
   .product-evolution-wrapper {
     .product-evalution-card-wrapper {
       .product-evalution-card {
@@ -302,11 +306,27 @@
   .container {
     padding: 0 70px;
   }
+  .banner-content-wrapper {
+    height: 600px;
+  }
+  .footer-top-wrapper {
+    .footer-about-us-wrapper {
+      text-align: start;
+      @include flex(column, center, start, wrap, 20px);
+    }
+    .footer-contact-wrapper {
+      text-align: start;
+      @include flex(column, center, start, wrap, 20px);
+    }
+  }
 }
 
 @media (max-width: 992px) {
   .container {
     padding: 0 50px;
+  }
+  .banner-content-wrapper {
+    height: 380px;
   }
   .our-preferences-wrapper {
     .our-preferences-item {
@@ -351,6 +371,9 @@
 }
 
 @media (max-width: 576px) {
+  .banner-content-wrapper {
+    height: 250px;
+  }
   .slider-wrapper {
     .carousel-content-wrapper {
       margin: 0;
@@ -366,7 +389,24 @@
   }
   .our-preferences-wrapper .our-preferences-item {
     text-align: center;
-    @include flex(column, center, center)
+    @include flex(column, center, center);
+  }
+  //   footer
+  .footer-top-wrapper {
+    .footer-logo-wrapper {
+      text-align: center;
+    }
+    .footer-social-wrapper {
+      @include flex(row, center, center, wrap, 20px);
+    }
+    .footer-about-us-wrapper {
+      text-align: center;
+      @include flex(column, center, center, wrap, 20px);
+    }
+    .footer-contact-wrapper {
+      text-align: center;
+      @include flex(column, center, center, wrap, 20px);
+    }
   }
 }
 

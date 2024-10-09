@@ -1,0 +1,84 @@
+.footer-top-wrapper {
+  background-color: $blue;
+  padding: 80px 0;
+  // footer left logo wrapper start
+  .footer-logo-wrapper {
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  .footer-social-wrapper {
+    @include flex(row, start, center, wrap, 30px);
+    a {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  // footer left logo wrapper end
+  //   ---------------------------------------------------
+  // footer middle wrapper start
+  .footer-about-us-wrapper {
+    text-align: center;
+    @include flex(column, center, center, wrap, 20px);
+    .about-us-title {
+      margin: 0;
+      color: $white;
+      @include fontSize(20px, 3vw, 28px, 500);
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  // footer middle wrapper end
+  //   ---------------------------------------------------
+  // footer right wrapper start
+  .footer-contact-wrapper {
+    text-align: end;
+    @include flex(column, center, end, wrap, 20px);
+    .contact-title {
+      margin: 0;
+      color: $white;
+      @include fontSize(20px, 3vw, 28px, 500);
+    }
+    .phone-number {
+      margin: 0;
+      color: $white;
+      @include fontSize(16px, 2vw, 20px, 400);
+    }
+    a {
+      margin: 0;
+      color: $white;
+      @include fontSize(16px, 2vw, 20px, 400);
+      &:hover {
+        color: $black;
+      }
+    }
+    .address {
+      margin: 0;
+      color: $white;
+      @include fontSize(16px, 2vw, 20px, 400);
+    }
+  }
+  // footer right wrapper end
+}
+
+.footer-bottom-wrapper {
+  padding: 15px 0;
+  .footer-bottom-content-wrapper {
+    @include flex(column, center, center, nowrap, 0);
+    p {
+      margin: 0;
+      color: $grey;
+      @include fontSize(14px, 2vw, 20px, 400);
+      a {
+        color: $black;
+        @include fontSize(14px, 2vw, 20px, 500);
+      }
+    }
+  }
+}
