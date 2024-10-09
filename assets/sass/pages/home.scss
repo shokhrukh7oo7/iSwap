@@ -258,6 +258,10 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 5px;
+    }
+
     .online-assessment-wrapper .form-wrapper {
         @include flex(column, center, end);
     }
@@ -284,10 +288,6 @@
 }
 
 @media (max-width: 576px) {
-    .container {
-        padding: 0 30px;
-    }
-
     .slider-wrapper {
         .carousel-content-wrapper {
             margin: 0;
@@ -303,23 +303,23 @@
     }
 }
 
-@media (max-width: 450px) {
-    .container {
-        padding: 0 20px;
-    }
+// @media (max-width: 450px) {
+//     .container {
+//         padding: 0 20px;
+//     }
 
-    .banner-content-wrapper {
-        .banner-header {
-            width: 100%;
-            max-width: 100px;
-        }
-    }
+//     .banner-content-wrapper {
+//         .banner-header {
+//             width: 100%;
+//             max-width: 100px;
+//         }
+//     }
 
-    .product-evolution-wrapper {
-        margin: 10px 0 20px 0;
+//     .product-evolution-wrapper {
+//         margin: 10px 0 20px 0;
 
-        .product-evalution-header {
-            margin: 0 0 20px 0;
-        }
-    }
-}
+//         .product-evalution-header {
+//             margin: 0 0 20px 0;
+//         }
+//     }
+// }

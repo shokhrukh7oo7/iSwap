@@ -36,8 +36,10 @@ header#main-header {
       .location-wrapper {
         cursor: pointer;
         position: relative;
+
         .selected-location {
           @include flex(row, center, center, nowrap, 5px);
+
           img {
             width: 30px;
           }
@@ -68,6 +70,7 @@ header#main-header {
             padding: 0px 20px;
             background-color: $white;
             margin: 0;
+
             span {
               color: $grey;
             }
@@ -82,9 +85,11 @@ header#main-header {
               color: $blue;
             }
           }
+
           .location-city:first-child {
             padding-top: 10px;
           }
+
           .location-city:last-child {
             padding-bottom: 10px;
           }
@@ -133,11 +138,13 @@ header#main-header {
           height: 50px;
           padding: 0 12px;
           cursor: pointer;
+
           img {
             width: 28px;
           }
         }
       }
+
       //  Search end
 
       //   Language start
@@ -160,6 +167,7 @@ header#main-header {
 
         .dropdown-menu {
           --bs-dropdown-min-width: 5rem;
+
           li {
             .dropdown-item {
               img {
@@ -202,6 +210,7 @@ header#main-header {
       left: 0;
       bottom: 0;
     }
+
     // LINE SECTION END
 
     .bottom-nav {
@@ -210,6 +219,7 @@ header#main-header {
         gap: 10px 30px;
         padding: 0;
         margin: 10px 0;
+
         .item {
           a {
             @include fontSize(14px, 1.3vw, 18px, 400);
@@ -223,18 +233,28 @@ header#main-header {
 
 #main-body-content {
   .main-content-wrapper {
-    display: none;
+
+    // display: none;
     .left-menu {
       width: 0;
       background-color: $white;
       overflow: hidden;
-      float: left;
+      position: fixed;
+      top: 80px;
+      background-color: white;
+      z-index: 999;
+      left: 0;
+      height: calc(100vh - 80px);
+      padding-left: 100px;
+
+
       .left-menu-item {
         padding: 10px 0;
-        & > a {
+
+        &>a {
+          color: $grey;
           @include fontSize(14px, 1.5vw, 20px, 400);
           @include flex(row, start, center);
-          color: $grey;
         }
       }
 
@@ -244,8 +264,8 @@ header#main-header {
 
       &.show-left-menu {
         border-right: 1px solid $grey;
-        width: $left-menu-width;
-        height: 100vh;
+        width: 20%;
+        height: calc(100vh - 80px);
 
         span:last-child {
           opacity: 1;
@@ -257,9 +277,37 @@ header#main-header {
   .main-content {
     background-color: darkgray;
     width: 100%;
+    overflow: auto;
+    height: calc(100vh - 126px);
 
-    &.show-left-menu {
-      width: 100%;
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: lightgray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 10px;
+      background-color: gray;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .main-content-wrapper {
+      .left-menu {
+        &.show-left-menu {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-content-wrapper {
+      .left-menu {
+        &.show-left-menu {
+          width: 45%;
+        }
+      }
     }
   }
 }

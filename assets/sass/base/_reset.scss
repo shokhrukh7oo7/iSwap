@@ -18,6 +18,17 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+// Google Chrome      =>  ::-webkit-scrollbar
+// Mozilla Firefox    =>  ::-moz-scrollbar
+// Internet Explorer  =>  ::-ms-scrollbar
+
+
+
 button {
   cursor: pointer;
 }
