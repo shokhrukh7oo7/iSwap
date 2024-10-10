@@ -30,8 +30,11 @@ header#main-header {
 
       //   Logo start
       .logo-wrapper {
-        img {
-          width: 60px;
+        a {
+          img {
+            width: 100%;
+            max-width: 60px;
+          }
         }
       }
 
@@ -140,7 +143,7 @@ header#main-header {
           position: absolute;
           top: 0.8px;
           right: -2px;
-          height: 50px;
+          height: 48px;
           padding: 0 12px;
           cursor: pointer;
 
@@ -256,9 +259,17 @@ header#main-header {
       .left-menu-item {
         & > a {
           color: $grey;
+          padding: 10px;
+
           @include fontSize(14px, 1.5vw, 20px, 400);
           @include flex(row, start, center);
-          padding: 10px;
+        }
+        & > a.active {
+          background-color: $blue;
+          color: $white;
+        }
+        & > a.active img {
+          filter: brightness(10);
         }
       }
 
@@ -267,14 +278,67 @@ header#main-header {
       }
 
       &.show-left-menu {
-        border-right: 1px solid $line-color;
+        border-right: 1px solid rgb(245, 245, 245);
         width: 30%;
         height: calc(100vh - 80px);
         transform: translateX(0);
 
-
         span:last-child {
           opacity: 1;
+        }
+      }
+
+      .search-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 10px 5px;
+        display: none;
+        margin-top: 10px;
+        border-top: 1px solid rgb(245, 245, 245);
+
+        input {
+          background-color: $light-blue;
+          border-radius: 15px;
+          height: 50px;
+
+          &::placeholder {
+            @include fontSize(14px, 1.5vw, 20px, 400);
+            color: $grey;
+          }
+
+          &:focus {
+            border: none;
+            box-shadow: 0 0 0 0.1rem $blue;
+          }
+        }
+
+        span {
+          @include flex(row, center, center, nowrap, 0);
+          background-color: $blue;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          position: absolute;
+          top: 10.8px;
+          right: 7px;
+          height: 48px;
+          padding: 0 12px;
+          cursor: pointer;
+
+          img {
+            width: 28px;
+          }
+        }
+      }
+
+      .left-menu-language {
+        display: none;
+        .language-menu {
+          display: flex;
+          justify-content: start;
+          padding: 0;
+          margin: 10px;
+          align-items: center;
+          gap: 20px;
         }
       }
     }
@@ -300,7 +364,7 @@ header#main-header {
     .main-content-wrapper {
       .left-menu {
         &.show-left-menu {
-          width: 50%;
+          width: 55%;
         }
       }
     }

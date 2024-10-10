@@ -11,3 +11,14 @@ CONTENT_TOGGLER.addEventListener("click", (e) => {
   mainContent.classList.toggle("show-left-menu");
 });
 
+// ASIDE MENU LEFT ACTIVE
+const menuItems = document.querySelectorAll(".left-menu-item a");
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    menuItems.forEach((l) => {
+      l.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+  });
+});
