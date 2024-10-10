@@ -596,7 +596,11 @@ main .online-evaluation-wrapper .online-evaluation-form form .form-group .input-
   main .online-evaluation-wrapper .online-evaluation-form form .form-group .input-wrapper input {
     max-width: 576px;
     margin-right: 0;
-    margin-bottom: 10px;
+    height: 40px;
+  }
+  main .online-evaluation-wrapper .online-evaluation-form form .form-group .input-wrapper button {
+    padding: 0;
+    height: 40px;
   }
 }
 @media (max-width: 576px) {
