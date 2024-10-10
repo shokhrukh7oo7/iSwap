@@ -441,6 +441,8 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 .main-slider-wrapper .slider {
   height: 700px;
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
