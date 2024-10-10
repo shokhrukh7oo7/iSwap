@@ -246,7 +246,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 
 #main-body-content {
-  padding: 150px 0;
+  padding: 130px 0;
 }
 #main-body-content .main-content-wrapper .left-menu {
   background-color: rgb(255, 255, 255);
@@ -420,7 +420,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 .welcome-wrapper .welcome-content img {
   width: 100%;
-  max-width: 400px;
+  max-width: 200px;
   filter: brightness(2);
 }
 .welcome-wrapper .welcome-content .welcome-title {
@@ -552,9 +552,9 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(20, 255, 114, 0.7960784314);
+  background-color: rgb(0, 140, 238);
   border: none;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-family: monospace;
   font-weight: bold;
   transition: 0.5s;
@@ -1028,6 +1028,9 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   .container {
     padding: 0 15px;
   }
+  #main-body-content {
+    padding: 150px 0;
+  }
   .welcome-wrapper .welcome-content {
     display: flex;
     flex-direction: column;
@@ -1124,7 +1127,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
     gap: 0px 30px;
   }
 }
-@media (max-width: 365px) {
+@media (max-width: 385px) {
   #main-body-content {
     padding: 170px 0;
   }

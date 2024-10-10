@@ -23,50 +23,47 @@ $(document).ready(function () {
 });
 
 // home slider custom js start
-let nextBtn = document.querySelector(".next");
-let prevBtn = document.querySelector(".prev");
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.slider .list .item');
+  const thumbnails = document.querySelectorAll('.thumbnail .item');
+  const nextButton = document.querySelector('.next');
+  const prevButton = document.querySelector('.prev');
+  let currentIndex = 0;
 
-let slider = document.querySelector(".slider");
-let sliderList = slider.querySelector(".slider .list");
-let thumbnail = document.querySelector(".slider .thumbnail");
-let thumbnailItems = thumbnail.querySelectorAll(".item");
-
-thumbnail.appendChild(thumbnailItems[0]);
-
-// Function for next button
-nextBtn.onclick = function () {
-  moveSlider("next");
-};
-
-// Function for prev button
-prevBtn.onclick = function () {
-  moveSlider("prev");
-};
-
-function moveSlider(direction) {
-  let sliderItems = sliderList.querySelectorAll(".item");
-  let thumbnailItems = document.querySelectorAll(".thumbnail .item");
-
-  if (direction === "next") {
-    sliderList.appendChild(sliderItems[0]);
-    thumbnail.appendChild(thumbnailItems[0]);
-    slider.classList.add("next");
-  } else {
-    sliderList.prepend(sliderItems[sliderItems.length - 1]);
-    thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1]);
-    slider.classList.add("prev");
+  // Функция для обновления слайдера
+  function updateSlider(index) {
+    items.forEach((item, idx) => {
+      item.style.zIndex = idx === index ? 1 : 0;
+      item.style.opacity = idx === index ? 1 : 0;
+      item.style.transition = 'opacity 0.5s ease-in-out';
+    });
+    thumbnails.forEach((thumb, idx) => {
+      thumb.classList.toggle('active', idx === index);
+    });
   }
 
-  slider.addEventListener(
-    "animationend",
-    function () {
-      if (direction === "next") {
-        slider.classList.remove("next");
-      } else {
-        slider.classList.remove("prev");
-      }
-    },
-    { once: true }
-  ); // Remove the event listener after it's triggered once
-}
+  // Клик по кнопке "Next"
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateSlider(currentIndex);
+  });
+
+  // Клик по кнопке "Prev"
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateSlider(currentIndex);
+  });
+
+  // Клик по элементам миниатюр
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      currentIndex = index;
+      updateSlider(currentIndex);
+    });
+  });
+
+  // Начальное состояние
+  updateSlider(currentIndex);
+});
+
 // home slider custom js end

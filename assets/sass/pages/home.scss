@@ -8,7 +8,7 @@
     @include flex(row, center, center, nowrap);
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 200px;
       filter: brightness(2);
     }
     .welcome-title {
@@ -137,9 +137,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #14ff72cb;
+    background-color: $blue;
     border: none;
-    color: #fff;
+    color: $white;
     font-family: monospace;
     font-weight: bold;
     transition: 0.5s;
@@ -640,6 +640,9 @@
   .container {
     padding: 0 15px;
   }
+  #main-body-content {
+    padding: 150px 0;
+  }
   .welcome-wrapper {
     .welcome-content {
       @include flex(column, center, center);
@@ -679,7 +682,7 @@
 @media (max-width: 576px) {
   .welcome-wrapper {
     .welcome-content {
-        padding: 10px 0;
+      padding: 10px 0;
       img {
         max-width: 200px;
       }
@@ -736,28 +739,7 @@
   }
 }
 
-// @media (max-width: 450px) {
-//     .container {
-//         padding: 0 20px;
-//     }
-
-//     .banner-content-wrapper {
-//         .banner-header {
-//             width: 100%;
-//             max-width: 100px;
-//         }
-//     }
-
-//     .product-evolution-wrapper {
-//         margin: 10px 0 20px 0;
-
-//         .product-evalution-header {
-//             margin: 0 0 20px 0;
-//         }
-//     }
-// }
-
-@media (max-width: 365px) {
+@media (max-width: 385px) {
   #main-body-content {
     padding: 170px 0;
   }
