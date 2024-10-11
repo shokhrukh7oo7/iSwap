@@ -267,7 +267,7 @@ header#main-header nav .top-nav .enter-wrapper .overlay .modal-image-2 img {
 }
 header#main-header nav .top-nav .enter-wrapper .enter-modal {
   position: fixed;
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 540px;
   background-color: #f4f4f4;
   padding: 15px 40px;
