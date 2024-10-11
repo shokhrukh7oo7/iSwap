@@ -273,7 +273,7 @@ header#main-header nav .top-nav .enter-wrapper .enter-modal {
   padding: 15px 40px;
   border-radius: 8px;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   z-index: 102;
   opacity: 0;
