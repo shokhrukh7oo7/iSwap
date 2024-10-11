@@ -170,26 +170,49 @@
 
               <!-- modal start -->
               <div class="enter-modal hidden" id="modal">
+                <button class="btn close-btn" id="close-btn">
+                  <i class="fas fa-close"></i>
+                </button>
                 <div class="modal-header">
-                  <h3>enter</h3>
-                  <button class="btn close-btn" id="close-btn">
-                    <i class="fas fa-close"></i>
-                  </button>
+                  <h3>Kabinetga kirish</h3>
                 </div>
                 <div class="modal-body">
-                  <h2 class="modal-title">modal title</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Deserunt nam dicta vero quam quia facilis quae inventore,
-                    expedita, saepe doloremque exercitationem. Maxime
-                    accusantium consequuntur iste animi facere sequi eius nam!
-                  </p>
+                  <form>
+                    <div class="form-control-wrapper">
+                      <label for="enter-phone">Telefon raqam</label>
+                      <input
+                        id="enter-phone"
+                        type="tel"
+                        placeholder="+998 9x-xxx-xx-xx"
+                      />
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-wrapper password-wrapper">
+                      <label for="pass">Parol</label>
+                      <span id="show-password-eye">
+                        <i class="fa-regular fa-eye-slash"></i>
+                      </span>
+                      <input id="pass" type="password" placeholder="Password" />
+                      <p class="error"></p>
+                    </div>
+                    <a class="forgot-password">Parolni unutdingizmi?</a>
+                    <div class="form-control-wrapper">
+                      <button type="submit">Kirish</button>
+                    </div>
+                  </form>
                 </div>
               </div>
               <!-- modal end -->
 
               <!-- overlay -->
-              <div class="overlay hidden" id="overlay"></div>
+              <div class="overlay hidden" id="overlay">
+                <div class="modal-image-1">
+                  <img src="./assets/images/home/Logo (2).png" alt="" />
+                </div>
+                <div class="modal-image-2">
+                  <img src="./assets/images/home/Logo (2).png" alt="" />
+                </div>
+              </div>
             </div>
             <!-- Enter end -->
           </div>
@@ -505,12 +528,7 @@
                       />
                     </div>
                   </form>
-                  <a
-                    href="./assets/pages/online-baholash.html"
-                    type="submit"
-                    class="assessment-btn"
-                    >Baholash</a
-                  >
+                  <a href="#" type="submit" class="assessment-btn">Baholash</a>
                 </div>
               </div>
             </div>
@@ -816,6 +834,16 @@
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/helper.js"></script>
     <!-- owl carousel end -->
+
+    <!-- font-awesome cdn js start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font-awesome cdn js end -->
 
     <!-- MAIN CUSTOM JS START -->
     <script src="./assets/js/header.js"></script>

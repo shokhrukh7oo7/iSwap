@@ -26,36 +26,11 @@ menuItems.forEach((item) => {
 // modal
 const showBtn = document.getElementById("show-btn");
 const enterModal = document.getElementById("modal");
-const closeBtn = document.getElementById("close-btn");
+const closeBtn = document.querySelector("#close-btn i");
 const overlay = document.getElementById("overlay");
 
 // ---------------------------------------------------------
 // HEADER ENTER MODAL JS START
-// add classlist hidden
-// const addHidden = () => {
-//   enterModal.classList.add("hidden");
-//   overlay.classList.add("hidden");
-// };
-
-// // remove classlist hidden
-// const removeHidden = () => {
-//   enterModal.classList.remove("hidden");
-//   overlay.classList.remove("hidden");
-// };
-
-// showBtn.addEventListener("click", removeHidden);
-
-// closeBtn.addEventListener("click", addHidden);
-
-// overlay.addEventListener("click", addHidden);
-
-// document.addEventListener("keydown", (e) => {
-//   if (e.key == "Escape") {
-//     addHidden();
-//   }
-// });
-// HEADER ENTER MODAL JS END
-// ---------------------------------------------------------
 const addHidden = () => {
   enterModal.classList.remove("visible");
   overlay.classList.remove("visible");
@@ -87,3 +62,11 @@ document.addEventListener("keydown", (e) => {
     addHidden();
   }
 });
+// HEADER ENTER MODAL JS END
+// ---------------------------------------------------------
+
+// ---------------------------------------------------------
+// HEADER ENTER MODAL FORM JS (PASSWORD AND USERNAME) START
+
+// HEADER ENTER MODAL FORM JS (PASSWORD AND USERNAME) END
+// ---------------------------------------------------------
