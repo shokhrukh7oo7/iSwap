@@ -198,12 +198,52 @@ header#main-header {
         }
       }
 
-      //   Enter start
+      //   Enter start modal
       .enter-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        transition: 0.3s ease;
         .enter-title {
           @include fontSize(14px, 2vw, 22px, 500);
           color: $black;
           margin: 0;
+        }
+        .hidden {
+          display: none;
+        }
+        .overlay {
+          position: fixed;
+          top: 80.35px;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: $blue;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .enter-modal {
+          position: fixed;
+          width: 100%;
+          max-width: 700px;
+          background-color: #f4f4f4;
+          padding: 15px;
+          border-radius: 8px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 102;
+          opacity: 0;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .overlay.visible {
+          opacity: 1;
+          visibility: visible;
+        }
+        .enter-modal.visible {
+          opacity: 1;
         }
       }
 

@@ -166,7 +166,30 @@
 
             <!-- Enter start -->
             <div class="enter-wrapper">
-              <a href="#" class="enter-title">Kirish</a>
+              <a href="#" class="enter-title" id="show-btn">Kirish</a>
+
+              <!-- modal start -->
+              <div class="enter-modal hidden" id="modal">
+                <div class="modal-header">
+                  <h3>enter</h3>
+                  <button class="btn close-btn" id="close-btn">
+                    <i class="fas fa-close"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2 class="modal-title">modal title</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Deserunt nam dicta vero quam quia facilis quae inventore,
+                    expedita, saepe doloremque exercitationem. Maxime
+                    accusantium consequuntur iste animi facere sequi eius nam!
+                  </p>
+                </div>
+              </div>
+              <!-- modal end -->
+
+              <!-- overlay -->
+              <div class="overlay hidden" id="overlay"></div>
             </div>
             <!-- Enter end -->
           </div>
@@ -482,7 +505,12 @@
                       />
                     </div>
                   </form>
-                  <a href="./assets/pages/online-baholash.html" type="submit" class="assessment-btn">Baholash</a>
+                  <a
+                    href="./assets/pages/online-baholash.html"
+                    type="submit"
+                    class="assessment-btn"
+                    >Baholash</a
+                  >
                 </div>
               </div>
             </div>
