@@ -595,6 +595,26 @@
   .container {
     padding: 0 70px;
   }
+  header#main-header {
+    nav {
+      .top-nav {
+        justify-content: space-evenly;
+        .search-wrapper {
+          display: none !important;
+        }
+        .enter-wrapper {
+          .overlay {
+            .modal-image-1 {
+              max-width: 400px;
+            }
+            .modal-image-2 {
+              max-width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
   .main-slider-wrapper {
     .slider {
       height: 600px;
