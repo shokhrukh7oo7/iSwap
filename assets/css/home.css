@@ -417,7 +417,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 #main-body-content .main-content-wrapper .left-menu {
   background-color: rgb(255, 255, 255);
-  overflow: hidden;
+  overflow: auto;
   position: fixed;
   top: 80px;
   background-color: white;
@@ -964,6 +964,12 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   padding: 10px 30px;
   max-width: 854px;
 }
+.online-assessment-wrapper .form-wrapper form .input-wrapper.sms-input-wrapper {
+  display: none;
+}
+.online-assessment-wrapper .form-wrapper .sms-action-wrapper {
+  display: none;
+}
 .online-assessment-wrapper .form-wrapper .assessment-btn {
   border: transparent;
   background-color: rgb(206, 53, 81);
@@ -972,6 +978,14 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   color: rgb(255, 255, 255);
   font-size: clamp(14px, 2vw, 18px);
   font-weight: 400;
+}
+.online-assessment-wrapper .form-wrapper .assessment-btn:hover {
+  outline: 3px solid rgba(255, 0, 0, 0.3);
+}
+.online-assessment-wrapper .form-wrapper .assessment-btn:disabled {
+  background-color: gray;
+  color: rgb(255, 255, 255);
+  outline: none;
 }
 
 .banner-content-wrapper {

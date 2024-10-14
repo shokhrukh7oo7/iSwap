@@ -7,6 +7,7 @@ header#main-header {
   background-color: #fff;
   z-index: 101;
   width: 100%;
+
   nav {
     @include flex(column, space-between, start, wrap, 0);
 
@@ -205,14 +206,17 @@ header#main-header {
         align-items: center;
         height: inherit;
         transition: 0.3s ease;
+
         .enter-title {
           @include fontSize(14px, 2vw, 22px, 500);
           color: $black;
           margin: 0;
         }
+
         .hidden {
           display: none;
         }
+
         .overlay {
           position: fixed;
           top: 80.35px;
@@ -223,29 +227,34 @@ header#main-header {
           opacity: 0;
           visibility: hidden;
           transition: opacity 0.3s ease, visibility 0.3s ease;
+
           .modal-image-1 {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             max-width: 500px;
+
             img {
               width: 100%;
               object-fit: cover;
             }
           }
+
           .modal-image-2 {
             position: absolute;
             bottom: 0;
             right: 0;
             width: 100%;
             max-width: 500px;
+
             img {
               width: 100%;
               object-fit: cover;
             }
           }
         }
+
         .enter-modal {
           position: fixed;
           width: calc(100% - 40px);
@@ -259,38 +268,47 @@ header#main-header {
           z-index: 102;
           opacity: 0;
           transition: opacity 0.3s ease, transform 0.3s ease;
+
           .close-btn {
             border: none;
             width: 100%;
             margin-top: 15px;
             cursor: unset;
             @include flex(row, end, center, nowrap);
+
             i {
               font-size: 18px;
               cursor: pointer;
             }
           }
+
           .modal-header {
             @include flex(row, center, center, nowrap);
+
             h3 {
               @include fontSize(24px, 4vw, 35px, 500);
             }
           }
+
           .modal-body {
             form {
               width: 100%;
               margin: 25px auto;
               border-radius: 10px;
+
               .form-control-wrapper {
                 margin: 10px 0;
-                & > * {
+
+                &>* {
                   display: block;
                   width: 100%;
                 }
+
                 label {
                   margin-left: 10px;
                   @include fontSize(18px, 2vw, 24px, 400);
                 }
+
                 input {
                   outline: none;
                   border: none;
@@ -298,13 +316,16 @@ header#main-header {
                   background-color: $light-blue;
                   border-radius: 8px;
                 }
+
                 input:focus {
                   background-color: snow;
                   outline: 3px solid rgb(0, 255, 255, 0.3);
                 }
+
                 input::placeholder {
                   color: gray;
                 }
+
                 button {
                   outline: none;
                   border: none;
@@ -317,6 +338,7 @@ header#main-header {
                   color: $white;
                   @include fontSize(15px, 2vw, 22px, 400);
                 }
+
                 .error {
                   font-size: small;
                   text-align: center;
@@ -324,8 +346,10 @@ header#main-header {
                   font-style: italic;
                 }
               }
+
               .password-wrapper {
                 position: relative;
+
                 span {
                   display: inline-block;
                   width: 25px;
@@ -341,6 +365,7 @@ header#main-header {
                   align-items: center;
                 }
               }
+
               .forgot-password {
                 display: block;
                 text-align: end;
@@ -350,10 +375,12 @@ header#main-header {
             }
           }
         }
+
         .overlay.visible {
           opacity: 1;
           visibility: visible;
         }
+
         .enter-modal.visible {
           opacity: 1;
         }
@@ -393,12 +420,14 @@ header#main-header {
 
 #main-body-content {
   padding: 130px 0;
+
   .main-content-wrapper {
+
     // display: none;
     .left-menu {
       // width: 0;
       background-color: $white;
-      overflow: hidden;
+      overflow: auto;
       position: fixed;
       top: 80px;
       background-color: white;
@@ -409,18 +438,20 @@ header#main-header {
       transition: all 0.3s;
 
       .left-menu-item {
-        & > a {
+        &>a {
           color: $grey;
           padding: 10px;
 
           @include fontSize(14px, 1.5vw, 20px, 400);
           @include flex(row, start, center);
         }
-        & > a.active {
+
+        &>a.active {
           background-color: $blue;
           color: $white;
         }
-        & > a.active img {
+
+        &>a.active img {
           filter: brightness(10);
         }
       }
@@ -484,6 +515,7 @@ header#main-header {
 
       .left-menu-language {
         display: none;
+
         .language-menu {
           display: flex;
           justify-content: start;
@@ -521,6 +553,7 @@ header#main-header {
       }
     }
   }
+
   @media (max-width: 450px) {
     .main-content-wrapper {
       .left-menu {

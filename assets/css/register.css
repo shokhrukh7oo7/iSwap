@@ -417,7 +417,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 #main-body-content .main-content-wrapper .left-menu {
   background-color: rgb(255, 255, 255);
-  overflow: hidden;
+  overflow: auto;
   position: fixed;
   top: 80px;
   background-color: white;
