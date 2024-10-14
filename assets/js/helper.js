@@ -91,61 +91,73 @@ function moveSlider(direction) {
 // home slider custom js end
 // ================================================================================================
 // ONLINE ASSESSEMENT JS START (HOME PAGE SECTION)
-const onlineAssessmentForm = document.querySelector("#online-assessment-form")
-const onlineAssessmentTelInput = document.querySelector("#tel-of-online-assessment")
-const sumbitTelButton = document.querySelector("#submit-tel-for-assessment-btn")
+const onlineAssessmentForm = document.querySelector("#online-assessment-form");
+const onlineAssessmentTelInput = document.querySelector(
+  "#tel-of-online-assessment"
+);
+const sumbitTelButton = document.querySelector(
+  "#submit-tel-for-assessment-btn"
+);
 
-const autoDecrementTimeForSms = document.querySelector("#auto-decrement-time-for-sms")
-const submitSmsForAssessmentBtn = document.querySelector("#submit-sms-for-assessment-btn")
+const autoDecrementTimeForSms = document.querySelector(
+  "#auto-decrement-time-for-sms"
+);
+const submitSmsForAssessmentBtn = document.querySelector(
+  "#submit-sms-for-assessment-btn"
+);
 
-const smsInputWrapper = document.querySelector(".sms-input-wrapper")
-const smsActionWrapper = document.querySelector(".sms-action-wrapper")
-const ONE_SECOND = 1000
+const smsInputWrapper = document.querySelector(".sms-input-wrapper");
+const smsActionWrapper = document.querySelector(".sms-action-wrapper");
+const ONE_SECOND = 1000;
 
 function showConfirmationSections(show = true) {
-  smsInputWrapper.style.display = show ? "flex" : "none"
-  smsActionWrapper.style.display = show ? "flex" : "none"
+  smsInputWrapper.style.display = show ? "flex" : "none";
+  smsActionWrapper.style.display = show ? "flex" : "none";
 }
 
 function fetchSubmitSmsForAssessment(e) {
   // NEEDED BACKEND FOR SENDING SMS
 }
-submitSmsForAssessmentBtn.addEventListener("click", fetchSubmitSmsForAssessment)
+submitSmsForAssessmentBtn.addEventListener(
+  "click",
+  fetchSubmitSmsForAssessment
+);
 
 function showTimerForAssessmentSMS(timerTime) {
-  let counter = timerTime
+  let counter = timerTime;
   let intervalID = setInterval(() => {
-    let timeToShow = counter
+    let timeToShow = counter;
     if (String(timeToShow).length == 1) {
-      timeToShow = `0${timeToShow}`
+      timeToShow = `0${timeToShow}`;
     }
-    autoDecrementTimeForSms.textContent = `00:${timeToShow}`
-    counter -= 1
+    autoDecrementTimeForSms.textContent = `00:${timeToShow}`;
+    counter -= 1;
 
     if (counter < 0) {
-      sumbitTelButton.disabled = false
-      sumbitTelButton.textContent = "SMSni qayta jo'natish"
-      clearInterval(intervalID)
+      sumbitTelButton.disabled = false;
+      sumbitTelButton.textContent = "SMSni qayta jo'natish";
+      clearInterval(intervalID);
     }
-  }, ONE_SECOND)
+  }, ONE_SECOND);
 }
 
 function fetchSMSforAssessmentNumber(e) {
-  const timerTime = 5
-  e.preventDefault()
-  showConfirmationSections()
-  showTimerForAssessmentSMS(timerTime)
-  sumbitTelButton.disabled = true
+  const timerTime = 5;
+  e.preventDefault();
+  showConfirmationSections();
+  showTimerForAssessmentSMS(timerTime);
+  sumbitTelButton.disabled = true;
 }
 
 onlineAssessmentTelInput.addEventListener("input", (e) => {
   if (e.target.value.length >= 9) {
-    sumbitTelButton.disabled = false
-    sumbitTelButton.addEventListener("click", fetchSMSforAssessmentNumber)
+    sumbitTelButton.disabled = false;
+    sumbitTelButton.addEventListener("click", fetchSMSforAssessmentNumber);
   } else {
-    sumbitTelButton.disabled = true
-    sumbitTelButton.removeEventListener("click", fetchSMSforAssessmentNumber)
-    showConfirmationSections(false)
+    sumbitTelButton.disabled = true;
+    sumbitTelButton.removeEventListener("click", fetchSMSforAssessmentNumber);
+    showConfirmationSections(false);
   }
-})
+});
 // ================================================================================================
+

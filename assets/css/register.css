@@ -633,6 +633,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 #register-wrapper {
   height: 100vh;
   background-color: rgb(0, 140, 238);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -706,6 +707,71 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 #register-wrapper .register-form-wrapper .form-wrapper form .form-btn a:hover {
   color: rgb(0, 140, 238);
 }
+#register-wrapper .form-image-1 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+}
+#register-wrapper .form-image-1 img {
+  width: 100%;
+  max-width: 500px;
+}
+#register-wrapper .form-image-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#register-wrapper .form-image-2 img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.register-sms-wrapper {
+  width: 100%;
+  max-width: 1066px;
+}
+.register-sms-wrapper .bgWhite {
+  background: white;
+  box-shadow: 0px 3px 6px 0px #cacaca;
+  border-radius: 16px;
+}
+.register-sms-wrapper .bgWhite .sms-form-wrapper .title {
+  margin-top: 20px;
+  color: rgb(43, 43, 43);
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 500;
+}
+.register-sms-wrapper .bgWhite .sms-form-wrapper form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: 15px;
+  gap: 10px;
+}
+.register-sms-wrapper .bgWhite .sms-form-wrapper form input {
+  display: inline-block;
+  width: 58px;
+  height: 73px;
+  text-align: center;
+  border-radius: 2px;
+  border: none;
+  background-color: rgba(97, 190, 255, 0.5);
+}
+.register-sms-wrapper .bgWhite .sms-form-wrapper .customBtn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  background-color: rgb(0, 140, 238);
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+.register-sms-wrapper .bgWhite .sms-form-wrapper .customBtn:hover {
+  color: rgb(0, 140, 238);
+  background-color: rgba(97, 190, 255, 0.5);
+}
 
 @media (max-width: 1200px) {
   .container {
@@ -720,5 +786,15 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
+  }
+}
+@media (max-width: 658px) {
+  #register-wrapper .form-image-1 {
+    top: 15%;
+  }
+}
+@media (max-width: 366px) {
+  #register-wrapper .form-image-1 {
+    top: 20%;
   }
 }

@@ -1,8 +1,9 @@
 @import "../global";
-
+// register form custom css start
 #register-wrapper {
   height: 100vh;
   background-color: $blue;
+  position: relative;
   @include flex(column, center, center);
   .register-form-wrapper {
     position: relative;
@@ -56,7 +57,73 @@
       }
     }
   }
+  // left right logo images
+  .form-image-1 {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  .form-image-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
 }
+// register form custom css end
+
+// register sms custom css start
+.register-sms-wrapper {
+  width: 100%;
+  max-width: 1066px;
+  .bgWhite {
+    background: white;
+    box-shadow: 0px 3px 6px 0px #cacaca;
+    border-radius: 16px;
+    .sms-form-wrapper {
+      .title {
+        margin-top: 20px;
+        color: $black;
+        @include fontSize(22px, 3vw, 36px, 500);
+      }
+      form {
+        @include flex(row, center, center, 15px);
+        input {
+          display: inline-block;
+          width: 58px;
+          height: 73px;
+          text-align: center;
+          border-radius: 2px;
+          border: none;
+          background-color: $light-blue;
+        }
+      }
+      .customBtn {
+        border: none;
+        border-radius: 8px;
+        padding: 10px 30px;
+        background-color: $blue;
+        color: $white;
+        transition: 0.5s ease;
+        @include fontSize(14px, 2vw, 18px, 400);
+        &:hover {
+          color: $blue;
+          background-color: $light-blue;
+        }
+      }
+    }
+  }
+}
+// register sms custom css end
+
+// RESPONSIVE REGISTER PAGE
 @media (max-width: 1200px) {
   .container {
     padding: 0 70px;
@@ -71,5 +138,20 @@
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
+  }
+}
+
+@media (max-width: 658px) {
+  #register-wrapper {
+    .form-image-1 {
+      top: 15%;
+    }
+  }
+}
+@media (max-width: 366px) {
+  #register-wrapper {
+    .form-image-1 {
+      top: 20%;
+    }
   }
 }

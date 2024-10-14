@@ -323,18 +323,19 @@
         </div>
         <div class="main-content">
           <section id="register-wrapper">
+            <!-- left image start -->
+            <div class="form-image-1">
+              <img src="/assets/images/home/Logo (2).png" alt="image" />
+            </div>
+            <!-- left image end -->
             <div class="container">
               <div class="register-form-wrapper">
-                <!-- left image start -->
-                <!-- <div class="form-image-1">
-                  <img src="/assets/images/home/Logo (2).png" alt="image" />
-                </div> -->
-                <!-- left image end -->
-
+                <!-- ======================================================== -->
+                <!-- Refister form start -->
                 <div class="form-wrapper">
                   <h1 class="register-form-header">Ro'yxatdan o'tish</h1>
 
-                  <form>
+                  <form id="registerForm">
                     <div class="form-control-wrapper">
                       <label for="register-name">Ism</label>
                       <input
@@ -342,6 +343,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Anvar Anvarov"
+                        required
                       />
                       <p class="error"></p>
                     </div>
@@ -352,6 +354,7 @@
                         type="tel"
                         class="form-control"
                         placeholder="+998 9x-xxx-xx-xx"
+                        required
                       />
                       <p class="error"></p>
                     </div>
@@ -361,14 +364,71 @@
                     </div>
                   </form>
                 </div>
+                <!-- Refister form end -->
+                <!-- ======================================================== -->
+                <div class="register-sms-wrapper" style="display: none;">
+                  <div class="container">
+                    <div class="row justify-content-md-center">
+                      <div class="col-md-8 text-center">
+                        <div class="row">
+                          <div class="col-sm-12 bgWhite">
+                            <div class="sms-form-wrapper">
+                              <div class="title">SMS kodni kiriting</div>
 
-                <!-- right image start -->
-                <!-- <div class="form-image-2">
-                  <img src="/assets/images/home/Logo (2).png" alt="image" />
-                </div> -->
-                <!-- right image end -->
+                              <form action="" class="mt-4">
+                                <input
+                                  class="otp"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(1)"
+                                  maxlength="1"
+                                />
+                                <input
+                                  class="otp"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(2)"
+                                  maxlength="1"
+                                />
+                                <input
+                                  class="otp"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(3)"
+                                  maxlength="1"
+                                />
+                                <input
+                                  class="otp"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(4)"
+                                  maxlength="1"
+                                />
+                              </form>
+                              <p id="countdown-timer">3:00</p>
+                              <p>3 minutdan so'ng 
+                                <span id="resendBtn" style="cursor: pointer; color: blue; display: none;">qayta jo'natish</span>
+                              </p>
+                              <button
+                                class="btn btn-primary btn-block mt-4 mb-4 customBtn"
+                              >
+                                Tasdiqlash
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ======================================================== -->
               </div>
             </div>
+            <!-- right image start -->
+            <div class="form-image-2">
+              <img src="/assets/images/home/Logo (2).png" alt="image" />
+            </div>
+            <!-- right image end -->
           </section>
         </div>
       </div>
@@ -395,6 +455,7 @@
 
     <!-- MAIN CUSTOM JS START -->
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/register.js"></script>
     <!-- MAIN CUSTOM JS END -->
   </body>
 </html>
