@@ -41,27 +41,27 @@ const addHidden = () => {
 };
 
 // Показ модального окна
-const removeHidden = () => {
-  enterModal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-  setTimeout(() => {
-    enterModal.classList.add("visible");
-    overlay.classList.add("visible");
-  }, 10); // Небольшая задержка для корректного срабатывания анимации
-};
+// const removeHidden = () => {
+//   enterModal.classList.remove("hidden");
+//   overlay.classList.remove("hidden");
+//   setTimeout(() => {
+//     enterModal.classList.add("visible");
+//     overlay.classList.add("visible");
+//   }, 10); // Небольшая задержка для корректного срабатывания анимации
+// };
 
-// События
-showBtn.addEventListener("click", removeHidden);
+// // События
+// showBtn.addEventListener("click", removeHidden);
 
-closeBtn.addEventListener("click", addHidden);
+// closeBtn.addEventListener("click", addHidden);
 
-overlay.addEventListener("click", addHidden);
+// overlay.addEventListener("click", addHidden);
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    addHidden();
-  }
-});
+// document.addEventListener("keydown", (e) => {
+//   if (e.key === "Escape") {
+//     addHidden();
+//   }
+// });
 // HEADER ENTER MODAL JS END
 // ---------------------------------------------------------
 

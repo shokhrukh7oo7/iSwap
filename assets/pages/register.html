@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iSwap</title>
+    <!-- BOOTSTRAP CUSTOM CSS START -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <link rel="stylesheet" href="/assets/css/register.css">
+    <!-- FAVICON CSS -->
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/header/iSwap03 1-modified.png"
+    />
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <header id="main-header">
+      <nav>
+        <div class="container">
+          <!-- Navbar top start -->
+          <div class="top-nav">
+            <!-- Menu burger start -->
+            <span id="main-body-content-toggler">
+              <img src="/assets/images/header/Burger.svg" alt="image" />
+            </span>
+            <!-- Menu burger end -->
+
+            <!-- Logo start -->
+            <div class="logo-wrapper">
+              <a href="/index.html"
+                ><img
+                  src="/assets/images/header/iSwap03 1-modified.png"
+                  alt="logo"
+              /></a>
+            </div>
+            <!-- Logo end -->
+
+            <!-- Location start -->
+            <div class="location-wrapper">
+              <div class="selected-location">
+                <img src="/assets/images/header/Location.svg" alt="image" />
+                <p class="location-city">
+                  <span data-i18n="toshkent">Toshkent</span>
+                  <span>shahri</span>
+                </p>
+              </div>
+              <div class="locations-dropdown-content">
+                <p class="location-city">
+                  Toshkent
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Samarqand
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Jizzax
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Sirdaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qashqadaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Surxandaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Xorazm
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Buxoro
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Andijon
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Farg'ona
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Namangan
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qoraqalpog'iston
+                  <span>respublikasi</span>
+                </p>
+              </div>
+            </div>
+            <!-- Location end -->
+
+            <!-- Search start -->
+            <div class="search-wrapper">
+              <input
+                type="search"
+                placeholder="iSwapdan qidirish"
+                class="form-control"
+              />
+              <span>
+                <img src="/assets/images/header/search.svg" alt="image" />
+              </span>
+            </div>
+            <!-- Search end -->
+
+            <!-- Language start -->
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="/assets/images/header/flag.svg" alt="img" />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="/assets/images/header/ru.svg" alt="image"
+                  /></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="/assets/images/header/en.svg" alt="image"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Language end -->
+
+            <!-- Notification start -->
+            <!-- <div class="add-to-cart-wrapper">
+                <img src="./assets/images/header/bell.svg" alt="image" />
+              </div> -->
+            <!-- Notification end -->
+
+            <!-- Add to cart start -->
+            <div class="add-to-cart-wrapper">
+              <img src="/assets/images/header/Mask group.svg" alt="image" />
+            </div>
+            <!-- Add to cart end -->
+
+            <!-- Enter start -->
+            <div class="enter-wrapper">
+              <a href="#" class="enter-title" id="show-btn">Kirish</a>
+              <!-- overlay -->
+              <div class="overlay hidden" id="overlay">
+                <div class="modal-image-1">
+                  <img src="/assets/images/home/Logo (2).png" alt="" />
+                </div>
+                <div class="modal-image-2">
+                  <img src="/assets/images/home/Logo (2).png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Enter end -->
+          </div>
+          <!-- Navbar top end -->
+          <!-- <div class="line"></div> -->
+          <!-- Navbar bottom start -->
+          <div class="bottom-nav">
+            <ul class="bottom-nav-items">
+              <li class="item"><a href="#">Trade in haqida</a></li>
+              <li class="item">
+                <a href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a>
+              </li>
+              <li class="item"><a href="#assessment">Texnikani baholash</a></li>
+              <li class="item"><a href="#preferences">Afzalliklarimiz</a></li>
+              <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
+            </ul>
+          </div>
+          <!-- Navbar bottom end -->
+        </div>
+      </nav>
+    </header>
+    <!-- Header start -->
+
+    <!-- Main start -->
+    <main id="main-body-content">
+      <div class="main-content-wrapper">
+        <div class="left-menu">
+          <!-- Left menu items -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/phone.svg" alt="image" />
+              </span>
+              <span>Telefonlar va gadjetlar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/earbuds.svg" alt="image" />
+              </span>
+              <span>Aksesuarlar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/fridge.svg" alt="image" />
+              </span>
+              <span>Maishiy texnikalar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img
+                  src="/assets/images/aside-menu/vacuum-cleaner.svg"
+                  alt="image"
+                />
+              </span>
+              <span>Kichik maishiy texikalar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/oven.svg" alt="image" />
+              </span>
+              <span>Oshxona buyumlar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/bar-bq.svg" alt="image" />
+              </span>
+              <span>Kichik oshxona buyumlar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/Komp.svg" alt="image" />
+              </span>
+              <span>Kompyuter vav ofis jihozlar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img src="/assets/images/aside-menu/avto.svg" alt="image" />
+              </span>
+              <span>Avto tovarlar</span>
+            </a>
+          </div>
+          <!-- --------------------------- -->
+          <div class="left-menu-item">
+            <a href="#">
+              <span>
+                <img
+                  src="/assets/images/aside-menu/vacuum-cleaner.svg"
+                  alt="image"
+                />
+              </span>
+              <span>Go'zallik va salomatlik</span>
+            </a>
+          </div>
+          <!-- Left menu items -->
+
+          <!-- Left menu search start -->
+          <div class="search-wrapper">
+            <input
+              type="search"
+              placeholder="iSwapdan qidirish"
+              class="form-control"
+            />
+            <span>
+              <img src="/assets/images/header/search.svg" alt="image" />
+            </span>
+          </div>
+          <!-- Left menu search end -->
+
+          <!-- Left menu language start -->
+          <div class="left-menu-language">
+            <ul class="language-menu">
+              <li>
+                <a class="language-item" href="#"
+                  ><img src="/assets/images/header/flag.svg" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a class="language-item" href="#"
+                  ><img src="/assets/images/header/ru.svg" alt="image"
+                /></a>
+              </li>
+              <li>
+                <a class="language-item" href="#"
+                  ><img src="/assets/images/header/en.svg" alt="image"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Left menu language end -->
+        </div>
+        <div class="main-content">
+          <div class="register-form-wrapper">
+            <!-- left image start -->
+            <div class="form-image-1">
+              <img src="/assets/images/home/Logo (2).png" alt="image" />
+            </div>
+            <!-- left image end -->
+
+            <div class="form-wrapper">
+              <form>
+                <div class="form-control-wrapper">
+                  <label for="enter-phone">Telefon raqam</label>
+                  <input
+                    id="enter-phone"
+                    type="tel"
+                    placeholder="+998 9x-xxx-xx-xx"
+                  />
+                  <p class="error"></p>
+                </div>
+                <div class="form-control-wrapper password-wrapper">
+                  <label for="pass">Parol</label>
+                  <span id="show-password-eye">
+                    <i class="fa-regular fa-eye-slash"></i>
+                  </span>
+                  <input id="pass" type="password" placeholder="Password" />
+                  <p class="error"></p>
+                </div>
+                <a class="forgot-password">Parolni unutdingizmi?</a>
+                <div class="form-control-wrapper">
+                  <button type="submit">Kirish</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- right image start -->
+            <div class="form-image-2">
+              <img src="/assets/images/home/Logo (2).png" alt="image" />
+            </div>
+            <!-- right image end -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer>
+      <!-- footer top start -->
+      <section class="footer-top-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-xl-4 my-4">
+              <div class="footer-logo-wrapper">
+                <img src="/assets/images/footer/Logo.svg" alt="image" />
+              </div>
+
+              <div class="footer-social-wrapper">
+                <a href="#"
+                  ><img src="/assets/images/footer/instagram.svg" alt="image"
+                /></a>
+                <a href="#"
+                  ><img src="/assets/images/footer/tg.svg" alt="image"
+                /></a>
+                <a href="#"
+                  ><img src="/assets/images/footer/facebook.svg" alt="image"
+                /></a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-4 my-4">
+              <div class="footer-about-us-wrapper">
+                <a href="#" class="about-us-title about-us-top"
+                  >Biz haqimizda</a
+                >
+                <a href="#" class="about-us-title about-us-bottom">
+                  Yetkazib berish shartlari
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-4 my-4">
+              <div class="footer-contact-wrapper">
+                <h3 class="contact-title">Bog'lanish</h3>
+                <p class="phone-number">+998 9x-xxx-xx-xx</p>
+                <a href="#">iswapuz@gmail.com</a>
+                <p class="address">Sharof Rashidov ko'chasi, 11 uy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer top end -->
+
+      <!-- footer bottom start -->
+      <section class="footer-bottom-wrapper">
+        <div class="container">
+          <div class="footer-bottom-content-wrapper">
+            <p class="reserv">
+              <img src="/assets/images/footer/c-circle.svg" alt="image" />
+              2024
+              <a href="#">iSwap.</a>
+              All rights Reserved
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- footer bottom end -->
+    </footer>
+    <!-- Footer end -->
+
+    <!-- BOOTSTRAP CUSTOM JS START -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP CUSTOM JS END -->
+
+    <!-- font-awesome cdn js start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font-awesome cdn js end -->
+
+    <!-- MAIN CUSTOM JS START -->
+    <script src="/assets/js/header.js"></script>
+    <!-- MAIN CUSTOM JS END -->
+  </body>
+</html>
