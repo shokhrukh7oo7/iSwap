@@ -10,7 +10,6 @@ CONTENT_TOGGLER.addEventListener("click", (e) => {
   leftMenu.classList.toggle("show-left-menu");
   mainContent.classList.toggle("show-left-menu");
 });
-
 // ASIDE MENU LEFT ACTIVE
 const menuItems = document.querySelectorAll(".left-menu-item a");
 
@@ -22,55 +21,6 @@ menuItems.forEach((item) => {
     e.currentTarget.classList.add("active");
   });
 });
-
-// modal
-const showBtn = document.getElementById("show-btn");
-const enterModal = document.getElementById("modal");
-const closeBtn = document.querySelector("#close-btn i");
-const overlay = document.getElementById("overlay");
-
-// ================================================================================================
-// ---------------------------------------------------------
-// HEADER ENTER MODAL JS START
-const addHidden = () => {
-  enterModal.classList.remove("visible");
-  overlay.classList.remove("visible");
-  setTimeout(() => {
-    enterModal.classList.add("hidden");
-    overlay.classList.add("hidden");
-  }, 0); // Таймер, чтобы дождаться завершения анимации
-};
-
-// Показ модального окна
-// const removeHidden = () => {
-//   enterModal.classList.remove("hidden");
-//   overlay.classList.remove("hidden");
-//   setTimeout(() => {
-//     enterModal.classList.add("visible");
-//     overlay.classList.add("visible");
-//   }, 10); // Небольшая задержка для корректного срабатывания анимации
-// };
-
-// // События
-// showBtn.addEventListener("click", removeHidden);
-
-// closeBtn.addEventListener("click", addHidden);
-
-// overlay.addEventListener("click", addHidden);
-
-// document.addEventListener("keydown", (e) => {
-//   if (e.key === "Escape") {
-//     addHidden();
-//   }
-// });
-// HEADER ENTER MODAL JS END
-// ---------------------------------------------------------
-
-// ---------------------------------------------------------
-// HEADER ENTER MODAL FORM JS (PASSWORD AND USERNAME) START
-
-// HEADER ENTER MODAL FORM JS (PASSWORD AND USERNAME) END
-// ---------------------------------------------------------
 // ================================================================================================
 // ONLINE ASSESSEMENT JS START
 const onlineAssessmentForm = document.querySelector("#online-assessment-form")
@@ -85,8 +35,8 @@ const smsActionWrapper = document.querySelector(".sms-action-wrapper")
 const ONE_SECOND = 1000
 
 function showConfirmationSections(show = true) {
-  smsInputWrapper.style.display = show ? "block" : "none"
-  smsActionWrapper.style.display = show ? "block" : "none"
+  smsInputWrapper.style.display = show ? "flex" : "none"
+  smsActionWrapper.style.display = show ? "flex" : "none"
 }
 
 function fetchSubmitSmsForAssessment(e) {
