@@ -412,9 +412,6 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   color: rgb(43, 43, 43);
 }
 
-#main-body-content {
-  padding: 130px 0;
-}
 #main-body-content .main-content-wrapper .left-menu {
   background-color: rgb(255, 255, 255);
   overflow: auto;
@@ -633,29 +630,95 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   font-weight: 500;
 }
 
-.register-form-wrapper {
+#register-wrapper {
+  height: 100vh;
   background-color: rgb(0, 140, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#register-wrapper .register-form-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
-.register-form-wrapper .form-image-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
+#register-wrapper .register-form-wrapper .form-wrapper {
   width: 100%;
+  max-width: 1066px;
+  padding: 40px 40px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
 }
-.register-form-wrapper .form-image-1 img {
-  width: 100%;
-  object-fit: cover;
-  max-width: 400px;
+#register-wrapper .register-form-wrapper .form-wrapper .register-form-header {
+  text-align: center;
+  font-size: clamp(22px, 4vw, 56px);
+  font-weight: 500;
 }
-.register-form-wrapper .form-image-2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
+#register-wrapper .register-form-wrapper .form-wrapper form {
+  margin: 40px 0;
 }
-.register-form-wrapper .form-image-2 img {
+#register-wrapper .register-form-wrapper .form-wrapper form .form-control-wrapper {
   width: 100%;
-  object-fit: cover;
-  max-width: 400px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-control-wrapper label {
+  margin-left: 15px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-control-wrapper input {
+  height: 60px;
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-btn button {
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  background-color: rgb(206, 53, 81);
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-btn button:hover {
+  background-color: rgb(0, 140, 238);
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-btn a {
+  color: rgb(206, 53, 81);
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+}
+#register-wrapper .register-form-wrapper .form-wrapper form .form-btn a:hover {
+  color: rgb(0, 140, 238);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
 }

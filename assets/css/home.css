@@ -412,9 +412,6 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   color: rgb(43, 43, 43);
 }
 
-#main-body-content {
-  padding: 130px 0;
-}
 #main-body-content .main-content-wrapper .left-menu {
   background-color: rgb(255, 255, 255);
   overflow: auto;
@@ -634,6 +631,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 
 .welcome-wrapper {
+  padding-top: 130px;
   background-color: rgb(0, 140, 238);
 }
 .welcome-wrapper .welcome-content {
@@ -1332,8 +1330,8 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   .container {
     padding: 0 15px;
   }
-  #main-body-content {
-    padding: 150px 0;
+  .welcome-wrapper {
+    padding-top: 150px;
   }
   .welcome-wrapper .welcome-content {
     display: flex;
@@ -1445,7 +1443,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   }
 }
 @media (max-width: 385px) {
-  #main-body-content {
-    padding: 170px 0;
+  .welcome-wrapper {
+    padding-top: 170px;
   }
 }

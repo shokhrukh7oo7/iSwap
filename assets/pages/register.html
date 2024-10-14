@@ -14,12 +14,12 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/assets/css/home.css" />
-    <link rel="stylesheet" href="/assets/css/register.css">
+    <link rel="stylesheet" href="/assets/css/register.css" />
     <!-- FAVICON CSS -->
 
     <link
       rel="shortcut icon"
-      href="assets/images/header/iSwap03 1-modified.png"
+      href="/assets/images/header/iSwap03 1-modified.png"
     />
   </head>
 
@@ -322,112 +322,58 @@
           <!-- Left menu language end -->
         </div>
         <div class="main-content">
-          <div class="register-form-wrapper">
-            <!-- left image start -->
-            <div class="form-image-1">
-              <img src="/assets/images/home/Logo (2).png" alt="image" />
-            </div>
-            <!-- left image end -->
+          <section id="register-wrapper">
+            <div class="container">
+              <div class="register-form-wrapper">
+                <!-- left image start -->
+                <!-- <div class="form-image-1">
+                  <img src="/assets/images/home/Logo (2).png" alt="image" />
+                </div> -->
+                <!-- left image end -->
 
-            <div class="form-wrapper">
-              <form>
-                <div class="form-control-wrapper">
-                  <label for="enter-phone">Telefon raqam</label>
-                  <input
-                    id="enter-phone"
-                    type="tel"
-                    placeholder="+998 9x-xxx-xx-xx"
-                  />
-                  <p class="error"></p>
-                </div>
-                <div class="form-control-wrapper password-wrapper">
-                  <label for="pass">Parol</label>
-                  <span id="show-password-eye">
-                    <i class="fa-regular fa-eye-slash"></i>
-                  </span>
-                  <input id="pass" type="password" placeholder="Password" />
-                  <p class="error"></p>
-                </div>
-                <a class="forgot-password">Parolni unutdingizmi?</a>
-                <div class="form-control-wrapper">
-                  <button type="submit">Kirish</button>
-                </div>
-              </form>
-            </div>
+                <div class="form-wrapper">
+                  <h1 class="register-form-header">Ro'yxatdan o'tish</h1>
 
-            <!-- right image start -->
-            <div class="form-image-2">
-              <img src="/assets/images/home/Logo (2).png" alt="image" />
+                  <form>
+                    <div class="form-control-wrapper">
+                      <label for="register-name">Ism</label>
+                      <input
+                        id="register-name"
+                        type="text"
+                        class="form-control"
+                        placeholder="Anvar Anvarov"
+                      />
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-wrapper">
+                      <label for="register-phone">Telefon raqam</label>
+                      <input
+                        id="register-phone"
+                        type="tel"
+                        class="form-control"
+                        placeholder="+998 9x-xxx-xx-xx"
+                      />
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-wrapper form-btn">
+                      <button type="submit">Ro'yxatdan o'tish</button>
+                      <a href="#">Avval ro'yxatdan o'tganmisiz?</a>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- right image start -->
+                <!-- <div class="form-image-2">
+                  <img src="/assets/images/home/Logo (2).png" alt="image" />
+                </div> -->
+                <!-- right image end -->
+              </div>
             </div>
-            <!-- right image end -->
-          </div>
+          </section>
         </div>
       </div>
     </main>
     <!-- Main end -->
-
-    <!-- Footer start -->
-    <footer>
-      <!-- footer top start -->
-      <section class="footer-top-wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-sm-6 col-xl-4 my-4">
-              <div class="footer-logo-wrapper">
-                <img src="/assets/images/footer/Logo.svg" alt="image" />
-              </div>
-
-              <div class="footer-social-wrapper">
-                <a href="#"
-                  ><img src="/assets/images/footer/instagram.svg" alt="image"
-                /></a>
-                <a href="#"
-                  ><img src="/assets/images/footer/tg.svg" alt="image"
-                /></a>
-                <a href="#"
-                  ><img src="/assets/images/footer/facebook.svg" alt="image"
-                /></a>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-xl-4 my-4">
-              <div class="footer-about-us-wrapper">
-                <a href="#" class="about-us-title about-us-top"
-                  >Biz haqimizda</a
-                >
-                <a href="#" class="about-us-title about-us-bottom">
-                  Yetkazib berish shartlari
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-xl-4 my-4">
-              <div class="footer-contact-wrapper">
-                <h3 class="contact-title">Bog'lanish</h3>
-                <p class="phone-number">+998 9x-xxx-xx-xx</p>
-                <a href="#">iswapuz@gmail.com</a>
-                <p class="address">Sharof Rashidov ko'chasi, 11 uy</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- footer top end -->
-
-      <!-- footer bottom start -->
-      <section class="footer-bottom-wrapper">
-        <div class="container">
-          <div class="footer-bottom-content-wrapper">
-            <p class="reserv">
-              <img src="/assets/images/footer/c-circle.svg" alt="image" />
-              2024
-              <a href="#">iSwap.</a>
-              All rights Reserved
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- footer bottom end -->
-    </footer>
-    <!-- Footer end -->
 
     <!-- BOOTSTRAP CUSTOM JS START -->
     <script

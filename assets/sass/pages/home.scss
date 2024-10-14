@@ -2,6 +2,7 @@
 
 // welcome section start
 .welcome-wrapper {
+  padding-top: 130px;
   background-color: $blue;
 
   .welcome-content {
@@ -783,11 +784,8 @@
     padding: 0 15px;
   }
 
-  #main-body-content {
-    padding: 150px 0;
-  }
-
   .welcome-wrapper {
+    padding-top: 150px;
     .welcome-content {
       @include flex(column, center, center);
     }
@@ -943,8 +941,8 @@
 }
 
 @media (max-width: 385px) {
-  #main-body-content {
-    padding: 170px 0;
+  .welcome-wrapper {
+    padding-top: 170px;
   }
 }
 
