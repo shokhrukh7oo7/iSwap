@@ -1,3 +1,45 @@
+const countdownTimer = document.querySelector("#countdown-timer")
+const resendBtn = document.querySelector("#resendBtn")
+
+const ONE_SECOND = 1000
+const ONE_MINUTE = 60 * ONE_SECOND
+
+function startCountdown() {
+  let counter = 1 * 3
+  resendBtn.removeEventListener("click", handleResendBtnClick)
+  resendBtn.style.color = "gray"
+  resendBtn.style.cursor = "not-allowed"
+
+  let intervalID = setInterval(() => {
+    let minutes = parseInt(counter / 60)
+    let seconds = counter % 60
+    if (String(seconds).length == 1) {
+      seconds = `0${seconds}`;
+    }
+
+    countdownTimer.textContent = `${minutes}:${seconds}`
+    counter -= 1
+
+    if (counter < 0) {
+      resendBtn.style.color = "#0000fa"
+      resendBtn.style.cursor = "pointer"
+      resendBtn.addEventListener("click", handleResendBtnClick)
+      clearInterval(intervalID)
+    }
+  }, ONE_SECOND)
+}
+
+function handleResendBtnClick() {
+  startCountdown()
+  sendAccountActivationSMSCode()
+}
+
+function sendAccountActivationSMSCode() {
+  console.log("SMS sent")
+  // TODO:
+  // SEND ACTUAL CODE THROUGHT SMS
+}
+
 // register page form sms (OTP)
 let digitValidate = function (ele) {
   ele.value = ele.value.replace(/[^0-9]/g, "");
@@ -40,6 +82,8 @@ document
     if (name && phone) {
       document.querySelector(".form-wrapper").style.display = "none";
       document.querySelector(".register-sms-wrapper").style.display = "block";
+      startCountdown()
+      sendAccountActivationSMSCode()
       // Сохраняем текущее состояние в localStorage
       //localStorage.setItem("registrationStep", "sms");
     } else {
