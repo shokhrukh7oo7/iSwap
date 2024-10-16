@@ -364,9 +364,10 @@
                     </div>
                   </form>
                 </div>
-                <!-- Refister form end -->
+                <!-- Register form end -->
                 <!-- ======================================================== -->
-                <div class="register-sms-wrapper" style="display: none;">
+                <!-- Register sms wrapper start -->
+                <div class="register-sms-wrapper" style="display: none">
                   <div class="container">
                     <div class="row justify-content-md-center">
                       <div class="col-md-8 text-center">
@@ -405,17 +406,28 @@
                                   maxlength="1"
                                 />
                               </form>
-                              <p style="margin-top:10px;" id="countdown-timer"></p>
+                              <p
+                                style="margin-top: 10px"
+                                id="countdown-timer"
+                              ></p>
                               <p>
-                                3 minutdan so'ng 
-                                <span id="resendBtn" 
-                                  style="cursor:pointer; color:gray;  text-decoration:underline; cursor:not-allowed; margin-left:5px;"
+                                3 minutdan so'ng
+                                <span
+                                  id="resendBtn"
+                                  style="
+                                    cursor: pointer;
+                                    color: gray;
+                                    text-decoration: underline;
+                                    cursor: not-allowed;
+                                    margin-left: 5px;
+                                  "
                                 >
                                   qayta jo'natish
                                 </span>
                               </p>
                               <button
                                 class="btn btn-primary btn-block mt-4 mb-4 customBtn"
+                                id="confirm-btn"
                               >
                                 Tasdiqlash
                               </button>
@@ -425,6 +437,35 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <!-- Register sms wrapper end -->
+                <!-- ======================================================== -->
+                <div class="password-form" style="display: none;">
+                  <form id="password-form">
+                    <div class="form-control-password">
+                      <label for="password">Parolni kiriting</label>
+                      <div class="password-input-wrapper">
+                        <input id="password" type="password" placeholder="Parolni kiriting" class="form-control"/>
+                        <span class="show-password-eye">
+                          <img src="/assets/images/form/eye (2).svg" alt="image" class="password-eye-icon">
+                        </span>
+                      </div>
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-password">
+                      <label for="password-2">Parolni qaytaring</label>
+                      <div class="password-input-wrapper">
+                        <input id="password-2" type="password" placeholder="Parolni qaytaring" class="form-control"/>
+                        <span class="show-password-eye">
+                          <img src="/assets/images/form/eye (2).svg" alt="image" class="password-eye-icon">
+                        </span>
+                      </div>
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-password">
+                      <button type="submit" id="password-btn">Tasdiqlash</button>
+                    </div>
+                  </form>
                 </div>
                 <!-- ======================================================== -->
               </div>
@@ -439,6 +480,10 @@
       </div>
     </main>
     <!-- Main end -->
+
+    <!-- SWEET-ALERT2 JS START -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SWEET-ALERT2 JS END -->
 
     <!-- BOOTSTRAP CUSTOM JS START -->
     <script

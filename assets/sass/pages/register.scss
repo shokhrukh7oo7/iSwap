@@ -123,6 +123,102 @@
 }
 // register sms custom css end
 
+// sweet alert2 custom css start
+.swal2-popup {
+  height: 356px;
+  width: 100%;
+  max-width: 710px;
+  aspect-ratio: 710 / 356;
+  .swal2-html-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    @include fontSize(20px, 2vw, 28px, 500);
+  }
+  .swal2-actions {
+    gap: 10px;
+    margin: 0;
+    .swal2-cancel {
+      border: none;
+      background-color: $red;
+    }
+    .swal2-confirm {
+      border: none;
+      background-color: $red;
+    }
+  }
+}
+// sweet alert2 custom css end
+
+// password-form custom css start
+.password-form {
+  width: 100%;
+  display: none;
+  form {
+    width: 100%;
+    max-width: 725px;
+    background-color: $white;
+    border-radius: 16px;
+    margin: 0 auto;
+    padding: 100px 20px 50px;
+    @include flex(column, center, center);
+    .form-control-password {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      z-index: 1;
+      label {
+        margin-left: 13px;
+        @include fontSize(14px, 2vw, 18px, 400);
+      }
+      .password-input-wrapper {
+        position: relative;
+        input {
+          height: 50px;
+          border-radius: 55px;
+          background-color: $light-blue;
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          &::placeholder {
+            color: $grey;
+          }
+        }
+        span {
+          position: absolute;
+          top: 25%;
+          right: 3%;
+          img {
+            width: 18px;
+            cursor: pointer;
+          }
+        }
+      }
+      .error {
+        text-align: center;
+        color: $red;
+      }
+      button {
+        background-color: $red;
+        padding: 10px 30px;
+        border-radius: 8px;
+        border: none;
+        color: $white;
+        margin: 0 auto;
+        @include fontSize(14px, 2vw, 18px, 400);
+        @include flex(column, center, center);
+        &:hover {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}
+// password-form custom css end
+
+// =========================================================
 // RESPONSIVE REGISTER PAGE
 @media (max-width: 1200px) {
   .container {

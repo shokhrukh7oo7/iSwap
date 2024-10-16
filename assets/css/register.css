@@ -773,6 +773,110 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   background-color: rgba(97, 190, 255, 0.5);
 }
 
+.swal2-popup {
+  height: 356px;
+  width: 100%;
+  max-width: 710px;
+  aspect-ratio: 710/356;
+}
+.swal2-popup .swal2-html-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
+}
+.swal2-popup .swal2-actions {
+  gap: 10px;
+  margin: 0;
+}
+.swal2-popup .swal2-actions .swal2-cancel {
+  border: none;
+  background-color: rgb(206, 53, 81);
+}
+.swal2-popup .swal2-actions .swal2-confirm {
+  border: none;
+  background-color: rgb(206, 53, 81);
+}
+
+.password-form {
+  width: 100%;
+  display: none;
+}
+.password-form form {
+  width: 100%;
+  max-width: 725px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 100px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.password-form form .form-control-password {
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  z-index: 1;
+}
+.password-form form .form-control-password label {
+  margin-left: 13px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+.password-form form .form-control-password .password-input-wrapper {
+  position: relative;
+}
+.password-form form .form-control-password .password-input-wrapper input {
+  height: 50px;
+  border-radius: 55px;
+  background-color: rgba(97, 190, 255, 0.5);
+}
+.password-form form .form-control-password .password-input-wrapper input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.password-form form .form-control-password .password-input-wrapper input::placeholder {
+  color: rgba(43, 43, 43, 0.5);
+}
+.password-form form .form-control-password .password-input-wrapper span {
+  position: absolute;
+  top: 25%;
+  right: 3%;
+}
+.password-form form .form-control-password .password-input-wrapper span img {
+  width: 18px;
+  cursor: pointer;
+}
+.password-form form .form-control-password .error {
+  text-align: center;
+  color: rgb(206, 53, 81);
+}
+.password-form form .form-control-password button {
+  background-color: rgb(206, 53, 81);
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.password-form form .form-control-password button:hover {
+  background-color: rgb(0, 140, 238);
+}
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 70px;
