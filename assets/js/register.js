@@ -42,7 +42,7 @@ function sendAccountActivationSMSCode(phone, resend=false) {
   // TODO:
   // SEND ACTUAL CODE THROUGHT SMS
   try {
-    const URL = ""
+    const URL = "" // ASK
     fetch(URL, {
       method: "POST", // ASK from backend
       headers: {
