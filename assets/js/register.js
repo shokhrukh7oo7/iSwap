@@ -5,7 +5,7 @@ const ONE_SECOND = 1000
 const ONE_MINUTE = 60 * ONE_SECOND
 
 function startCountdown() {
-  let counter = 1 * 3
+  let counter = 60 * 3
   resendBtn.removeEventListener("click", handleResendBtnClick)
   resendBtn.style.color = "gray"
   resendBtn.style.cursor = "not-allowed"
@@ -31,13 +31,32 @@ function startCountdown() {
 
 function handleResendBtnClick() {
   startCountdown()
-  sendAccountActivationSMSCode()
+  sendAccountActivationSMSCode(null, true)
 }
 
-function sendAccountActivationSMSCode() {
-  console.log("SMS sent")
+function sendAccountActivationSMSCode(phone, resend=false) {
+  if (resend) {
+    phone = JSON.parse(sessionStorage.getItem("auth-phone-number"))
+  }
+  console.log("SMS sent to number: ", phone)
   // TODO:
   // SEND ACTUAL CODE THROUGHT SMS
+  try {
+    const URL = ""
+    fetch(URL, {
+      method: "POST", // ASK from backend
+      headers: {
+        // ASK if needed
+      },
+      body: JSON.stringify({ phone })
+    })
+    .then(response => {
+      console.log(response)
+    })
+  }
+  catch (e) {
+    console.log("Error: ", e)
+  }
 }
 
 // register page form sms (OTP)
@@ -80,10 +99,12 @@ document
     const phone = document.getElementById("register-phone").value;
 
     if (name && phone) {
+      sessionStorage.setItem("auth-phone-number", JSON.stringify(phone))
+
       document.querySelector(".form-wrapper").style.display = "none";
       document.querySelector(".register-sms-wrapper").style.display = "block";
       startCountdown()
-      sendAccountActivationSMSCode()
+      sendAccountActivationSMSCode(phone)
       // Сохраняем текущее состояние в localStorage
       //localStorage.setItem("registrationStep", "sms");
     } else {
