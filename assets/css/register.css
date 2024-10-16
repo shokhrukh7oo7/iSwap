@@ -774,10 +774,19 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 
 .swal2-popup {
-  height: 356px;
+  height: 400px;
   width: 100%;
-  max-width: 710px;
+  max-width: 730px;
   aspect-ratio: 710/356;
+}
+.swal2-popup .swal2-title {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
 }
 .swal2-popup .swal2-html-container {
   width: 100%;
@@ -836,6 +845,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   height: 50px;
   border-radius: 55px;
   background-color: rgba(97, 190, 255, 0.5);
+  padding-left: 20px;
 }
 .password-form form .form-control-password .password-input-wrapper input:focus {
   box-shadow: none;

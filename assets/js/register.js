@@ -126,7 +126,7 @@ document.getElementById("confirm-btn").addEventListener("click", function () {
   // Вызываем SweetAlert
   swalWithBootstrapButtons
     .fire({
-      title: "iSwap",
+      // title: "iSwap",
       text: "Parolingizni doimiyga o'zgartirishni xohlaysizmi?",
       icon: false,
       showCancelButton: true,
@@ -165,8 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const passInput = document.getElementById("password");
   const passInputSecond = document.getElementById("password-2");
   const submitBtn = document.getElementById("password-btn");
-  const showPasswordEye = document.getElementById("show-password-eye");
-  const passwordEyeIcon = document.getElementById("password-eye-icon");
 
   // Функция для отображения ошибки
   function showError(element, message = "") {
@@ -241,16 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
-  // showPasswordEye.addEventListener("click", (e) => {
-  //   if (passInput.type == "password") {
-  //     passInput.type = "text";
-  //     passwordEyeIcon.src = "/assets/images/form/eye-slash.svg";
-  //   } else {
-  //     passInput.type = "password";
-  //     passwordEyeIcon.src = "/assets/images/form/eye (2).svg";
-  //   }
-  // });
 });
 
 // password form end

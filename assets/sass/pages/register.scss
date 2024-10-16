@@ -125,10 +125,18 @@
 
 // sweet alert2 custom css start
 .swal2-popup {
-  height: 356px;
+  height: 400px;
   width: 100%;
-  max-width: 710px;
+  max-width: 730px;
   aspect-ratio: 710 / 356;
+  .swal2-title {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    @include fontSize(20px, 2vw, 28px, 500);
+  }
   .swal2-html-container {
     width: 100%;
     max-width: 400px;
@@ -178,6 +186,7 @@
           height: 50px;
           border-radius: 55px;
           background-color: $light-blue;
+          padding-left: 20px;
           &:focus {
             box-shadow: none;
             outline: none;
