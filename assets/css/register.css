@@ -774,7 +774,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 
 .swal2-popup {
-  height: 400px;
+  height: 250px;
   width: 100%;
   max-width: 730px;
   aspect-ratio: 710/356;
@@ -815,11 +815,11 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 .password-form form {
   width: 100%;
-  max-width: 725px;
+  max-width: 625px;
   background-color: rgb(255, 255, 255);
   border-radius: 16px;
   margin: 0 auto;
-  padding: 100px 20px 50px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -857,7 +857,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 .password-form form .form-control-password .password-input-wrapper span {
   position: absolute;
   top: 25%;
-  right: 3%;
+  right: 5%;
 }
 .password-form form .form-control-password .password-input-wrapper span img {
   width: 18px;

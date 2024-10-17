@@ -125,7 +125,7 @@
 
 // sweet alert2 custom css start
 .swal2-popup {
-  height: 400px;
+  height: 250px;
   width: 100%;
   max-width: 730px;
   aspect-ratio: 710 / 356;
@@ -165,11 +165,11 @@
   display: none;
   form {
     width: 100%;
-    max-width: 725px;
+    max-width: 625px;
     background-color: $white;
     border-radius: 16px;
     margin: 0 auto;
-    padding: 100px 20px 50px;
+    padding: 50px 20px;
     @include flex(column, center, center);
     .form-control-password {
       width: 100%;
@@ -198,7 +198,7 @@
         span {
           position: absolute;
           top: 25%;
-          right: 3%;
+          right: 5%;
           img {
             width: 18px;
             cursor: pointer;
