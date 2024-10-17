@@ -238,5 +238,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 // password form end
