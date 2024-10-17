@@ -630,7 +630,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   font-weight: 500;
 }
 
-#register-wrapper {
+#enter-wrapper {
   height: 100vh;
   background-color: rgb(0, 140, 238);
   position: relative;
@@ -641,7 +641,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   flex-wrap: nowrap;
   gap: 10px;
 }
-#register-wrapper .register-form-wrapper {
+#enter-wrapper .enter-form-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -650,35 +650,62 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   flex-wrap: nowrap;
   gap: 10px;
 }
-#register-wrapper .register-form-wrapper .form-wrapper {
+#enter-wrapper .enter-form-wrapper .form-wrapper {
   width: 100%;
-  max-width: 1066px;
-  padding: 40px 40px;
+  max-width: 540px;
+  padding: 40px 40px 0;
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
 }
-#register-wrapper .register-form-wrapper .form-wrapper .register-form-header {
+#enter-wrapper .enter-form-wrapper .form-wrapper .enter-form-header {
   text-align: center;
-  font-size: clamp(22px, 4vw, 56px);
+  font-size: clamp(22px, 4vw, 46px);
   font-weight: 500;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form {
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm {
   margin: 40px 0;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-control-wrapper {
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-control-wrapper label {
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper label {
   margin-left: 15px;
   font-size: clamp(14px, 2vw, 18px);
   font-weight: 500;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-control-wrapper input {
-  height: 60px;
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper input {
+  height: 57px;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-btn {
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper .enter-password-wrapper {
+  position: relative;
+}
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper .enter-password-wrapper input {
+  height: 57px;
+}
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper .enter-password-wrapper span {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  cursor: pointer;
+}
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper a {
+  text-align: end;
+  color: rgb(206, 53, 81);
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .form-control-wrapper a:hover {
+  color: rgb(0, 140, 238);
+}
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .enter-form-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -686,234 +713,65 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   flex-wrap: nowrap;
   gap: 10px;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-btn button {
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .enter-form-btn button {
   border: none;
   border-radius: 8px;
-  padding: 15px 30px;
+  padding: 10px 80px;
   background-color: rgb(206, 53, 81);
   color: rgb(255, 255, 255);
   transition: 0.5s ease;
+  margin: 20px 0 0 0;
   font-size: clamp(14px, 2vw, 18px);
   font-weight: 400;
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-btn button:hover {
+#enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .enter-form-btn button:hover {
   background-color: rgb(0, 140, 238);
 }
-#register-wrapper .register-form-wrapper .form-wrapper form .form-btn a {
-  color: rgb(206, 53, 81);
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 500;
-}
-#register-wrapper .register-form-wrapper .form-wrapper form .form-btn a:hover {
-  color: rgb(0, 140, 238);
-}
-#register-wrapper .form-image-1 {
+#enter-wrapper .form-image-1 {
   position: absolute;
   top: 10%;
   left: 0;
 }
-#register-wrapper .form-image-1 img {
+#enter-wrapper .form-image-1 img {
   width: 100%;
   max-width: 500px;
 }
-#register-wrapper .form-image-2 {
+#enter-wrapper .form-image-2 {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#register-wrapper .form-image-2 img {
+#enter-wrapper .form-image-2 img {
   width: 100%;
   max-width: 500px;
 }
 
-.register-sms-wrapper {
-  width: 100%;
-  max-width: 1066px;
-}
-.register-sms-wrapper .bgWhite {
-  background: white;
-  box-shadow: 0px 3px 6px 0px #cacaca;
-  border-radius: 16px;
-}
-.register-sms-wrapper .bgWhite .sms-form-wrapper .title {
-  margin-top: 20px;
-  color: rgb(43, 43, 43);
-  font-size: clamp(22px, 3vw, 36px);
-  font-weight: 500;
-}
-.register-sms-wrapper .bgWhite .sms-form-wrapper form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: 15px;
-  gap: 10px;
-}
-.register-sms-wrapper .bgWhite .sms-form-wrapper form input {
-  display: inline-block;
-  width: 58px;
-  height: 73px;
-  text-align: center;
-  border-radius: 2px;
-  border: none;
-  background-color: rgba(97, 190, 255, 0.5);
-}
-.register-sms-wrapper .bgWhite .sms-form-wrapper .customBtn {
-  border: none;
-  border-radius: 8px;
-  padding: 10px 30px;
-  background-color: rgb(0, 140, 238);
-  color: rgb(255, 255, 255);
-  transition: 0.5s ease;
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 400;
-}
-.register-sms-wrapper .bgWhite .sms-form-wrapper .customBtn:hover {
-  color: rgb(0, 140, 238);
-  background-color: rgba(97, 190, 255, 0.5);
-}
-
-.swal2-popup {
-  height: 400px;
-  width: 100%;
-  max-width: 730px;
-  aspect-ratio: 710/356;
-}
-.swal2-popup .swal2-title {
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0;
-  font-size: clamp(20px, 2vw, 28px);
-  font-weight: 500;
-}
-.swal2-popup .swal2-html-container {
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  margin: 0 auto;
-  font-size: clamp(20px, 2vw, 28px);
-  font-weight: 500;
-}
-.swal2-popup .swal2-actions {
-  gap: 10px;
-  margin: 0;
-}
-.swal2-popup .swal2-actions .swal2-cancel {
-  border: none;
-  background-color: rgb(206, 53, 81);
-}
-.swal2-popup .swal2-actions .swal2-confirm {
-  border: none;
-  background-color: rgb(206, 53, 81);
-}
-
-.password-form {
-  width: 100%;
-  display: none;
-}
-.password-form form {
-  width: 100%;
-  max-width: 725px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 16px;
-  margin: 0 auto;
-  padding: 100px 20px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-.password-form form .form-control-password {
-  width: 100%;
-  max-width: 460px;
-  position: relative;
-  z-index: 1;
-}
-.password-form form .form-control-password label {
-  margin-left: 13px;
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 400;
-}
-.password-form form .form-control-password .password-input-wrapper {
-  position: relative;
-}
-.password-form form .form-control-password .password-input-wrapper input {
-  height: 50px;
-  border-radius: 55px;
-  background-color: rgba(97, 190, 255, 0.5);
-  padding-left: 20px;
-}
-.password-form form .form-control-password .password-input-wrapper input:focus {
-  box-shadow: none;
-  outline: none;
-}
-.password-form form .form-control-password .password-input-wrapper input::placeholder {
-  color: rgba(43, 43, 43, 0.5);
-}
-.password-form form .form-control-password .password-input-wrapper span {
-  position: absolute;
-  top: 25%;
-  right: 3%;
-}
-.password-form form .form-control-password .password-input-wrapper span img {
-  width: 18px;
-  cursor: pointer;
-}
-.password-form form .form-control-password .error {
-  text-align: center;
-  color: rgb(206, 53, 81);
-}
-.password-form form .form-control-password button {
-  background-color: rgb(206, 53, 81);
-  padding: 10px 30px;
-  border-radius: 8px;
-  border: none;
-  color: rgb(255, 255, 255);
-  margin: 0 auto;
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-.password-form form .form-control-password button:hover {
-  background-color: rgb(0, 140, 238);
-}
-
 @media (max-width: 1200px) {
-  .container {
+  #main-header nav .container {
+    padding: 0 70px;
+  }
+  #enter-wrapper .container {
     padding: 0 70px;
   }
 }
 @media (max-width: 992px) {
-  .container {
+  #main-header nav .container {
+    padding: 0 50px;
+  }
+  #enter-wrapper .container {
     padding: 0 50px;
   }
 }
 @media (max-width: 768px) {
-  .container {
+  #main-header nav .container {
+    padding: 0 15px;
+  }
+  #enter-wrapper .container {
     padding: 0 15px;
   }
 }
-@media (max-width: 658px) {
-  #register-wrapper .form-image-1 {
-    top: 15%;
-  }
-}
 @media (max-width: 576px) {
-  #register-wrapper .register-form-wrapper {
+  #enter-wrapper {
     margin-top: 80px;
-  }
-}
-@media (max-width: 366px) {
-  #register-wrapper .form-image-1 {
-    top: 20%;
   }
 }

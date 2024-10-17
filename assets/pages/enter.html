@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iSwap</title>
+    <title>Enter</title>
     <!-- BOOTSTRAP CUSTOM CSS START -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/assets/css/home.css" />
-    <link rel="stylesheet" href="/assets/css/register.css" />
+    <link rel="stylesheet" href="/assets/css/enter.css" />
     <!-- FAVICON CSS -->
 
     <link
@@ -22,7 +22,6 @@
       href="/assets/images/header/iSwap03 1-modified.png"
     />
   </head>
-
   <body>
     <!-- Header start -->
     <header id="main-header">
@@ -129,7 +128,11 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <img id="current-flag" src="/assets/images/header/flag.svg" alt="img" />
+                <img
+                  id="current-flag"
+                  src="/assets/images/header/flag.svg"
+                  alt="img"
+                />
               </button>
               <ul class="dropdown-menu">
                 <li>
@@ -148,8 +151,8 @@
 
             <!-- Notification start -->
             <!-- <div class="add-to-cart-wrapper">
-                <img src="./assets/images/header/bell.svg" alt="image" />
-              </div> -->
+                      <img src="./assets/images/header/bell.svg" alt="image" />
+                    </div> -->
             <!-- Notification end -->
 
             <!-- Add to cart start -->
@@ -322,35 +325,24 @@
           <!-- Left menu language end -->
         </div>
         <div class="main-content">
-          <section id="register-wrapper">
+          <section id="enter-wrapper">
             <!-- left image start -->
             <div class="form-image-1">
               <img src="/assets/images/home/Logo (2).png" alt="image" />
             </div>
             <!-- left image end -->
             <div class="container">
-              <div class="register-form-wrapper">
+              <div class="enter-form-wrapper">
                 <!-- ======================================================== -->
-                <!-- Refister form start -->
+                <!-- Enter form start -->
                 <div class="form-wrapper">
-                  <h1 class="register-form-header">Ro'yxatdan o'tish</h1>
+                  <h1 class="enter-form-header">Kabinetga kirish</h1>
 
-                  <form id="registerForm">
+                  <form id="enterForm">
                     <div class="form-control-wrapper">
-                      <label for="register-name">Ism</label>
+                      <label for="enter-name">Telefon raqam</label>
                       <input
-                        id="register-name"
-                        type="text"
-                        class="form-control"
-                        placeholder="Anvar Anvarov"
-                        required
-                      />
-                      <p class="error"></p>
-                    </div>
-                    <div class="form-control-wrapper">
-                      <label for="register-phone">Telefon raqam</label>
-                      <input
-                        id="register-phone"
+                        id="enter-name"
                         type="tel"
                         class="form-control"
                         placeholder="+998 9x-xxx-xx-xx"
@@ -358,135 +350,39 @@
                       />
                       <p class="error"></p>
                     </div>
-                    <div class="form-control-wrapper form-btn">
-                      <button type="submit">Ro'yxatdan o'tish</button>
-                      <a href="#">Avval ro'yxatdan o'tganmisiz?</a>
+                    <div class="form-control-wrapper">
+                      <label for="enter-password">Parol</label>
+                      <div class="enter-password-wrapper">
+                        <input
+                          id="enter-password"
+                          type="text"
+                          class="form-control"
+                          placeholder="jdsadksakkksds"
+                          required
+                        />
+                        <span class="show-password-eye">
+                          <img
+                            src="/assets/images/form/eye (2).svg"
+                            alt="image"
+                            class="password-eye-icon"
+                          />
+                        </span>
+                      </div>
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-wrapper">
+                      <a href="#">Parolni unutdingizmi?</a>
+                    </div>
+                    <div class="form-control-wrapper enter-form-btn">
+                      <button type="submit">Kirish</button>
                     </div>
                   </form>
                 </div>
-                <!-- Register form end -->
+                <!-- Enter form end -->
                 <!-- ======================================================== -->
-                <!-- Register sms wrapper start -->
-                <div class="register-sms-wrapper" style="display: none">
-                  <div class="container">
-                    <div class="row justify-content-md-center">
-                      <div class="col-md-8 text-center">
-                        <div class="row">
-                          <div class="col-sm-12 bgWhite">
-                            <div class="sms-form-wrapper">
-                              <div class="title">SMS kodni kiriting</div>
 
-                              <form action="" class="mt-4">
-                                <input
-                                  class="otp"
-                                  type="text"
-                                  oninput="digitValidate(this)"
-                                  onkeyup="tabChange(1)"
-                                  maxlength="1"
-                                />
-                                <input
-                                  class="otp"
-                                  type="text"
-                                  oninput="digitValidate(this)"
-                                  onkeyup="tabChange(2)"
-                                  maxlength="1"
-                                />
-                                <input
-                                  class="otp"
-                                  type="text"
-                                  oninput="digitValidate(this)"
-                                  onkeyup="tabChange(3)"
-                                  maxlength="1"
-                                />
-                                <input
-                                  class="otp"
-                                  type="text"
-                                  oninput="digitValidate(this)"
-                                  onkeyup="tabChange(4)"
-                                  maxlength="1"
-                                />
-                              </form>
-                              <p
-                                style="margin-top: 10px"
-                                id="countdown-timer"
-                              ></p>
-                              <p>
-                                3 minutdan so'ng
-                                <span
-                                  id="resendBtn"
-                                  style="
-                                    cursor: pointer;
-                                    color: gray;
-                                    text-decoration: underline;
-                                    cursor: not-allowed;
-                                    margin-left: 5px;
-                                  "
-                                >
-                                  qayta jo'natish
-                                </span>
-                              </p>
-                              <button
-                                class="btn btn-primary btn-block mt-4 mb-4 customBtn"
-                                id="confirm-btn"
-                              >
-                                Tasdiqlash
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Register sms wrapper end -->
                 <!-- ======================================================== -->
-                <div class="password-form" style="display: none">
-                  <form id="password-form">
-                    <div class="form-control-password">
-                      <label for="password">Parolni kiriting</label>
-                      <div class="password-input-wrapper">
-                        <input
-                          id="password"
-                          type="password"
-                          placeholder="Parolni kiriting"
-                          class="form-control"
-                        />
-                        <span class="show-password-eye">
-                          <img
-                            src="/assets/images/form/eye (2).svg"
-                            alt="image"
-                            class="password-eye-icon"
-                          />
-                        </span>
-                      </div>
-                      <p class="error"></p>
-                    </div>
-                    <div class="form-control-password">
-                      <label for="password-2">Parolni qaytaring</label>
-                      <div class="password-input-wrapper">
-                        <input
-                          id="password-2"
-                          type="password"
-                          placeholder="Parolni qaytaring"
-                          class="form-control"
-                        />
-                        <span class="show-password-eye">
-                          <img
-                            src="/assets/images/form/eye (2).svg"
-                            alt="image"
-                            class="password-eye-icon"
-                          />
-                        </span>
-                      </div>
-                      <p class="error"></p>
-                    </div>
-                    <div class="form-control-password">
-                      <button type="submit" id="password-btn">
-                        Tasdiqlash
-                      </button>
-                    </div>
-                  </form>
-                </div>
+
                 <!-- ======================================================== -->
               </div>
             </div>
@@ -523,9 +419,6 @@
     />
     <!-- font-awesome cdn js end -->
 
-    <!-- MAIN CUSTOM JS START -->
     <script src="/assets/js/header.js"></script>
-    <script src="/assets/js/register.js"></script>
-    <!-- MAIN CUSTOM JS END -->
   </body>
 </html>

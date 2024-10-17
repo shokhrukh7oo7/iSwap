@@ -23,3 +23,15 @@ menuItems.forEach((item) => {
 });
 
 // ================================================================================================
+
+document.querySelectorAll('.top-nav .dropdown-menu .dropdown-item img').forEach(function(img) {
+  img.addEventListener('click', function(event) {
+    // Получаем текущий src изображения в button
+    let currentFlag = document.getElementById('current-flag');
+    let currentSrc = currentFlag.src;
+
+    // Меняем местами src изображения в button и нажатого элемента
+    currentFlag.src = event.target.src;
+    event.target.src = currentSrc;
+  });
+});

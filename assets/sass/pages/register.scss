@@ -253,6 +253,13 @@
     }
   }
 }
+@media (max-width: 576px) {
+  #register-wrapper {
+    .register-form-wrapper {
+      margin-top: 80px;
+    }
+  }
+}
 @media (max-width: 366px) {
   #register-wrapper {
     .form-image-1 {

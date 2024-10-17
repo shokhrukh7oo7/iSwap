@@ -222,14 +222,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-
   const passwordEyeIcons = document.querySelectorAll(".show-password-eye");
   passwordEyeIcons.forEach((icon, index) => {
     icon.addEventListener("click", () => {
       const input = index === 0 ? passInput : passInputSecond;
       const passwordEyeIcon = icon.querySelector(".password-eye-icon");
-  
+
       if (input.type === "password") {
         input.type = "text";
         passwordEyeIcon.src = "/assets/images/form/eye-slash.svg";
