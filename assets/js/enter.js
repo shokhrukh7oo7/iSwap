@@ -36,6 +36,29 @@ function handleResendBtnClick() {
   startCountdown(); // Перезапуск обратного отсчета при повторной отправке
 }
 
+function sendAccountActivationSMSCode(phone, resend = false) {
+    if (resend) {
+      phone = JSON.parse(sessionStorage.getItem("auth-phone-number"));
+    }
+    console.log("SMS sent to number: ", phone);
+    // TODO:
+    // SEND ACTUAL CODE THROUGHT SMS
+    try {
+      const URL = ""; // ASK
+      fetch(URL, {
+        method: "POST", // ASK from backend
+        headers: {
+          // ASK if needed
+        },
+        body: JSON.stringify({ phone }),
+      }).then((response) => {
+        console.log(response);
+      });
+    } catch (e) {
+      console.log("Error: ", e);
+    }
+  }
+
 let digitValidate = function (ele) {
   ele.value = ele.value.replace(/[^0-9]/g, "");
 };
@@ -99,3 +122,22 @@ document
     startCountdown(); // Запускаем таймер при показе SMS формы
   });
 // enter sms wrapper js end
+
+document.addEventListener("DOMContentLoaded", () => {
+  const submitBtn = document.getElementById("confirm-btn");
+
+  // Сравнение паролей при нажатии на кнопку
+  submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Проверяем если пароли совпадают и их длина правильная
+    Swal.fire({
+      // icon: 'success',
+      title: "Parolingiz muvaffaqiyatli saqlandi!",
+      imageUrl: "/assets/images/form/check.png", // Укажите путь к вашей иконке
+      imageWidth: 120, // Задайте ширину изображения
+      imageHeight: 120, // Задайте высоту изображения
+      imageAlt: "Custom image", // Альтернативный текст для изображения
+    });
+  });
+});
