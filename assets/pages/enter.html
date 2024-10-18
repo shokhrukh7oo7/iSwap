@@ -332,6 +332,7 @@
             </div>
             <!-- left image end -->
             <div class="container">
+              <!-- enter form start -->
               <div class="enter-form-wrapper">
                 <!-- ======================================================== -->
                 <!-- Enter form start -->
@@ -386,6 +387,121 @@
 
                 <!-- ======================================================== -->
               </div>
+              <!-- enter form end -->
+
+              <!-- recover password form start -->
+              <div class="recover-password" id="recover-password" style="display: none"
+              >
+                <div class="form-wrapper">
+                  <!-- enter recover password header start -->
+                  <div class="recover-password-header-wrapper">
+                    <h1 class="recover-password-header">Parolni tiklash</h1>
+                    <p class="recover-password-description">
+                      Sizning raqamingizga tasdiqlash kodi yuborildi
+                    </p>
+                  </div>
+                  <!-- enter recover password header end -->
+
+                  <!-- recover password form start -->
+                  <form id="recover-password">
+                    <div class="form-control-wrapper">
+                      <label for="recover-phone-number">Telefon raqam</label>
+                      <input
+                        type="tel"
+                        placeholder="+998 9x-xxx-xx-xx"
+                        name="recover-phone-number"
+                        id="recover-phone-number"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-contol recover-password-btn-wrapper">
+                      <button
+                        type="submit"
+                        class="recover-password-btn"
+                        id="recover-password-btn"
+                      >
+                        SMS ni yuborish
+                      </button>
+                    </div>
+                  </form>
+                  <!-- recover password form end -->
+                </div>
+              </div>
+              <!-- recover password form end -->
+
+              <!-- enter sms wrapper start -->
+              <div class="enter-sms-wrapper" id="enter-sms-wrapper" style="display: none;">
+                <div class="container">
+                  <div class="row justify-content-md-center">
+                    <div class="col-md-8 text-center">
+                      <div class="row">
+                        <div class="col-sm-12 bgWhite">
+                          <div class="sms-form-wrapper">
+                            <div class="title">SMS kodni kiriting</div>
+
+                            <form action="" class="mt-4">
+                              <input
+                                class="otp"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(1)"
+                                maxlength="1"
+                              />
+                              <input
+                                class="otp"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(2)"
+                                maxlength="1"
+                              />
+                              <input
+                                class="otp"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(3)"
+                                maxlength="1"
+                              />
+                              <input
+                                class="otp"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(4)"
+                                maxlength="1"
+                              />
+                            </form>
+                            <p
+                              style="margin-top: 10px"
+                              id="countdown-timer"
+                            ></p>
+                            <p>
+                              3 minutdan so'ng
+                              <span
+                                id="resendBtn"
+                                style="
+                                  cursor: pointer;
+                                  color: gray;
+                                  text-decoration: underline;
+                                  cursor: not-allowed;
+                                  margin-left: 5px;
+                                "
+                              >
+                                qayta jo'natish
+                              </span>
+                            </p>
+                            <button
+                              class="btn btn-primary btn-block mt-4 mb-4 customBtn"
+                              id="confirm-btn"
+                            >
+                              Tasdiqlash
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- enter sms wrapper end -->
             </div>
             <!-- right image start -->
             <div class="form-image-2">

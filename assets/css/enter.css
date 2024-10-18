@@ -727,6 +727,114 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 #enter-wrapper .enter-form-wrapper .form-wrapper #enterForm .enter-form-btn button:hover {
   background-color: rgb(0, 140, 238);
 }
+#enter-wrapper .recover-password {
+  display: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#enter-wrapper .recover-password .form-wrapper {
+  width: 100%;
+  max-width: 540px;
+  padding: 40px 40px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+}
+#enter-wrapper .recover-password .form-wrapper .recover-password-header-wrapper {
+  text-align: center;
+}
+#enter-wrapper .recover-password .form-wrapper .recover-password-header-wrapper .recover-password-header {
+  color: rgb(43, 43, 43);
+  font-size: clamp(22px, 4vw, 46px);
+  font-weight: 500;
+}
+#enter-wrapper .recover-password .form-wrapper .recover-password-header-wrapper .recover-password-description {
+  color: rgb(43, 43, 43);
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 400;
+}
+#enter-wrapper .recover-password .form-wrapper form .form-control-wrapper label {
+  margin-left: 15px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+}
+#enter-wrapper .recover-password .form-wrapper form .form-control-wrapper input {
+  height: 57px;
+}
+#enter-wrapper .recover-password .form-wrapper form .recover-password-btn-wrapper {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#enter-wrapper .recover-password .form-wrapper form .recover-password-btn-wrapper button {
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  background-color: rgb(206, 53, 81);
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease;
+  font-size: clamp(14px, 1.8vw, 17px);
+  font-weight: 400;
+}
+#enter-wrapper .recover-password .form-wrapper form .recover-password-btn-wrapper button:hover {
+  background-color: rgb(0, 140, 238);
+}
+#enter-wrapper .enter-sms-wrapper {
+  width: 100%;
+  max-width: 1066px;
+  margin: 0 auto;
+}
+#enter-wrapper .enter-sms-wrapper .bgWhite {
+  background: white;
+  box-shadow: 0px 3px 6px 0px #cacaca;
+  border-radius: 16px;
+}
+#enter-wrapper .enter-sms-wrapper .bgWhite .sms-form-wrapper .title {
+  margin-top: 20px;
+  color: rgb(43, 43, 43);
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 500;
+}
+#enter-wrapper .enter-sms-wrapper .bgWhite .sms-form-wrapper form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: 15px;
+  gap: 10px;
+}
+#enter-wrapper .enter-sms-wrapper .bgWhite .sms-form-wrapper form input {
+  display: inline-block;
+  width: 58px;
+  height: 73px;
+  text-align: center;
+  border-radius: 2px;
+  border: none;
+  background-color: rgba(97, 190, 255, 0.5);
+}
+#enter-wrapper .enter-sms-wrapper .bgWhite .sms-form-wrapper .customBtn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  background-color: rgb(0, 140, 238);
+  color: rgb(255, 255, 255);
+  transition: 0.5s ease;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+#enter-wrapper .enter-sms-wrapper .bgWhite .sms-form-wrapper .customBtn:hover {
+  color: rgb(0, 140, 238);
+  background-color: rgba(97, 190, 255, 0.5);
+}
 #enter-wrapper .form-image-1 {
   position: absolute;
   top: 10%;

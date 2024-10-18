@@ -89,9 +89,7 @@ let tabChange = function (val) {
 //   }
 // });
 // ======================================================================================
-document
-  .getElementById("registerForm")
-  .addEventListener("submit", function (event) {
+document.getElementById("registerForm").addEventListener("submit", function (event) {
     event.preventDefault();
     const name = document.getElementById("register-name").value;
     const phone = document.getElementById("register-phone").value;
