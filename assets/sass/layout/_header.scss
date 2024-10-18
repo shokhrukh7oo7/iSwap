@@ -194,8 +194,19 @@ header#main-header {
       //   Language end
 
       .add-to-cart-wrapper {
+        position: relative;
         img {
           width: 40px;
+        }
+        .cart-count {
+          position: absolute;
+          top: -5px;
+          right: -15px;
+          background-color: $red;
+          border-radius: 12px;
+          padding: 1px 10px;
+          color: $white;
+          @include fontSize(10px, 1.5vw, 14px, 400);
         }
       }
 

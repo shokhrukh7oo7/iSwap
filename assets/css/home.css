@@ -213,8 +213,22 @@ header#main-header nav .top-nav .dropdown .dropdown-menu li .dropdown-item img {
 header#main-header nav .top-nav .dropdown .dropdown-menu.show {
   transform: translate(-15px, 50px) !important;
 }
+header#main-header nav .top-nav .add-to-cart-wrapper {
+  position: relative;
+}
 header#main-header nav .top-nav .add-to-cart-wrapper img {
   width: 40px;
+}
+header#main-header nav .top-nav .add-to-cart-wrapper .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  background-color: rgb(206, 53, 81);
+  border-radius: 12px;
+  padding: 1px 10px;
+  color: rgb(255, 255, 255);
+  font-size: clamp(10px, 1.5vw, 14px);
+  font-weight: 400;
 }
 header#main-header nav .top-nav .enter-wrapper {
   display: flex;
