@@ -66,10 +66,10 @@ togglePassword.addEventListener("click", () => {
   passwrodField.setAttribute("type", type);
 
   // change eye icon
-  this.src =
+  togglePassword.src =
     type === "password"
       ? "/assets/images/form/eye (2).svg"
-      : "/assets/images/form/eye-open.svg";
+      : "/assets/images/form/eye-slash.svg";
 });
 
 // recovery password js start
