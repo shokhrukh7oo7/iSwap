@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -438,6 +439,10 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   transform: translateX(-100%);
   transition: all 0.3s;
 }
+#main-body-content .main-content-wrapper .left-menu .left-menu-item {
+  position: relative;
+  margin-bottom: 10px; /* Отступы между пунктами меню */
+}
 #main-body-content .main-content-wrapper .left-menu .left-menu-item > a {
   color: rgba(43, 43, 43, 0.5);
   padding: 10px;
@@ -456,6 +461,25 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 #main-body-content .main-content-wrapper .left-menu .left-menu-item > a.active img {
   filter: brightness(10);
+}
+#main-body-content .main-content-wrapper .left-menu .left-menu-item .dropdown-menu {
+  max-height: 0; /* Высота скрыта */
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Анимация открытия/закрытия */
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#main-body-content .main-content-wrapper .left-menu .left-menu-item .dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+#main-body-content .main-content-wrapper .left-menu .left-menu-item .dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+#main-body-content .main-content-wrapper .left-menu .left-menu-item.active .dropdown-menu {
+  max-height: 200px;
 }
 #main-body-content .main-content-wrapper .left-menu span:last-child {
   opacity: 0;
