@@ -160,4 +160,30 @@ onlineAssessmentTelInput.addEventListener("input", (e) => {
   }
 });
 // ================================================================================================
+// ================================================================================================
+// NAV-SIDEBAR link dropdown 
+const drpButtons = document.querySelectorAll('.link-dropdown .nav-drp-button')
+drpButtons.forEach(drpButton => {
+  drpButton.addEventListener('click', (e) => {
+    e.stopPropagation()
+    const arrow = drpButton.querySelector('.arrow')
+    const drpContent = drpButton.nextElementSibling
+    const height = drpContent.getAttribute("data-height")
 
+    if (drpContent.classList.contains('show')) {
+      drpContent.classList.remove('show')
+      drpContent.style.maxHeight = '0'
+      arrow.style.transform = 'rotate(0deg)'
+      setTimeout(() => {
+        drpContent.style.display = 'none'
+      }, 500)
+    } else {
+      drpContent.classList.add('show')
+      drpContent.style.display = 'block'
+      arrow.style.transform = 'rotate(90deg)'
+      setTimeout(() => {
+        drpContent.style.maxHeight = height +'px'
+      }, 100)
+    }
+  })
+})
