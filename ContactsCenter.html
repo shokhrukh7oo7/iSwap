@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="pulse-wrapper">
+        <div class="call-center-links" name="links">
+            <div class="links-wrapper">
+                <a href="#">📱</a>
+                <a href="#">📞</a>
+                <a href="#">💬</a>
+            </div>
+            <div class="icon close-icon">
+                &times;
+            </div>
+        </div>
+        <div class="call-center-wrapper" name="center">
+            <div class="icon call-icon">
+                📞
+            </div>
+            <div class="icon message-icon">
+                💬
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const pulseWrapper = document.querySelector('.pulse-wrapper')
+        const callCenterLinks = pulseWrapper.querySelector(".call-center-links")
+        const callCenterWrapper = pulseWrapper.querySelector(".call-center-wrapper")
+        const linksWrapper = callCenterLinks.querySelector(".links-wrapper")
+        const closeIcon = callCenterLinks.querySelector('.close-icon')
+
+        const iconsWrappers = [callCenterLinks, callCenterWrapper]
+        iconsWrappers.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const name = item.getAttribute('name')
+                console.log(name)
+                if (name == 'links') {
+                    pulseWrapper.style.animation = "pulse 1s linear infinite"
+
+                    // callCenterWrapper
+                    callCenterWrapper.style.display = 'flex'
+                    callCenterWrapper.style.opacity = '1'
+                    
+                    // callCenterLinks
+                    callCenterLinks.style.opacity = "0"
+                    linksWrapper.style.maxHeight = "0"
+                    linksWrapper.style.bottom = "0"
+
+                    setTimeout(() => {
+                        callCenterLinks.style.display = 'none'
+                    }, 500)
+                } else {
+                    callCenterWrapper.style.opacity = '0'
+                    callCenterLinks.style.display = 'flex'
+                    pulseWrapper.style.animation = "none"
+                    setTimeout(() => {
+                        linksWrapper.style.maxHeight = "200px"
+                        linksWrapper.style.bottom = "100px"
+                        callCenterLinks.style.opacity = "1"
+                    }, 100)
+                    setTimeout(() => {
+                        callCenterWrapper.style.display = 'none'
+                    }, 500)
+                }
+            })
+        })
+
+    </script>
+</body>
+<style>
+    * {
+        transition: 0.5s linear;
+    }
+
+    :root {
+        --blue: rgb(76, 76, 220);
+        --blue-t: rgb(76, 76, 220, 0.4);
+    }
+
+    body {
+        min-height: 100vh;
+        min-width: 100%;
+    }
+
+    .pulse-wrapper::selection, 
+    .pulse-wrapper *::selection {
+        background-color: transparent;
+    }
+
+    .call-center-links,
+    .pulse-wrapper,
+    .call-center-wrapper {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: var(--blue);
+        outline: 10px solid var(--blue-t);
+        cursor: pointer;
+    }
+
+    .call-center-links {
+        background-color: darkgray;
+        outline: 5px solid lightgray;
+    }
+
+    .pulse-wrapper {
+        animation: pulse 1s linear infinite;
+    }
+
+    .call-center-links .close-icon,
+    .call-center-wrapper>div.icon {
+        position: absolute;
+        font-size: 3em;
+    }
+
+    .call-center-wrapper .call-icon {
+        animation: call 2s linear infinite alternate;
+    }
+
+    .call-center-wrapper .message-icon {
+        animation: message 2s linear infinite alternate;
+    }
+
+    @keyframes call {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes message {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            outline: 0px solid rgb(76, 76, 220, 0.2);
+        }
+
+        25% {
+            outline: 25px solid rgb(76, 76, 220, 0.15);
+        }
+
+        50% {
+            outline: 50px solid rgb(76, 76, 220, 0.10);
+        }
+
+        75% {
+            outline: 75px solid rgb(76, 76, 220, 0.05);
+        }
+
+        100% {
+            outline: 100px solid rgb(0, 0, 0, 0);
+        }
+    }
+
+
+    .call-center-links {
+        display: none;
+    }
+
+    .call-center-links .close-icon {
+        font-family: sans-serif;
+        font-size: 4em;
+        color: snow;
+    }
+
+    .call-center-links .links-wrapper {
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 0;
+    }
+
+    .call-center-links .links-wrapper>a {
+        text-decoration: none;
+        font-size: 2em;
+    }
+</style>
+
+</html>
