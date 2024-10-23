@@ -180,7 +180,7 @@ drpButtons.forEach(drpButton => {
     } else {
       drpContent.classList.add('show')
       drpContent.style.display = 'block'
-      arrow.style.transform = 'rotate(90deg)'
+      arrow.style.transform = 'rotate(180deg)'
       setTimeout(() => {
         drpContent.style.maxHeight = height +'px'
       }, 100)
