@@ -725,6 +725,9 @@ table {
   padding: 0;
   width: 100%;
   table-layout: fixed;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
 }
 
 table caption {
@@ -733,7 +736,7 @@ table caption {
 }
 
 table tr {
-  background-color: #f8f8f8;
+  background-color: #fff;
   border: 1px solid #ddd;
   padding: 0.35em;
 }
@@ -748,6 +751,13 @@ table th {
   font-size: 0.85em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.product-not-found {
+  color: rgb(206, 53, 81);
+  text-decoration: underline;
+  font-size: clamp(12px, 2vw, 17px);
+  font-weight: 500;
 }
 
 @media (max-width: 1200px) {
@@ -772,6 +782,7 @@ table th {
   }
   table {
     border: 0;
+    box-shadow: none;
   }
   table caption {
     font-size: 1.3em;
@@ -790,6 +801,8 @@ table th {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: 0.625em;
+    border-radius: 18px;
+    box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.1);
   }
   table td {
     border-bottom: 1px solid #ddd;
@@ -804,8 +817,9 @@ table th {
       */
     content: attr(data-label);
     float: left;
-    font-weight: bold;
     text-transform: uppercase;
+    font-size: clamp(12px, 2vw, 22px);
+    font-weight: 700;
   }
   table td:last-child {
     border-bottom: 0;
