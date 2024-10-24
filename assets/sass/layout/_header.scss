@@ -477,7 +477,6 @@ header#main-header {
             display: block;
             color: $black;
             padding: 10px 20px 10px 60px;
-            font-family: sans-serif;
             @include fontSize(14px, 1.5vw, 20px);
 
             &::before {
