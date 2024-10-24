@@ -494,25 +494,41 @@
 
     .owl-nav {
       .owl-prev {
-        @include fontSize(14px, 2.5vw, 26px, 500);
         background-color: $red;
         border-radius: 50%;
-        padding: 5px 20px 10px !important;
+        // padding: 5px 20px 10px !important;
         position: absolute;
         color: $white;
         margin-top: 10px;
         left: 0;
+        width: 50px;
+        height: 50px;
+        span {
+          font-size: 60px;
+          position: absolute;
+          top: 33%;
+          left: 48%;
+          transform: translate(-50%, -50%);
+        }
       }
 
       .owl-next {
-        @include fontSize(14px, 2.5vw, 26px, 500);
         background-color: $red;
         border-radius: 50%;
-        padding: 5px 20px 10px !important;
+        // padding: 5px 20px 10px !important;
         position: absolute;
         color: $white;
         margin-top: 10px;
         right: 0;
+        width: 50px;
+        height: 50px;
+        span {
+          font-size: 60px;
+          position: absolute;
+          top: 33%;
+          left: 55%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }
@@ -881,7 +897,6 @@
         .input-wrapper {
           .send-action-wrapper {
             width: 100%;
-
           }
         }
         .sms-action-wrapper {
@@ -907,6 +922,25 @@
 
   .carousel-wrapper {
     padding: 10px 0;
+
+    .owl-carousel {
+      .owl-nav {
+        .owl-prev {
+          span {
+            font-size: 50px;
+            top: 33%;
+            left: 50%;
+          }
+        }
+        .owl-next {
+          span {
+            font-size: 50px;
+            top: 33%;
+            left: 55%;
+          }
+        }
+      }
+    }
   }
 
   .our-preferences-wrapper .our-preferences-item {
