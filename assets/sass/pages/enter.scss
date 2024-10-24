@@ -233,6 +233,9 @@
   }
 }
 @media (max-width: 768px) {
+  #main-body-content .main-content-wrapper .left-menu .left-menu-language {
+    display: block;
+  }
   #main-header {
     nav {
       .container {
@@ -249,5 +252,8 @@
 @media (max-width: 576px) {
   #enter-wrapper {
     margin-top: 80px;
+  }
+  #main-body-content .main-content-wrapper .left-menu .search-wrapper {
+    display: block;
   }
 }

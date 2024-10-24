@@ -244,6 +244,9 @@
   .container {
     padding: 0 15px;
   }
+  #main-body-content .main-content-wrapper .left-menu .left-menu-language {
+    display: block;
+  }
 }
 
 @media (max-width: 658px) {
@@ -258,6 +261,9 @@
     .register-form-wrapper {
       margin-top: 80px;
     }
+  }
+  #main-body-content .main-content-wrapper .left-menu .search-wrapper {
+    display: block;
   }
 }
 @media (max-width: 366px) {

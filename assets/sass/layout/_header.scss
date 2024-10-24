@@ -451,10 +451,10 @@ header#main-header {
 
       .left-menu-item {
         & > a {
-          color: $grey;
+          color: #2B2B2B;
           padding: 10px;
 
-          @include fontSize(14px, 1.5vw, 20px, 400);
+          @include fontSize(14px, 1.5vw, 20px, 500);
           @include flex(row, start, center);
         }
 
@@ -503,6 +503,23 @@ header#main-header {
             }
           }
         }
+        // cabinet partner user menu
+        .user-name-wrapper {
+          padding: 20px 0;
+          .user-name {
+            margin: 0;
+            @include fontSize(18px, 4vw, 26px, 500);
+          }
+          .user-summ {
+            margin: 0;
+            color: $red;
+            @include fontSize(14px, 1.5vw, 18px, 500);
+          }
+        }
+      }
+      .user-menu-item {
+        border-bottom: 1px solid $black;
+        border-top: 1px solid $black;
       }
 
       span:last-child {
