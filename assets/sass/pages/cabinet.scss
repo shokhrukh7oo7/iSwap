@@ -1,5 +1,6 @@
 @import "../global";
 
+// cabinet table start
 .cabinet-table {
   height: 100vh;
   background-color: $blue;
@@ -54,6 +55,84 @@ table th {
   text-decoration: underline;
   @include fontSize(12px, 2vw, 17px, 500);
 }
+// cabinet table end
+
+// cabinet-products start
+.cabinet-products {
+  height: 100vh;
+  background-color: $blue;
+  padding-top: 200px;
+  .card-container {
+    display: flex;
+    gap: 16px;
+  }
+  .card {
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+    padding: 16px 22px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    @include flex(column, space-between, normal);
+  }
+  .card .trade-in {
+    position: absolute;
+    top: 10px;
+    left: -28px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 17px;
+    padding: 4px 25px;
+    transform: rotate(-45deg);
+  }
+  .card .heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ef4444;
+    font-size: 24px;
+    padding: 3px 10px;
+  }
+  .card img {
+    width: 100%;
+    // height: 160px;
+    height: auto;
+    aspect-ratio: 1.5 / 1;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    color: $black;
+    margin: 0 0 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    @include fontSize(15px, 1.8vw, 18px, 500);
+  }
+  .card .price {
+    color: $blue;
+    margin: 8px 0 0 8px;
+    @include fontSize(15px, 2vw, 22px, 700);
+  }
+  .card .installment {
+    border: 1px solid $red;
+    border-radius: 30px;
+    color: $red;
+    margin-top: 8px;
+    width: 100%;
+    @include fontSize(13px, 1.5vw, 15px, 500);
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+  }
+}
+// cabinet-products end
 
 // responsive cabinet
 @media (max-width: 1200px) {
@@ -135,4 +214,10 @@ table th {
   #main-body-content .main-content-wrapper .left-menu .search-wrapper {
     display: block;
   }
+}
+
+@media (min-width: 1400px) {
+  .col-lg-5-custom {
+    width: 20%;
+}
 }
