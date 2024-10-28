@@ -350,6 +350,7 @@
         </div>
 
         <div class="main-content">
+          <!-- CABINET TABLE START -->
           <section
             class="cabinet-table"
             id="cabinet-table"
@@ -422,7 +423,9 @@
               </div>
             </div>
           </section>
+          <!-- CABINET TABLE END -->
 
+          <!-- PRODUCTS CARD START -->
           <section
             class="cabinet-products"
             id="cabinet-products"
@@ -564,8 +567,14 @@
               </div>
             </div>
           </section>
+          <!-- PRODUCTS CARD END -->
 
-          <section class="cabinet-limit" id="cabinet-limit">
+          <!-- LIMIT START -->
+          <section
+            class="cabinet-limit"
+            id="cabinet-limit"
+            style="display: none"
+          >
             <div class="container">
               <div class="cabinet-limit-wrapper">
                 <div class="limit-header-title-wrapper">
@@ -573,7 +582,9 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3">
+                  <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3"
+                  >
                     <div class="card-container">
                       <div class="card-top-image">
                         <img
@@ -600,7 +611,9 @@
                     </div>
                   </div>
 
-                  <div class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3">
+                  <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3"
+                  >
                     <div class="card-container">
                       <div class="card-top-image">
                         <img
@@ -627,7 +640,9 @@
                     </div>
                   </div>
 
-                  <div class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3">
+                  <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3"
+                  >
                     <div class="card-container">
                       <div class="card-top-image">
                         <img
@@ -653,7 +668,9 @@
                     </div>
                   </div>
 
-                  <div class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3">
+                  <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3"
+                  >
                     <div class="card-container">
                       <div class="card-top-image">
                         <img
@@ -679,7 +696,9 @@
                     </div>
                   </div>
 
-                  <div class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3">
+                  <div
+                    class="col-12 col-sm-6 col-lg-4 col-xl-3 col-lg-5-custom mb-3"
+                  >
                     <div class="card-container">
                       <div class="card-top-image">
                         <img
@@ -708,6 +727,132 @@
               </div>
             </div>
           </section>
+          <!-- LIMIT END -->
+
+          <!-- PROFILE SETTING START -->
+          <section class="cabinet-profile-setting" id="cabinet-profile-setting">
+            <div class="container">
+              <div class="cabinet-setting-wrapper">
+                <h1 class="cabinet-setting-header">Profil nastroykasi</h1>
+
+                <div class="cabinet-setting-box">
+                  <div class="cabinet-profile-image-wrapper">
+                    <img src="/assets/images/header/User.svg" alt="image" />
+                    <p class="change-profile-image">Rasmni o'zgartirish</p>
+                  </div>
+                  <div class="cabinet-form-wrapper">
+                    <form id="viewSection">
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="viewFullName">F.I.SH:</label>
+                          <input
+                            type="text"
+                            id="viewFullName"
+                            required
+                            class="form-control"
+                            placeholder="Anvar Anvarov"
+                            name="fullName"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="viewSex">Jins:</label>
+                          <input
+                            type="text"
+                            required
+                            id="viewSex"
+                            class="form-control"
+                            placeholder="Ayol/Erkak"
+                            name="sex"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="viewTel">Telefon raqam:</label>
+                          <input
+                            type="tel"
+                            required
+                            id="viewTel"
+                            class="form-control"
+                            placeholder="+998 93-852-XX-XX"
+                            name="viewTel"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="viewBirthday">Tug'ilgan sana:</label>
+                          <input
+                            type="text"
+                            required
+                            id="viewBirthday"
+                            class="form-control"
+                            placeholder="XX/01/XXXX"
+                            name="birthday"
+                          />
+                        </div>
+                      </div>
+                      <button class="btn-setting" id="editButton">
+                        O'zgartirish
+                      </button>
+                    </form>
+
+                    <form id="editSection" style="display: none">
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="editFullName">F.I.SH:</label>
+                          <input
+                            type="text"
+                            id="editFullName"
+                            required
+                            class="form-control"
+                            placeholder="Anvar Anvarov"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="editSex">Jins:</label>
+                          <input
+                            type="text"
+                            required
+                            id="editSex"
+                            class="form-control"
+                            placeholder="Ayol/Erkak"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="editTel">Telefon raqam:</label>
+                          <input
+                            type="tel"
+                            required
+                            id="editTel"
+                            class="form-control"
+                            placeholder="+998 93-852-XX-XX"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="editBirthday">Tug'ilgan sana:</label>
+                          <input
+                            type="text"
+                            required
+                            id="editBirthday"
+                            class="form-control"
+                            placeholder="XX/01/XXXX"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn-setting"
+                        id="cancelButton"
+                      >
+                        Bekor qilish
+                      </button>
+                      <button type="button" class="btn-setting" id="saveButton">
+                        Saqlash
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- PROFILE SETTING END -->
         </div>
       </div>
     </main>
@@ -737,7 +882,7 @@
 
     <!-- cabinet partner js start -->
     <script src="/assets/js/header.js"></script>
-    <!-- <script src="/assets/js/cabinet.js"></script> -->
+    <script src="/assets/js/cabinet.js"></script>
     <!-- cabinet partner js end -->
   </body>
 </html>

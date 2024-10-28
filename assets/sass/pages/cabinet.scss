@@ -158,8 +158,8 @@ table th {
     border-radius: 30px;
     padding: 60px 30px;
     background-color: $white;
-    .limit-header-title-wrapper{
-      .limit-header-title{
+    .limit-header-title-wrapper {
+      .limit-header-title {
         color: $black;
         margin-bottom: 30px;
         @include fontSize(18px, 4vw, 46px, 500);
@@ -224,6 +224,78 @@ table th {
   }
 }
 // cabinet limit end
+
+// cabinet setting start
+.cabinet-profile-setting {
+  height: 100vh;
+  background-color: $blue;
+  padding: 200px 0 100px;
+  .cabinet-setting-wrapper {
+    background-color: $white;
+    border-radius: 30px;
+    padding: 60px 30px;
+    .cabinet-setting-header {
+      color: $black;
+      margin-bottom: 30px;
+      @include fontSize(18px, 4vw, 46px, 500);
+    }
+    .cabinet-setting-box {
+      height: 100%;
+      background-color: $white;
+      box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+      border-radius: 30px;
+      padding: 60px;
+      .cabinet-profile-image-wrapper {
+        img {
+          width: 100%;
+          max-width: 80px;
+        }
+        .change-profile-image {
+          color: $red;
+          cursor: pointer;
+          @include fontSize(13px, 1.5vw, 16px, 400);
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+      .cabinet-form-wrapper {
+        form {
+          label {
+            color: $grey;
+            @include fontSize(13px, 1.5vw, 16px, 500);
+          }
+          .form-control {
+            border: none;
+            padding: 8px 5px;
+            &:focus {
+              box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+            }
+            &::placeholder {
+              color: $black;
+              @include fontSize(13px, 1.5vw, 16px, 500);
+            }
+            .red-border:focus {
+              border: none;
+            }
+          }
+          .btn-setting {
+            background-color: $red;
+            color: $white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            @include fontSize(13px, 1.5vw, 16px, 400);
+            &:hover {
+              background-color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// cabinet setting end
 
 // responsive cabinet
 @media (max-width: 1200px) {
@@ -328,11 +400,29 @@ table th {
       height: 100%;
     }
   }
+  .cabinet-profile-setting {
+    height: 100%;
+  }
+  .cabinet-profile-setting {
+    .cabinet-setting-wrapper {
+      padding: 50px 20px;
+      .cabinet-setting-box {
+        padding: 40px;
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {
   #main-body-content .main-content-wrapper .left-menu .search-wrapper {
     display: block;
+  }
+  .cabinet-profile-setting {
+    .cabinet-setting-wrapper {
+      .cabinet-setting-box {
+        padding: 40px 20px;
+      }
+    }
   }
 }
 
