@@ -48,6 +48,7 @@ table th {
   font-size: 0.85em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: $grey;
 }
 
 .product-not-found {
@@ -287,6 +288,28 @@ table th {
   z-index: 101;
 }
 // cabinet location end
+
+// cabinet sold products start
+.cabinet-sold {
+  height: 100vh;
+  background-color: $blue;
+  padding: 200px 0 100px;
+  .cabinet-sold-wrapper {
+    border-radius: 30px;
+    padding: 60px 30px;
+    background-color: $white;
+    .cabinet-sold-online-assessment-btn {
+      margin: 20px 0;
+      color: $white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 11px;
+      background-color: $red;
+      @include fontSize(13px, 2vw, 18px, 400);
+    }
+  }
+}
+// cabinet sold products end
 
 // cabinet limit start
 .cabinet-limit {
