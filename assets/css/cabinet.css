@@ -815,6 +815,7 @@ table th {
   color: #ef4444;
   font-size: 24px;
   padding: 3px 10px;
+  cursor: pointer;
 }
 .cabinet-products .card img {
   width: 100%;
@@ -1156,7 +1157,7 @@ table th {
   padding: 8px 5px;
 }
 .cabinet-profile-setting .cabinet-setting-wrapper .cabinet-setting-box .cabinet-form-wrapper form .form-control:focus {
-  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+  box-shadow: none;
 }
 .cabinet-profile-setting .cabinet-setting-wrapper .cabinet-setting-box .cabinet-form-wrapper form .form-control::placeholder {
   color: rgb(43, 43, 43);

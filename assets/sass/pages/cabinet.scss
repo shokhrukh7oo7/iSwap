@@ -107,6 +107,7 @@ table th {
     color: #ef4444;
     font-size: 24px;
     padding: 3px 10px;
+    cursor: pointer;
   }
   .card img {
     width: 100%;
@@ -409,7 +410,7 @@ table th {
             border: none;
             padding: 8px 5px;
             &:focus {
-              box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+              box-shadow: none;
             }
             &::placeholder {
               color: $black;

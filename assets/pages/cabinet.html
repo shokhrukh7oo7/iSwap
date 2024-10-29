@@ -429,7 +429,7 @@
           <section
             class="cabinet-products"
             id="cabinet-products"
-            style="display: none"
+            style="display: none;"
           >
             <div class="container">
               <div class="cabinet-products-wrapper">
@@ -570,7 +570,7 @@
           <!-- PRODUCTS CARD END -->
 
           <!-- LOCATION SECTION START -->
-          <section class="cabinet-location" id="cabinet-location">
+          <section class="cabinet-location" id="cabinet-location" style="display: none">
             <div class="container">
               <div class="cabinet-location-wrapper">
                 <!-- CABINET HEADER START -->
@@ -838,7 +838,7 @@
           <section
             class="cabinet-profile-setting"
             id="cabinet-profile-setting"
-            style="display: none"
+            
           >
             <div class="container">
               <div class="cabinet-setting-wrapper">
@@ -847,7 +847,10 @@
                 <div class="cabinet-setting-box">
                   <div class="cabinet-profile-image-wrapper">
                     <img src="/assets/images/header/User.svg" alt="image" />
-                    <p class="change-profile-image">Rasmni o'zgartirish</p>
+                    <!-- <p class="change-profile-image">Rasmni o'zgartirish</p> -->
+                    <a href="#" class="change-profile-image">
+                      Rasmni o'zgartirish
+                    </a>
                   </div>
                   <div class="cabinet-form-wrapper">
                     <form id="viewSection">
@@ -861,6 +864,7 @@
                             class="form-control"
                             placeholder="Anvar Anvarov"
                             name="fullName"
+                            readonly
                           />
                         </div>
                         <div class="col-12 col-md-6 mb-3">
@@ -872,6 +876,7 @@
                             class="form-control"
                             placeholder="Ayol/Erkak"
                             name="sex"
+                            readonly
                           />
                         </div>
                         <div class="col-12 col-md-6 mb-3">
@@ -883,6 +888,7 @@
                             class="form-control"
                             placeholder="+998 93-852-XX-XX"
                             name="viewTel"
+                            readonly
                           />
                         </div>
                         <div class="col-12 col-md-6 mb-3">
@@ -894,6 +900,7 @@
                             class="form-control"
                             placeholder="XX/01/XXXX"
                             name="birthday"
+                            readonly
                           />
                         </div>
                       </div>
