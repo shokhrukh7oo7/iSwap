@@ -679,11 +679,13 @@
           ></div>
 
           <!-- SOLD PRODUCTS START  -->
-           <section class="cabinet-sold" id="cabinet-sold">
+          <section class="cabinet-sold" id="cabinet-sold" style="display: none">
             <div class="container">
               <div class="cabinet-sold-wrapper">
                 <div class="cabinet-sold-header-wrapper">
-                  <h1 class="cabinet-sold-header-title">Sotilgan mahsulotlarim</h1>
+                  <h1 class="cabinet-sold-header-title">
+                    Sotilgan mahsulotlarim
+                  </h1>
                 </div>
 
                 <div class="cabinet-sold-table">
@@ -750,7 +752,12 @@
                   </table>
                 </div>
 
-                <button class="cabinet-sold-online-assessment-btn" id="cabinet-sold-online-assessment-btn">Online baholash</button>
+                <button
+                  class="cabinet-sold-online-assessment-btn"
+                  id="cabinet-sold-online-assessment-btn"
+                >
+                  Online baholash
+                </button>
 
                 <div class="cabinet-second-sold-tabole">
                   <table>
@@ -765,7 +772,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                       <tr>
+                      <tr>
                         <td data-label="Buyurtma raqamlari">#565854</td>
                         <td data-label="Buyurtma nomi">Iphone 13 Pro</td>
                         <td data-label="Sanasi">14.09.2024</td>
@@ -802,13 +809,13 @@
                         <td data-label="Miqdori">1</td>
                         <td data-label="Holat">O'rta</td>
                         <td data-label="Narx">9 000 000 so'm</td>
-                      </tr> 
+                      </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-           </section>
+          </section>
           <!-- SOLD PRODUCTS END  -->
 
           <!-- LIMIT START -->
@@ -970,6 +977,120 @@
             </div>
           </section>
           <!-- LIMIT END -->
+
+          <!-- GET MONEY START -->
+          <section class="cabinet-get-money" id="get-money">
+            <div class="container">
+              <div class="get-money-wrapper">
+                <!-- get money header start -->
+                <div class="get-money-header-wrapper">
+                  <h1 class="get-money-header-title">Pulni chiqarish</h1>
+                  <p class="view-all-summs">Umumiy: <span>30 000 000</span></p>
+                </div>
+                <!-- get money header end -->
+
+                <!-- get money body start -->
+                <div class="get-money-body-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Buyurtma raqamlari</th>
+                        <th scope="col">Buyurtma nomi</th>
+                        <th scope="col">Sanasi</th>
+                        <th scope="col">Miqdori</th>
+                        <th scope="col">Holat</th>
+                        <th scope="col">Narx</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Buyurtma raqamlari">#565854</td>
+                        <td data-label="Buyurtma nomi">Iphone 13 Pro</td>
+                        <td data-label="Sanasi">14.09.2024</td>
+                        <td data-label="Miqdori">1</td>
+                        <td data-label="Holat">Yangi</td>
+                        <td data-label="Narx">9 000 000 so'm</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="Buyurtma raqamlari">
+                          #564854
+                        </td>
+                        <td data-label="Buyurtma nomi">Samsung S23</td>
+                        <td data-label="Sanasi">15.09.2024</td>
+                        <td data-label="Miqdori">2</td>
+                        <td data-label="Holat">Eski</td>
+                        <td data-label="Narx">9 000 000 so'm</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="Buyurtma raqamlari">
+                          #567854
+                        </td>
+                        <td data-label="Buyurtma nomi">MackBook M1 pro</td>
+                        <td data-label="Sanasi">15.09.2024</td>
+                        <td data-label="Miqdori">1</td>
+                        <td data-label="Holat">O'rta</td>
+                        <td data-label="Narx">9 000 000 so'm</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="Buyurtma raqamlari">
+                          #567854
+                        </td>
+                        <td data-label="Buyurtma nomi">MackBook M1 pro</td>
+                        <td data-label="Sanasi">15.09.2024</td>
+                        <td data-label="Miqdori">1</td>
+                        <td data-label="Holat">O'rta</td>
+                        <td data-label="Narx">9 000 000 so'm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="get-money-body-bottom-wrapper">
+                    <p class="get-money-body-bottom-title">
+                      Ilovadan pul chiqarib olishda 1% lik ustama haqqi mavjud!
+                    </p>
+                    <button class="btn get-money-btn" id="get-money-btn">Shaxsiy kartaga o'tkazish</button>
+                  </div>
+                </div>
+                <!-- get money body end -->
+
+                <!-- transfer money to a card start -->
+                 <div class="transfer-money-to-card-wrapper" style="display: none;">
+                  <form id="transfer-money">
+                    <div class="row">
+                      <div class="col-12 col-md-4 mb-3">
+                        <label for="mfo">MFO:</label>
+                        <input type="text" class="form-control" name="mfo" id="mfo" placeholder="00453" required>
+                      </div>
+                      <div class="col-12 col-md-8 mb-3">
+                        <label for="cardTranzitNumber">Bank kartasi tranzit raqami:</label>
+                        <input type="number" class="form-control" name="cardTranzitNumber" id="cardTranzitNumber" placeholder="2312000080000045022" required>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4 mb-3">
+                        <label for="cardNumber">Karta raqami:</label>
+                        <input type="number" class="form-control" name="cardNumber" id="cardNumber" placeholder="8600492932134611" required>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4 mb-3">
+                        <label for="validityPeriod">Amal qilish muddati:</label>
+                        <input type="text" class="form-control" name="validityPeriod" id="validityPeriod" placeholder="xx/xx/xxxx" required>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-4 mb-3">
+                        <label for="currentMoney">Pul miqdori:</label>
+                        <input type="text" class="form-control" name="currentMoney" id="currentMoney" placeholder="70 000 000 so'm" required>
+                      </div>
+                    </div>
+                    <div class="get-money-body-bottom-wrapper">
+                      <p class="get-money-body-bottom-title">
+                        Ilovadan pul chiqarib olishda 1% lik ustama haqqi mavjud!
+                      </p>
+                      <button class="btn get-confirm-btn" id="get-confirm-btn">Tasdiqlash</button>
+                    </div>
+                  </form>
+                 </div>
+                <!-- transfer money to a card end -->
+              </div>
+            </div>
+          </section>
+          <!-- GET MONEY END -->
 
           <!-- PROFILE SETTING START -->
           <section

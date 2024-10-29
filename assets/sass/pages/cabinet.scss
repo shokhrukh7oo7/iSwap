@@ -298,6 +298,12 @@ table th {
     border-radius: 30px;
     padding: 60px 30px;
     background-color: $white;
+    .cabinet-sold-header-wrapper {
+      .cabinet-sold-header-title {
+        color: $black;
+        @include fontSize(20px, 3vw, 36px, 600);
+      }
+    }
     .cabinet-sold-online-assessment-btn {
       margin: 20px 0;
       color: $white;
@@ -310,6 +316,90 @@ table th {
   }
 }
 // cabinet sold products end
+
+// cabinet get money start
+.cabinet-get-money {
+  height: 100vh;
+  background-color: $blue;
+  padding: 200px 0 100px;
+  .get-money-wrapper {
+    border-radius: 30px;
+    padding: 60px 30px;
+    background-color: $white;
+    .get-money-header-wrapper {
+      margin-bottom: 20px;
+      @include flex(row, space-between, center, wrap);
+      .get-money-header-title {
+        color: $black;
+        margin: 0;
+        @include fontSize(20px, 3vw, 36px, 600);
+      }
+      .view-all-summs {
+        color: $blue;
+        margin: 0;
+        @include fontSize(16px, 2vw, 20px, 400);
+        span {
+          @include fontSize(16px, 2vw, 20px, 700);
+        }
+      }
+    }
+    .get-money-body-wrapper {
+      .get-money-body-bottom-wrapper {
+        margin: 30px 0;
+        @include flex(column, end, end);
+        .get-money-body-bottom-title {
+          color: $grey;
+          margin: 0;
+          @include fontSize(13px, 2vw, 20px, 400);
+        }
+        .get-money-btn {
+          color: $white;
+          padding: 10px 20px;
+          background-color: $red;
+          @include fontSize(13px, 2vw, 16px, 400);
+          transition: 0.3s ease-in;
+          &:hover {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+    .transfer-money-to-card-wrapper {
+      form {
+        label {
+          color: $black;
+          padding-left: 10px;
+          @include fontSize(13px, 1.5vw, 16px, 500);
+        }
+        input {
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        .get-money-body-bottom-wrapper {
+          margin: 30px 0;
+          @include flex(column, end, end);
+          .get-money-body-bottom-title {
+            color: $grey;
+            margin: 0;
+            @include fontSize(13px, 2vw, 20px, 400);
+          }
+          .get-confirm-btn {
+            color: $white;
+            padding: 10px 20px;
+            background-color: $red;
+            @include fontSize(13px, 2vw, 16px, 400);
+            transition: 0.3s ease-in;
+            &:hover {
+              background-color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// cabinet get money end
 
 // cabinet limit start
 .cabinet-limit {
@@ -579,6 +669,12 @@ table th {
     .cabinet-location-wrapper {
       padding: 40px 40px;
     }
+  }
+  .cabinet-sold {
+    height: 100%;
+  }
+  .cabinet-get-money {
+    height: 100%;
   }
 }
 

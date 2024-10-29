@@ -163,3 +163,15 @@ saveButton.addEventListener("click", () => {
   });
 });
 // CABINET SETTINGS CUSTOM JS END
+
+// TRANSFER MONEY TO A PERSONAL CARD JS START
+const transferMoneyBtn = document.getElementById('get-money-btn');
+const sectionTable = document.querySelector(".get-money-body-wrapper");
+const formTransfer = document.querySelector(".transfer-money-to-card-wrapper");
+const confirmBtn = document.getElementById("get-confirm-btn");
+
+transferMoneyBtn.addEventListener("click", () => {
+    sectionTable.style.display = "none";
+    formTransfer.style.display = "block";
+})
+// TRANSFER MONEY TO A PERSONAL CARD JS END
