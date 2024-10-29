@@ -569,6 +569,111 @@
           </section>
           <!-- PRODUCTS CARD END -->
 
+          <!-- LOCATION SECTION START -->
+          <section class="cabinet-location" id="cabinet-location">
+            <div class="container">
+              <div class="cabinet-location-wrapper">
+                <!-- CABINET HEADER START -->
+                <div class="cabinet-header-wrapper">
+                  <div class="cabinet-header-box">
+                    <h1 class="cabinet-header-title">Manzillarim</h1>
+                    <a href="#" class="location-not-found"
+                      >Sizda faol manzillar yo'q</a
+                    >
+                  </div>
+                  <button class="addBtn location-btn" id="addBtn">
+                    Manzil qo'shish
+                  </button>
+                </div>
+                <!-- CABINET HEADER END -->
+
+                <!-- CABINET BODY START -->
+                <div class="cabinet-body-wrapper">
+                  <!-- <div class="item">
+                    <div class="item-info">
+                      <span>Toshkent, shaxar,</span>
+                      <span>Yunusobod tumani,</span>
+                      <span>Mahalla</span>
+                    </div>
+
+                    <div class="item-delete-change-wrapper">
+                      <button class="btn change-btn" id="change-btn">
+                        <img src="/assets/images/cabinet-menu/Pencil.svg" alt="image">
+                      </button>
+                      <button class="btn delete-btn" id="delete-btn">
+                        <img src="/assets/images/cabinet-menu/Korzina.svg" alt="image">
+                      </button>
+                    </div>
+                  </div> -->
+                </div>
+                <!-- CABINET BODY END -->
+
+                <!-- MOADL START -->
+                <div class="location-modal location-hidden" id="location-modal">
+                  <!-- MODAL HEADER -->
+                  <div class="modal-header">
+                    <h3>Manzil qo'shish</h3>
+                    <button
+                      class="btn location-close-btn"
+                      id="location-close-btbn"
+                    >
+                      <i class="fas fa-close"></i>
+                    </button>
+                  </div>
+                  <!-- MODAL BODY -->
+                  <div class="location-modal-body">
+                    <form>
+                      <div class="location-item">
+                        <label for="viewRegion">Viloyat</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="viewRegion"
+                          name="viewRegion"
+                          required
+                          placeholder="Toshkent shahar"
+                        />
+                      </div>
+                      <div class="location-item">
+                        <label for="viewCity">Shahar / Tuman</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="viewCity"
+                          name="viewCity"
+                          required
+                          placeholder="Yunusobod tumani"
+                        />
+                      </div>
+                      <div class="location-item">
+                        <label for="viewAddress">Manzil</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="viewAddress"
+                          name="viewAddress"
+                          required
+                          placeholder="Mahalla, uy"
+                        />
+                      </div>
+                      <button class="btn save-btn" id="save-btn">
+                        Saqlash
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <!-- MOADL END -->
+              </div>
+            </div>
+          </section>
+          <!-- LOCATION SECTION END -->
+
+          <!-- OVERLAY -->
+          <div
+            class="location-overlay location-hidden"
+            id="location-overlay"
+          ></div>
+
           <!-- LIMIT START -->
           <section
             class="cabinet-limit"
@@ -730,7 +835,11 @@
           <!-- LIMIT END -->
 
           <!-- PROFILE SETTING START -->
-          <section class="cabinet-profile-setting" id="cabinet-profile-setting">
+          <section
+            class="cabinet-profile-setting"
+            id="cabinet-profile-setting"
+            style="display: none"
+          >
             <div class="container">
               <div class="cabinet-setting-wrapper">
                 <h1 class="cabinet-setting-header">Profil nastroykasi</h1>
