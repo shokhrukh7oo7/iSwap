@@ -1295,8 +1295,9 @@
                     />
                   </button>
                 </div>
-                <!-- Cabinet report header  -->
+                <!-- Cabinet report header end -->
 
+                <!-- Cabinet report table start -->
                 <div class="cabinet-report-filter-wrapper">
                   <div class="row">
                     <div class="col-12 col-sm-6 col-lg-4 mb-3">
@@ -1322,22 +1323,74 @@
                   <div class="cabinet-report-table-wrapper">
                     <div class="report-table-item">
                       <p class="report-table-data">7-sentabr, 2024</p>
-                      <p class="report-table-summ report-table-green-summ">+30 000 000 so'm</p>
+                      <p class="report-table-summ report-table-green-summ">
+                        +30 000 000 so'm
+                      </p>
                     </div>
                     <div class="report-table-item">
                       <p class="report-table-data">2-sentabr, 2024</p>
-                      <p class="report-table-summ report-table-red-summ">-2 000 000 so'm</p>
+                      <p class="report-table-summ report-table-red-summ">
+                        -2 000 000 so'm
+                      </p>
                     </div>
                     <div class="report-table-item">
                       <p class="report-table-data">2-sentabr, 2024</p>
-                      <p class="report-table-summ report-table-red-summ">-8 000 000 so'm</p>
+                      <p class="report-table-summ report-table-red-summ">
+                        -8 000 000 so'm
+                      </p>
                     </div>
                   </div>
                 </div>
+                <!-- Cabinet report table end -->
+
+                <!-- Cabinet report filter modal start -->
+                <div class="cabinet-report-filtr-modal report-filter-hidden">
+                  <!-- filtr modal header start -->
+                  <div class="cabinet-report-filtr-modal-header">
+                    <button class="btn filtr-btn" id="filtr-btn">
+                      <img
+                        src="/assets/images/cabinet-menu/Arrow.svg"
+                        alt="image"
+                      />
+                    </button>
+                    <p class="filtr-modal-header-title">Filtr</p>
+                    <button class="btn filtr-btn" id="filtr-btn">
+                      <img
+                        src="/assets/images/cabinet-menu/filtr.svg"
+                        alt="image"
+                      />
+                    </button>
+                  </div>
+
+                  <div class="cabinet-report-filtr-modal-body">
+                    <div class="cabinet-to-from">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="to-from-wrapper">
+                            <label for="to-from-title" class="to-from-title">Dan:</label>
+                            <input type="text" class="to-from-date form-control" id="to-from-title" placeholder="sen 01, 2024">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="to-from-wrapper">
+                            <label for="to-from-title-from" class="to-from-title">Gacha:</label>
+                            <input type="text" class="to-from-date form-control" id="to-from-title-from" placeholder="sen 30, 2024">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- filtr modal header end -->
+                </div>
+                <!-- Cabinet report filter modal end -->
               </div>
             </div>
           </section>
           <!-- REPORT END -->
+
+          <!-- REPORT overlay START -->
+          <div class="report-filter-hidden" id="report-filtr-overlay"></div>
+          <!-- REPORT overlay END -->
         </div>
       </div>
     </main>

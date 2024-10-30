@@ -560,6 +560,8 @@ table th {
     background-color: $white;
     border-radius: 30px;
     padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
     .cabinet-report-header-wrapper {
       margin-bottom: 30px;
       @include flex(row, space-between, center, wrap);
@@ -636,6 +638,49 @@ table th {
         }
         .report-table-item:last-child {
           border-bottom: none;
+        }
+      }
+    }
+    .cabinet-report-filtr-modal {
+      background-color: $white;
+      border-radius: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50.5%;
+      height: 100%;
+      padding: 60px 30px;
+      transform: translateX(100%);
+      z-index: 102;
+      .cabinet-report-filtr-modal-header {
+        @include flex(row, space-between, center);
+        .filtr-btn {
+          img {
+            width: 25px;
+          }
+          &:active {
+            border: none;
+          }
+        }
+      }
+      .cabinet-report-filtr-modal-body {
+        margin-top: 10px;
+        .cabinet-to-from {
+          .to-from-wrapper {
+            .to-from-title {
+              color: $grey;
+              padding: 0 15px;
+              margin: 0;
+              @include fontSize(12px, 1.5vw, 17px, 400);
+            }
+            .to-from-date {
+              color: $black;
+              border-radius: 8px;
+              padding: 10px 15px;
+              box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
+              @include fontSize(12px, 1.5vw, 17px, 400);
+            }
+          }
         }
       }
     }
@@ -805,6 +850,9 @@ table th {
             padding: 15px 12px;
           }
         }
+      }
+      .cabinet-report-filtr-modal {
+        width: 100%;
       }
     }
   }

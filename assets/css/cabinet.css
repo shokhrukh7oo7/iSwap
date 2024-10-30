@@ -1313,6 +1313,8 @@ table th {
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
   padding: 60px 30px;
+  position: relative;
+  overflow: hidden;
 }
 .cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper {
   margin-bottom: 30px;
@@ -1406,6 +1408,50 @@ table th {
 }
 .cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item:last-child {
   border-bottom: none;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50.5%;
+  height: 100%;
+  padding: 60px 30px;
+  transform: translateX(100%);
+  z-index: 102;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-header .filtr-btn img {
+  width: 25px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-header .filtr-btn:active {
+  border: none;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-body {
+  margin-top: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-body .cabinet-to-from .to-from-wrapper .to-from-title {
+  color: rgba(43, 43, 43, 0.5);
+  padding: 0 15px;
+  margin: 0;
+  font-size: clamp(12px, 1.5vw, 17px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-body .cabinet-to-from .to-from-wrapper .to-from-date {
+  color: rgb(43, 43, 43);
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
+  font-size: clamp(12px, 1.5vw, 17px);
+  font-weight: 400;
 }
 
 @media (max-width: 1200px) {
@@ -1538,6 +1584,9 @@ table th {
   }
   .cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item {
     padding: 15px 12px;
+  }
+  .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal {
+    width: 100%;
   }
 }
 @media (min-width: 1400px) {

@@ -185,3 +185,30 @@ transferMoneyBtn.addEventListener("click", () => {
   formTransfer.style.display = "block";
 });
 // TRANSFER MONEY TO A PERSONAL CARD JS END
+
+// REPORT SECTION FILTER MODAL JS START
+const filtrOpenBtn = document.getElementById("cabinet-report-filter-btn");
+const filtrModal = document.querySelector(".cabinet-report-filtr-modal");
+const filtrCloseBtn = document.querySelectorAll(".filtr-btn");
+
+filtrOpenBtn.addEventListener("click", () => {
+  locOverlay.classList.remove("location-hidden");
+  filtrModal.style.transform = "translateX(0%)";
+});
+
+filtrCloseBtn.forEach((i) => {
+  i.addEventListener("click", () => {
+    locOverlay.classList.add("location-hidden");
+    filtrModal.style.transform = "translateX(100%)";
+  });
+});
+locOverlay.addEventListener("click", () => {
+  filtrModal.style.transform = "translateX(100%)";
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Escape") {
+    filtrModal.style.transform = "translateX(100%)";
+  }
+});
+// REPORT SECTION FILTER MODAL JS END
