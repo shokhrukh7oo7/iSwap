@@ -1304,6 +1304,110 @@ table th {
   background-color: rgb(0, 140, 238);
 }
 
+.cabinet-report {
+  height: 100vh;
+  background-color: rgb(0, 140, 238);
+  padding: 200px 0 100px;
+}
+.cabinet-report .cabinet-report-wrapper {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 60px 30px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper .cabinet-report-header-title {
+  color: rgb(43, 43, 43);
+  margin: 0;
+  font-size: clamp(18px, 4vw, 46px);
+  font-weight: 500;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper .cabinet-date {
+  color: rgb(43, 43, 43);
+  margin: 0;
+  font-size: clamp(12px, 2vw, 20px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper .cabinet-report-filtr-btn img {
+  width: 30px;
+  height: 30px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper .cabinet-report-filtr-btn:active {
+  border: none;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .report-in-title {
+  color: rgb(43, 43, 43);
+  padding: 0 0 0 20px;
+  margin-bottom: 5px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .report-in-summ {
+  padding: 15px 0 15px 20px;
+  border-radius: 8px;
+  margin: 0;
+  box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
+  color: rgb(43, 43, 43);
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .report-in-green {
+  color: rgb(0, 238, 52);
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .report-in-red {
+  color: rgb(206, 53, 81);
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .report-in-black {
+  color: rgb(43, 43, 43);
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper {
+  border-radius: 8px;
+  margin-top: 50px;
+  box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item {
+  padding: 15px 25px;
+  border-bottom: 1px solid rgba(34, 60, 80, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item .report-table-data {
+  margin: 0;
+  color: rgb(43, 43, 43);
+  font-size: clamp(12px, 2vw, 20px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item .report-table-summ {
+  margin: 0;
+  color: rgb(43, 43, 43);
+  font-size: clamp(12px, 2vw, 20px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item .report-table-green-summ {
+  color: rgb(0, 238, 52);
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 600;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item .report-table-red-summ {
+  color: rgb(206, 53, 81);
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 600;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item:last-child {
+  border-bottom: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 70px;
@@ -1407,6 +1511,9 @@ table th {
   .cabinet-get-money {
     height: 100%;
   }
+  .cabinet-report {
+    height: 100%;
+  }
 }
 @media (max-width: 576px) {
   #main-body-content .main-content-wrapper .left-menu .search-wrapper {
@@ -1428,6 +1535,9 @@ table th {
     align-items: center;
     flex-wrap: nowrap;
     gap: 10px;
+  }
+  .cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper .cabinet-report-table-wrapper .report-table-item {
+    padding: 15px 12px;
   }
 }
 @media (min-width: 1400px) {
