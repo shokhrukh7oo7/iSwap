@@ -80,7 +80,9 @@ saveBtn.addEventListener("click", (e) => {
     cabinetBodyWrapper.appendChild(item);
 
     // Add event listeners for change and delete buttons
-    item.querySelector(".change-btn").addEventListener("click", () => openEditModal(item));
+    item
+      .querySelector(".change-btn")
+      .addEventListener("click", () => openEditModal(item));
     item.querySelector(".delete-btn").addEventListener("click", () => {
       item.remove();
       updateLocationNotFound(); // Update status after deletion
@@ -102,7 +104,6 @@ function openEditModal(item) {
 
   removeLocHidden();
 }
-
 // CABINET LOCATION CUSTOM JS END
 
 // CABINET SETTINGS CUSTOM JS START
@@ -124,7 +125,7 @@ const editSex = document.getElementById("editSex");
 const editTel = document.getElementById("editTel");
 const editBirthday = document.getElementById("editBirthday");
 
-const inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll("#editSection input");
 // Переход в режим редактирования
 editButton.addEventListener("click", () => {
   inputs.forEach((input) => {
@@ -151,6 +152,15 @@ cancelButton.addEventListener("click", () => {
 
 // Сохранение изменений
 saveButton.addEventListener("click", () => {
+  Swal.fire({
+    position: "center",
+    title: "Muvaffaqiyatli saqlandi!",
+    showConfirmButton: false,
+    imageUrl: "/assets/images/form/check.png", // Укажите путь к вашей иконке
+    imageWidth: 120, // Задайте ширину изображения
+    imageHeight: 120, // Задайте высоту изображения
+    timer: 1231500,
+  });
   viewFullName.value = editFullName.value;
   viewSex.value = editSex.value;
   viewTel.value = editTel.value;
@@ -165,13 +175,13 @@ saveButton.addEventListener("click", () => {
 // CABINET SETTINGS CUSTOM JS END
 
 // TRANSFER MONEY TO A PERSONAL CARD JS START
-const transferMoneyBtn = document.getElementById('get-money-btn');
+const transferMoneyBtn = document.getElementById("get-money-btn");
 const sectionTable = document.querySelector(".get-money-body-wrapper");
 const formTransfer = document.querySelector(".transfer-money-to-card-wrapper");
 const confirmBtn = document.getElementById("get-confirm-btn");
 
 transferMoneyBtn.addEventListener("click", () => {
-    sectionTable.style.display = "none";
-    formTransfer.style.display = "block";
-})
+  sectionTable.style.display = "none";
+  formTransfer.style.display = "block";
+});
 // TRANSFER MONEY TO A PERSONAL CARD JS END
