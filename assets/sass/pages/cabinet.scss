@@ -679,12 +679,13 @@ table th {
               margin: 0;
               @include fontSize(12px, 1.5vw, 17px, 400);
             }
-            .to-from-date {
-              color: $black;
-              border-radius: 8px;
-              padding: 10px 15px;
-              box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
+            .form-select {
               @include fontSize(12px, 1.5vw, 17px, 400);
+              &:focus {
+                border-color: #86b7fe;
+                outline: 0;
+                box-shadow: none;
+              }
             }
           }
         }

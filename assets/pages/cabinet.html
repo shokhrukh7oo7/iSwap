@@ -1364,37 +1364,35 @@
                   <!-- filtr modal header end -->
 
                   <!-- filtr modal body start -->
-                  <div
-                    class="cabinet-report-filtr-modal-body"
-                  >
+                  <div class="cabinet-report-filtr-modal-body">
                     <div class="cabinet-to-from">
                       <div class="row">
                         <div class="col-6">
                           <div class="to-from-wrapper">
-                            <label for="to-from-title" class="to-from-title"
-                              >Dan:
-                            </label>
-                            <input
-                              type="text"
-                              class="to-from-date form-control"
-                              id="to-from-title"
-                              placeholder="sen 01, 2024"
-                            />
+                            <p class="to-from-title">Dan:</p>
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Sen 01, 2024</option>
+                              <option value="1">Okt 01, 2024</option>
+                              <option value="2">Noy 01, 2024</option>
+                              <option value="3">Dek 01, 2024</option>
+                            </select>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="to-from-wrapper">
-                            <label
-                              for="to-from-title-from"
-                              class="to-from-title"
-                              >Gacha:
-                            </label>
-                            <input
-                              type="text"
-                              class="to-from-date form-control"
-                              id="to-from-title-from"
-                              placeholder="sen 30, 2024"
-                            />
+                            <p class="to-from-title">Gacha:</p>
+                            <select
+                              class="form-select"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Sen 30, 2024</option>
+                              <option value="1">Okt 30, 2024</option>
+                              <option value="2">Noy 30, 2024</option>
+                              <option value="3">Dek 30, 2024</option>
+                            </select>
                           </div>
                         </div>
                       </div>
@@ -1569,7 +1567,10 @@
                   <!-- filtr modal body end -->
 
                   <!-- filtr modal not found start -->
-                  <div class="cabinet-report-filtr-modal-not-found" style="display: none">
+                  <div
+                    class="cabinet-report-filtr-modal-not-found"
+                    style="display: none"
+                  >
                     <img
                       src="/assets/images/cabinet-menu/cry-image.png"
                       alt="image"
