@@ -774,6 +774,25 @@ table th {
           }
         }
       }
+      .cabinet-report-filtr-modal-not-found {
+        @include flex(column, center, center);
+        img {
+          width: 100%;
+          max-width: 250px;
+        }
+        .filtr-modal-not-found-title {
+          @include fontSize(13px, 1.5vw, 18px, 400);
+        }
+        .filtr-btn-wrapper {
+          @include flex(row, end, end);
+          .filtr-btn {
+            color: $white;
+            padding: 10px 30px;
+            background-color: $red;
+            @include fontSize(13px, 1.5vw, 17px, 400);
+          }
+        }
+      }
     }
   }
 }
@@ -812,6 +831,10 @@ table th {
             max-height: 400px;
           }
         }
+      }
+      .cabinet-report-filtr-modal-not-found {
+        margin-top: 50px;
+        @include flex(column, center, center);
       }
     }
   }
@@ -960,6 +983,10 @@ table th {
           .accordion {
             max-height: 430px;
           }
+        }
+        .cabinet-report-filtr-modal-not-found {
+          margin-top: 80px;
+          @include flex(column, center, center);
         }
       }
     }

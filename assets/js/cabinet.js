@@ -190,7 +190,22 @@ transferMoneyBtn.addEventListener("click", () => {
 const filtrOpenBtn = document.getElementById("cabinet-report-filter-btn");
 const filtrModal = document.querySelector(".cabinet-report-filtr-modal");
 const filtrCloseBtn = document.querySelectorAll(".filtr-btn");
+const filtrNextBtn = document.getElementById("filter-next-btn");
+const filtrModalBody = document.querySelector(".cabinet-report-filtr-modal-body");
 
+const filtrNotFound = document.querySelector(".cabinet-report-filtr-modal-not-found");
+const filtrBackBtn = document.getElementById("filter-back-btn");
+
+filtrNextBtn.addEventListener("click", () => {
+  filtrNotFound.style.display = "flex";
+  filtrModalBody.style.display = "none";
+})
+filtrBackBtn.addEventListener("click", () => {
+  filtrNotFound.style.display = "none";
+  filtrModalBody.style.display = "block";
+})
+
+// ==============================================
 filtrOpenBtn.addEventListener("click", () => {
   locOverlay.classList.remove("location-hidden");
   filtrModal.style.transform = "translateX(0%)";
@@ -211,4 +226,5 @@ document.addEventListener("keydown", (e) => {
     filtrModal.style.transform = "translateX(100%)";
   }
 });
+
 // REPORT SECTION FILTER MODAL JS END

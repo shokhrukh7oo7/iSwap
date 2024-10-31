@@ -1549,6 +1549,37 @@ table th {
   font-size: clamp(13px, 1.5vw, 17px);
   font-weight: 400;
 }
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-not-found img {
+  width: 100%;
+  max-width: 250px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-not-found .filtr-modal-not-found-title {
+  font-size: clamp(13px, 1.5vw, 18px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-not-found .filtr-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-not-found .filtr-btn-wrapper .filtr-btn {
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  background-color: rgb(206, 53, 81);
+  font-size: clamp(13px, 1.5vw, 17px);
+  font-weight: 400;
+}
 
 @media (max-width: 1200px) {
   .container {
@@ -1570,6 +1601,15 @@ table th {
   }
   .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-body .accordion {
     max-height: 400px;
+  }
+  .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal-not-found {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1689,6 +1729,15 @@ table th {
   }
   .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-body .accordion {
     max-height: 430px;
+  }
+  .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-not-found {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 }
 @media (min-width: 1400px) {
