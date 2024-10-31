@@ -652,6 +652,12 @@ table th {
       padding: 60px 30px;
       transform: translateX(100%);
       z-index: 102;
+      overflow-x: auto;
+      white-space: nowrap;
+      &::-webkit-scrollbar {
+        height: 2px; /* высота горизонтального скроллбара */
+        width: 0;
+      }
       .cabinet-report-filtr-modal-header {
         @include flex(row, space-between, center);
         .filtr-btn {
@@ -684,25 +690,6 @@ table th {
         }
         .accordion {
           margin: 10px 0;
-          max-height: 360px; /* Adjust this height as needed */
-          overflow-y: auto;
-          &::-webkit-scrollbar {
-            width: 8px; /* Ширина скроллбара */
-          }
-
-          &::-webkit-scrollbar-track {
-            background: #f4f4f4; /* Цвет фона трека скроллбара */
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background-color: $grey; /* Цвет ползунка */
-            border-radius: 10px; /* Радиус скругления */
-            border: 2px solid #f1f1f1; /* Цвет обводки ползунка */
-          }
-
-          &::-webkit-scrollbar-thumb:hover {
-            background-color: #555; /* Цвет ползунка при наведении */
-          }
           .accordion-item {
             &:last-child {
               margin-bottom: 20px;
@@ -775,6 +762,15 @@ table th {
                 @include fontSize(13px, 1.5vw, 16px, 400);
               }
             }
+          }
+        }
+        .filtr-btn-wrapper {
+          @include flex(row, end, end);
+          .filtr-btn {
+            color: $white;
+            padding: 10px 30px;
+            background-color: $red;
+            @include fontSize(13px, 1.5vw, 17px, 400);
           }
         }
       }
