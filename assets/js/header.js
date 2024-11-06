@@ -21,75 +21,40 @@ menuItems.forEach((item) => {
 });
 
 // ================================================================================================
-
-document
-  .querySelectorAll(".top-nav .dropdown-menu .dropdown-item img")
-  .forEach(function (img) {
-    img.addEventListener("click", function (event) {
-      // Получаем текущий src изображения в button
-      let currentFlag = document.getElementById("current-flag");
-      let currentSrc = currentFlag.src;
-
-      // Меняем местами src изображения в button и нажатого элемента
-      currentFlag.src = event.target.src;
-      event.target.src = currentSrc;
-    });
-  });
-
-// ============================================================================================
-
-// ============================================================================================
 document.addEventListener("DOMContentLoaded", function () {
   // Плавный скролл при клике на элементы меню
   document.querySelectorAll(".bottom-nav-items li a").forEach((anchor) => {
       anchor.addEventListener("click", function (event) {
           event.preventDefault();
           const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
 
-          // Проверяем, что targetId не является "#" перед выполнением querySelector
-          if (targetId !== "#" && targetId !== "") {
-              const targetElement = document.querySelector(targetId);
-
-              if (targetElement) {
-                  window.scrollTo({
-                      top: targetElement.offsetTop - 150,
-                      behavior: "smooth",
-                  });
-              }
+          if (targetElement) {
+              window.scrollTo({
+                  top: targetElement.offsetTop - 150,
+                  behavior: "smooth",
+              });
           }
       });
   });
 
-  // Получаем кнопку dropdown и меню
+  // Изменение текста кнопки dropdown и плавная прокрутка при выборе элемента из dropdown
   const dropdownButton = document.getElementById("dropdownMenuButton");
-  const dropdownMenu = document.getElementById("dropdownMenu");
+  document.querySelectorAll(".dropdown-menu .dropdown-item").forEach((item) => {
+      item.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
 
-  if (dropdownMenu && dropdownButton) { // Проверка, что элемент существует
-      // Используем делегирование событий для динамических элементов
-      dropdownMenu.addEventListener("click", function (event) {
-          // Проверка, был ли клик на элементе с классом dropdown-item
-          if (event.target && event.target.classList.contains("dropdown-item")) {
-              event.preventDefault();
-              
-              const targetId = event.target.getAttribute("href");
+          // Изменение текста кнопки dropdown на текст выбранного элемента
+          dropdownButton.textContent = this.textContent;
 
-              // Проверяем, что targetId не является "#" перед выполнением querySelector
-              if (targetId !== "#" && targetId !== "") {
-                  const targetElement = document.querySelector(targetId);
-
-                  // Изменение текста кнопки dropdown на выбранный элемент
-                  dropdownButton.textContent = event.target.textContent;
-
-                  // Перемещаемся к выбранному элементу, только если href не равно "#"
-                  window.scrollTo({
-                      top: targetElement.offsetTop - 150,
-                      behavior: "smooth",
-                  });
-              } else {
-                  // Если targetId "#", просто меняем текст на выбранный пункт
-                  dropdownButton.textContent = event.target.textContent;
-              }
+          if (targetElement) {
+              window.scrollTo({
+                  top: targetElement.offsetTop - 150,
+                  behavior: "smooth",
+              });
           }
       });
-  }
+  });
 });
