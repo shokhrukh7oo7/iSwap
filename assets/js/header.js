@@ -22,14 +22,35 @@ menuItems.forEach((item) => {
 
 // ================================================================================================
 
-document.querySelectorAll('.top-nav .dropdown-menu .dropdown-item img').forEach(function(img) {
-  img.addEventListener('click', function(event) {
-    // Получаем текущий src изображения в button
-    let currentFlag = document.getElementById('current-flag');
-    let currentSrc = currentFlag.src;
+document
+  .querySelectorAll(".top-nav .dropdown-menu .dropdown-item img")
+  .forEach(function (img) {
+    img.addEventListener("click", function (event) {
+      // Получаем текущий src изображения в button
+      let currentFlag = document.getElementById("current-flag");
+      let currentSrc = currentFlag.src;
 
-    // Меняем местами src изображения в button и нажатого элемента
-    currentFlag.src = event.target.src;
-    event.target.src = currentSrc;
+      // Меняем местами src изображения в button и нажатого элемента
+      currentFlag.src = event.target.src;
+      event.target.src = currentSrc;
+    });
+  });
+
+// ============================================================================================
+document.addEventListener("DOMContentLoaded", function () {
+  // Плавный скролл при клике на элементы меню
+  document.querySelectorAll(".bottom-nav-items li a").forEach((anchor) => {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 150,
+          behavior: "smooth",
+        });
+      }
+    });
   });
 });

@@ -1,3 +1,33 @@
+// CABINET HEADER AND SIDEBAR JS START
+// ASIDE MENU LEFT ACTIVE
+const menuItems = document.querySelectorAll(".left-menu-item a");
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    menuItems.forEach((l) => {
+      l.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+  });
+});
+
+// ================================================================================================
+
+document.querySelectorAll('.top-nav .dropdown-menu .dropdown-item img').forEach(function(img) {
+  img.addEventListener('click', function(event) {
+    // Получаем текущий src изображения в button
+    let currentFlag = document.getElementById('current-flag');
+    let currentSrc = currentFlag.src;
+
+    // Меняем местами src изображения в button и нажатого элемента
+    currentFlag.src = event.target.src;
+    event.target.src = currentSrc;
+  });
+});
+// CABINET HEADER AND SIDEBAR JS END
+
+// ================================================================================================
+
 // CABINET LOCATION CUSTOM JS START
 const locShowBtn = document.getElementById("addBtn");
 const locModal = document.getElementById("location-modal");

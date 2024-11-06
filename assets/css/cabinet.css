@@ -427,16 +427,16 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   color: rgb(43, 43, 43);
 }
 
+#main-body-content .main-content-wrapper {
+  display: flex;
+}
 #main-body-content .main-content-wrapper .left-menu {
+  width: 100%;
+  max-width: 470px;
   background-color: rgb(255, 255, 255);
-  overflow: auto;
-  position: fixed;
-  top: 80px;
+  margin-top: 127px;
   background-color: white;
-  z-index: 999;
-  left: 0;
   height: calc(100vh - 80px);
-  transform: translateX(-100%);
   transition: all 0.3s;
 }
 #main-body-content .main-content-wrapper .left-menu .left-menu-item > a {
@@ -516,9 +516,6 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 #main-body-content .main-content-wrapper .left-menu .user-menu-item {
   border-bottom: 1px solid rgb(43, 43, 43);
   border-top: 1px solid rgb(43, 43, 43);
-}
-#main-body-content .main-content-wrapper .left-menu span:last-child {
-  opacity: 0;
 }
 #main-body-content .main-content-wrapper .left-menu.show-left-menu {
   border-right: 1px solid rgb(245, 245, 245);
