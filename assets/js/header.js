@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (targetElement) {
               window.scrollTo({
-                  top: targetElement.offsetTop - 150,
+                  top: targetElement.offsetTop - 150, // Прокрутка с учетом отступа
                   behavior: "smooth",
               });
           }
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (targetElement) {
               window.scrollTo({
-                  top: targetElement.offsetTop - 150,
+                  top: targetElement.offsetTop - 150, // Прокрутка с учетом отступа
                   behavior: "smooth",
               });
           }
