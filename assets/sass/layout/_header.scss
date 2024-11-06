@@ -427,10 +427,19 @@ header#main-header {
           }
         }
       }
-      .form-select {
+      .dropdown {
         display: none;
+        button {
+          width: 100%;
+          background-color: transparent;
+          color: $blue;
+          border-color: $blue;
+        }
+        .dropdown-menu.show {
+          width: 100%;
+        }
         &:focus {
-          box-shadow: 0 0 0 .05rem rgba(13, 110, 253, .25);
+          box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.25);
         }
       }
     }

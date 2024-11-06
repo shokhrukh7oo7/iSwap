@@ -243,13 +243,17 @@
               <li class="item"><a href="#preferences">Afzalliklarimiz</a></li>
               <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
             </ul>
-            <select class="form-select" id="faqSelect" aria-label="Default select example">
-              <option selected value="#">Trade in haqida</option>
-              <option value="#carousel-box">Qabul qiladigan mahsulotlarimiz</option>
-              <option value="#assessment">Texnikani baholash</option>
-              <option value="#preferences">Afzalliklarimiz</option>
-              <option value="#">Ko'p beriladigan savollar</option>
-            </select>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Trade in haqida
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a class="dropdown-item" href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a></li>
+                <li><a class="dropdown-item" href="#assessment">Texnikani baholash</a></li>
+                <li><a class="dropdown-item" href="#preferences">Afzalliklarimiz</a></li>
+                <li><a class="dropdown-item" href="#preferences">Ko'p beriladigan savollar</a></li>
+              </ul>
+            </div>
           </div>
           <!-- Navbar bottom end -->
         </div>

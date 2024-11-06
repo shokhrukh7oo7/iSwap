@@ -428,10 +428,19 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   font-weight: 400;
   color: rgb(43, 43, 43);
 }
-header#main-header nav .bottom-nav .form-select {
+header#main-header nav .bottom-nav .dropdown {
   display: none;
 }
-header#main-header nav .bottom-nav .form-select:focus {
+header#main-header nav .bottom-nav .dropdown button {
+  width: 100%;
+  background-color: transparent;
+  color: rgb(0, 140, 238);
+  border-color: rgb(0, 140, 238);
+}
+header#main-header nav .bottom-nav .dropdown .dropdown-menu.show {
+  width: 100%;
+}
+header#main-header nav .bottom-nav .dropdown:focus {
   box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.25);
 }
 
@@ -1421,7 +1430,7 @@ header#main-header nav .bottom-nav .form-select:focus {
   #main-header nav .bottom-nav .bottom-nav-items {
     display: none !important;
   }
-  #main-header nav .bottom-nav .form-select {
+  #main-header nav .bottom-nav .dropdown {
     display: block !important;
   }
   #main-body-content .main-content-wrapper .left-menu .left-menu-language {

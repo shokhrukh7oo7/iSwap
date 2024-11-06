@@ -37,13 +37,7 @@ document
   });
 
 // ============================================================================================
-document.getElementById('faqSelect').addEventListener('change', function() {
-  const sectionId = this.value;
-  if (sectionId && sectionId !== "#") {
-      // Прокрутка к элементу с указанным ID
-      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
-  }
-});
+
 // ============================================================================================
 document.addEventListener("DOMContentLoaded", function () {
   // Плавный скролл при клике на элементы меню
@@ -62,18 +56,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // Плавный скролл при выборе элемента из выпадающего списка
-  document.getElementById("faqSelect").addEventListener("change", function () {
-      const targetId = this.value;
-      if (targetId && targetId !== "#") {
+  // Получаем кнопку dropdown и меню
+  const dropdownButton = document.getElementById("dropdownMenuButton");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  // Изменение текста кнопки dropdown и добавление текущего текста кнопки обратно в меню
+  document.querySelectorAll(".dropdown-menu .dropdown-item").forEach((item) => {
+      item.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href");
           const targetElement = document.querySelector(targetId);
 
+          // Сохраняем текущий текст кнопки, чтобы вернуть его в меню
+          const previousText = dropdownButton.textContent;
+          const previousHref = "#"; // Устанавливаем ссылку для возвращаемого элемента
+
+          // Изменение текста кнопки dropdown на выбранный элемент
+          dropdownButton.textContent = this.textContent;
+
+          // Удаляем выбранный элемент из меню и добавляем предыдущий текст в меню
+          const newMenuItem = document.createElement("li");
+          const newAnchor = document.createElement("a");
+          newAnchor.className = "dropdown-item";
+          newAnchor.href = previousHref;
+          newAnchor.textContent = previousText;
+          newMenuItem.appendChild(newAnchor);
+          dropdownMenu.appendChild(newMenuItem);
+
+          this.parentElement.remove(); // Удаляем выбранный элемент из меню
+
+          // Перемещаемся к выбранному элементу
           if (targetElement) {
               window.scrollTo({
                   top: targetElement.offsetTop - 150,
                   behavior: "smooth",
               });
           }
-      }
+      });
   });
 });
