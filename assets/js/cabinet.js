@@ -13,8 +13,8 @@ menuItems.forEach((item) => {
 
 // ================================================================================================
 
-document.querySelectorAll('.top-nav .dropdown-menu .dropdown-item img').forEach(function(img) {
-  img.addEventListener('click', function(event) {
+document.querySelectorAll('.top-nav .dropdown-menu .dropdown-item img').forEach(function (img) {
+  img.addEventListener('click', function (event) {
     // Получаем текущий src изображения в button
     let currentFlag = document.getElementById('current-flag');
     let currentSrc = currentFlag.src;
@@ -258,3 +258,35 @@ document.addEventListener("keydown", (e) => {
 });
 
 // REPORT SECTION FILTER MODAL JS END
+
+// ==============================================
+const mainBodyContentToggler = document.querySelector("#main-body-content-toggler")
+const leftMenu = document.querySelector(".left-menu")
+
+
+function navDropdownHandler(e) {
+  e.stopPropagation()
+
+  leftMenu.classList.toggle("as-dropdown")
+  if (leftMenu.classList.contains("as-dropdown")) {
+    leftMenu.style.display = "block"
+    setTimeout(() => {
+      leftMenu.style.maxHeight = "100%"
+    }, 100)
+    setTimeout(() => {
+      leftMenu.style.overflow = "visible"
+    }, 500)
+  } else {
+    leftMenu.style.maxHeight = "0"
+    leftMenu.style.overflow = "hidden"
+    setTimeout(() => {
+      leftMenu.style.display = "none"
+    }, 500)
+  }
+
+}
+if (window.innerWidth < 768) {
+  mainBodyContentToggler.addEventListener("click", navDropdownHandler)
+} else {
+  mainBodyContentToggler.removeEventListener("click", navDropdownHandler)
+}

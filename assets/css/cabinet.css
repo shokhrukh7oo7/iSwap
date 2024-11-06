@@ -437,7 +437,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   margin-top: 127px;
   background-color: white;
   height: calc(100vh - 80px);
-  transition: all 0.3s;
+  transition: 0.5s;
 }
 #main-body-content .main-content-wrapper .left-menu .left-menu-item > a {
   color: #2B2B2B;
@@ -589,8 +589,28 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   }
 }
 @media (max-width: 768px) {
+  #main-body-content .main-content-wrapper {
+    position: relative;
+  }
+  #main-body-content .main-content-wrapper .left-menu {
+    display: none;
+    max-height: 0;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: -13px;
+    overflow: hidden;
+  }
+  #main-body-content .main-content-wrapper .left-menu.as-dropdown {
+    display: block;
+  }
   #main-body-content .main-content-wrapper .left-menu.show-left-menu {
     width: 55%;
+  }
+}
+@media (max-width: 675px) {
+  #main-body-content .main-content-wrapper .left-menu {
+    top: 20px;
   }
 }
 @media (max-width: 450px) {
