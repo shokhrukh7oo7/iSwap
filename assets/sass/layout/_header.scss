@@ -13,7 +13,7 @@ header#main-header {
 
     .top-nav {
       width: 100%;
-      @include flex(row, space-between, center, nowrap);
+      @include flex(row, space-between, center, nowrap, 25px);
       padding: 10.2px 0;
 
       //   Burger start
@@ -414,17 +414,23 @@ header#main-header {
     // LINE SECTION END
 
     .bottom-nav {
+      margin: 10px 0;
       .bottom-nav-items {
         @include flex(row, start, center, wrap, 0);
         gap: 10px 30px;
         padding: 0;
         margin: 10px 0;
-
         .item {
           a {
             @include fontSize(11px, 1.3vw, 18px, 400);
             color: $black;
           }
+        }
+      }
+      .form-select {
+        display: none;
+        &:focus {
+          box-shadow: 0 0 0 .05rem rgba(13, 110, 253, .25);
         }
       }
     }
@@ -451,7 +457,7 @@ header#main-header {
 
       .left-menu-item {
         & > a {
-          color: #2B2B2B;
+          color: #2b2b2b;
           padding: 10px;
 
           @include fontSize(14px, 1.5vw, 20px, 500);

@@ -782,6 +782,14 @@
           display: none !important;
         }
       }
+      .bottom-nav {
+        .bottom-nav-items {
+          display: none !important;
+        }
+        .form-select {
+          display: block !important;
+        }
+      }
     }
   }
 

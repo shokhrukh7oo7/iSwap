@@ -37,20 +37,43 @@ document
   });
 
 // ============================================================================================
+document.getElementById('faqSelect').addEventListener('change', function() {
+  const sectionId = this.value;
+  if (sectionId && sectionId !== "#") {
+      // Прокрутка к элементу с указанным ID
+      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+// ============================================================================================
 document.addEventListener("DOMContentLoaded", function () {
   // Плавный скролл при клике на элементы меню
   document.querySelectorAll(".bottom-nav-items li a").forEach((anchor) => {
-    anchor.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
+      anchor.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
 
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 150,
-          behavior: "smooth",
-        });
+          if (targetElement) {
+              window.scrollTo({
+                  top: targetElement.offsetTop - 150,
+                  behavior: "smooth",
+              });
+          }
+      });
+  });
+
+  // Плавный скролл при выборе элемента из выпадающего списка
+  document.getElementById("faqSelect").addEventListener("change", function () {
+      const targetId = this.value;
+      if (targetId && targetId !== "#") {
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+              window.scrollTo({
+                  top: targetElement.offsetTop - 150,
+                  behavior: "smooth",
+              });
+          }
       }
-    });
   });
 });
