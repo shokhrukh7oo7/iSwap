@@ -45,13 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
       anchor.addEventListener("click", function (event) {
           event.preventDefault();
           const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
 
-          if (targetElement) {
-              window.scrollTo({
-                  top: targetElement.offsetTop - 150,
-                  behavior: "smooth",
-              });
+          // Проверяем, что targetId не является "#" перед выполнением querySelector
+          if (targetId !== "#" && targetId !== "") {
+              const targetElement = document.querySelector(targetId);
+
+              if (targetElement) {
+                  window.scrollTo({
+                      top: targetElement.offsetTop - 150,
+                      behavior: "smooth",
+                  });
+              }
           }
       });
   });
@@ -60,38 +64,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownButton = document.getElementById("dropdownMenuButton");
   const dropdownMenu = document.getElementById("dropdownMenu");
 
-  // Изменение текста кнопки dropdown и добавление текущего текста кнопки обратно в меню
-  document.querySelectorAll(".dropdown-menu .dropdown-item").forEach((item) => {
-      item.addEventListener("click", function (event) {
-          event.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
+  if (dropdownMenu && dropdownButton) { // Проверка, что элемент существует
+      // Используем делегирование событий для динамических элементов
+      dropdownMenu.addEventListener("click", function (event) {
+          // Проверка, был ли клик на элементе с классом dropdown-item
+          if (event.target && event.target.classList.contains("dropdown-item")) {
+              event.preventDefault();
+              
+              const targetId = event.target.getAttribute("href");
 
-          // Сохраняем текущий текст кнопки, чтобы вернуть его в меню
-          const previousText = dropdownButton.textContent;
-          const previousHref = "#"; // Устанавливаем ссылку для возвращаемого элемента
+              // Проверяем, что targetId не является "#" перед выполнением querySelector
+              if (targetId !== "#" && targetId !== "") {
+                  const targetElement = document.querySelector(targetId);
 
-          // Изменение текста кнопки dropdown на выбранный элемент
-          dropdownButton.textContent = this.textContent;
+                  // Изменение текста кнопки dropdown на выбранный элемент
+                  dropdownButton.textContent = event.target.textContent;
 
-          // Удаляем выбранный элемент из меню и добавляем предыдущий текст в меню
-          const newMenuItem = document.createElement("li");
-          const newAnchor = document.createElement("a");
-          newAnchor.className = "dropdown-item";
-          newAnchor.href = previousHref;
-          newAnchor.textContent = previousText;
-          newMenuItem.appendChild(newAnchor);
-          dropdownMenu.appendChild(newMenuItem);
-
-          this.parentElement.remove(); // Удаляем выбранный элемент из меню
-
-          // Перемещаемся к выбранному элементу
-          if (targetElement) {
-              window.scrollTo({
-                  top: targetElement.offsetTop - 150,
-                  behavior: "smooth",
-              });
+                  // Перемещаемся к выбранному элементу, только если href не равно "#"
+                  window.scrollTo({
+                      top: targetElement.offsetTop - 150,
+                      behavior: "smooth",
+                  });
+              } else {
+                  // Если targetId "#", просто меняем текст на выбранный пункт
+                  dropdownButton.textContent = event.target.textContent;
+              }
           }
       });
-  });
+  }
 });
