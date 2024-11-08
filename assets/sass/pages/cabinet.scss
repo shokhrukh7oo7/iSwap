@@ -847,6 +847,9 @@ table th {
   .container {
     padding: 0 15px;
   }
+  header#main-header nav .top-nav .dropdown {
+    display: none;
+  }
 
   #main-body-content .main-content-wrapper .left-menu .left-menu-language {
     display: block;
@@ -948,8 +951,25 @@ table th {
 }
 
 @media (max-width: 576px) {
-  #main-body-content .main-content-wrapper .left-menu .search-wrapper {
-    display: block;
+  header#main-header {
+    nav {
+      .top-nav {
+        .search-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #main-body-content {
+    .main-content-wrapper {
+      .left-menu {
+        margin-top: 80.3px;
+        .search-wrapper {
+          display: block;
+        }
+      }
+    }
   }
   .cabinet-profile-setting {
     .cabinet-setting-wrapper {

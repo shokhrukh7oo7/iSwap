@@ -270,20 +270,13 @@ function navDropdownHandler(e) {
   leftMenu.classList.toggle("as-dropdown")
   if (leftMenu.classList.contains("as-dropdown")) {
     leftMenu.style.display = "block"
-    setTimeout(() => {
-      leftMenu.style.maxHeight = "100%"
-    }, 100)
-    setTimeout(() => {
-      leftMenu.style.overflow = "visible"
-    }, 500)
+    leftMenu.style.maxHeight = "100%"
+    leftMenu.style.overflow = "auto"
   } else {
     leftMenu.style.maxHeight = "0"
     leftMenu.style.overflow = "hidden"
-    setTimeout(() => {
-      leftMenu.style.display = "none"
-    }, 500)
+    leftMenu.style.display = "none"
   }
-
 }
 if (window.innerWidth < 768) {
   mainBodyContentToggler.addEventListener("click", navDropdownHandler)

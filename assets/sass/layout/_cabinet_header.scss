@@ -10,6 +10,7 @@ header#main-header {
 
   nav {
     @include flex(column, space-between, start, wrap, 0);
+    height: 80px;
 
     .top-nav {
       width: 100%;
@@ -312,7 +313,7 @@ header#main-header {
               .form-control-wrapper {
                 margin: 10px 0;
 
-                &>* {
+                & > * {
                   display: block;
                   width: 100%;
                 }
@@ -414,6 +415,7 @@ header#main-header {
     // LINE SECTION END
 
     .bottom-nav {
+      display: none;
       .bottom-nav-items {
         @include flex(row, start, center, wrap, 0);
         gap: 10px 30px;
@@ -441,30 +443,30 @@ header#main-header {
       width: 100%;
       max-width: 470px;
       background-color: $white;
-      margin-top: 127px;
+      margin-top: 80.3px;
       background-color: white;
-      height: calc(100vh - 80px);
+      // height: calc(100vh - 80px);
       transition: 0.5s;
 
       .left-menu-item {
-        &>a {
-          color: #2B2B2B;
+        & > a {
+          color: #2b2b2b;
           padding: 10px;
 
           @include fontSize(14px, 1.5vw, 20px, 500);
           @include flex(row, start, center);
         }
 
-        &>a.active {
+        & > a.active {
           background-color: $blue;
           color: $white;
         }
 
-        &>a.active img {
+        & > a.active img {
           filter: brightness(10);
         }
 
-        &>.nav-drp-content {
+        & > .nav-drp-content {
           display: none;
           overflow: hidden;
           max-height: 0;
@@ -522,6 +524,14 @@ header#main-header {
       .user-menu-item {
         border-bottom: 1px solid $black;
         border-top: 1px solid $black;
+        a {
+          padding: 0;
+          span {
+            img {
+              width: 60px;
+            }
+          }
+        }
       }
 
       &.show-left-menu {
@@ -615,11 +625,11 @@ header#main-header {
       .left-menu {
         display: none;
         max-height: 0;
-        position: absolute;
+        position: fixed;
         z-index: 999;
         left: 0;
-        top: -13px;
-        overflow: hidden;
+        height: auto;
+        overflow: auto;
 
         &.as-dropdown {
           display: block;
@@ -630,14 +640,7 @@ header#main-header {
         }
       }
     }
-  }
 
-  @media (max-width: 675px) {
-    .main-content-wrapper {
-      .left-menu {
-        top: 20px;
-      }
-    }
   }
 
   @media (max-width: 450px) {
