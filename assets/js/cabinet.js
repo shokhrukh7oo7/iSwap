@@ -272,6 +272,13 @@ function navDropdownHandler(e) {
     leftMenu.style.display = "block"
     leftMenu.style.maxHeight = "100%"
     leftMenu.style.overflow = "auto"
+    setTimeout(() => {
+      leftMenu.style.maxHeight = "100%"
+      leftMenu.style.height = "120vh"
+    }, 100)
+    setTimeout(() => {
+      leftMenu.style.overflow = "visible"
+    }, 500)
   } else {
     leftMenu.style.maxHeight = "0"
     leftMenu.style.overflow = "hidden"
