@@ -46,14 +46,14 @@
     @keyframes slide1 { 
       0% { width: 80%; }
       25% { width: 20%; }
-      100% { width: 20%; }
+      100% { width: 0%; }
     }
 
     img:nth-child(2) { animation: slide2 3s linear;  animation-delay: 1s; }
     @keyframes slide2 { 
       0% { width: 80%; }
       33% { width: 20%; }
-      100% { width: 20%; }
+      100% { width: 0%; }
     }
 
 
@@ -61,20 +61,89 @@
     @keyframes slide3 { 
       0% { width: 80%; }
       50% { width: 20%; }
-      100% { width: 20%; }
+      100% { width: 0%; }
     }
 
     img:nth-child(4) { animation: slide4 2s linear;  animation-delay: 3s; }
     @keyframes slide4 { 
-      0% { width: 40%; 
-        // position: absolute;
-        // right: 0;
-        // z-index: 9;
+      0% { width: 20%; 
+        position: absolute;
+        right: 0;
+        z-index: 9;
       }
       100% { width: 100%; }
     }
   }
 }
+// chat start
+.chat-button-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  .chat-btn {
+    position: fixed;
+    bottom: 6%;
+    right: 6%;
+    z-index: 2;
+    background-color: $light-blue;
+    border-radius: 16px;
+    border: 1px solid $blue;
+    padding: 10px;
+    cursor: pointer;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  .chat-button-content {
+    position: fixed;
+    bottom: 5%;  /* Positioned below the button */
+    right: 5%;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    z-index: 1;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Initially positioned above */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+    .chat-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        text-align: center;
+        color: $black;
+        margin: 0;
+        @include fontSize(12px, 1.5vw, 16px, 500);
+      }
+      i {
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+    .chat-body a {
+      background-color: $blue;
+      color: $white;
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 10px auto;
+      @include fontSize(12px, 1.5vw, 16px, 500);
+    }
+  }
+}
+
+
+
+
+
+
+// chat end
 
 // Main slider custom css end
 
@@ -617,6 +686,20 @@
 }
 
 @media (max-width: 576px) {
+  .chat-container{
+    .chat-btn {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  .chat-button-content {
+    max-width: 200px;
+    height: 250px;
+  }
+}
+
+
   header#main-header {
     nav {
       .top-nav {
@@ -756,6 +839,8 @@
   header#main-header nav .bottom-nav .bottom-nav-items {
     gap: 0px 30px;
   }
+
+  
 }
 
 @media (max-width: 385px) {

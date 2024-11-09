@@ -237,27 +237,55 @@
           <!-- Navbar top end -->
           <!-- <div class="line"></div> -->
           <!-- Navbar bottom start -->
-            <div class="bottom-nav">
-              <ul class="bottom-nav-items">
-                  <li class="item"><a href="#">Trade in haqida</a></li>
-                  <li class="item"><a href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a></li>
-                  <li class="item"><a href="#assessment">Texnikani baholash</a></li>
-                  <li class="item"><a href="#preferences">Afzalliklarimiz</a></li>
-                  <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
+          <div class="bottom-nav">
+            <ul class="bottom-nav-items">
+              <li class="item"><a href="#">Trade in haqida</a></li>
+              <li class="item">
+                <a href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a>
+              </li>
+              <li class="item"><a href="#assessment">Texnikani baholash</a></li>
+              <li class="item"><a href="#preferences">Afzalliklarimiz</a></li>
+              <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
+            </ul>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Trade in haqida
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li>
+                  <a class="dropdown-item" href="#preferences"
+                    >Trade in haqida</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel-box"
+                    >Qabul qiladigan mahsulotlarimiz</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#assessment"
+                    >Texnikani baholash</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#preferences"
+                    >Afzalliklarimiz</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#faqSection"
+                    >Ko'p beriladigan savollar</a
+                  >
+                </li>
               </ul>
-          
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                      Trade in haqida
-                  </button>
-                  <ul class="dropdown-menu" id="dropdownMenu">
-                      <li><a class="dropdown-item" href="#preferences">Trade in haqida</a></li>
-                      <li><a class="dropdown-item" href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a></li>
-                      <li><a class="dropdown-item" href="#assessment">Texnikani baholash</a></li>
-                      <li><a class="dropdown-item" href="#preferences">Afzalliklarimiz</a></li>
-                      <li><a class="dropdown-item" href="#faqSection">Ko'p beriladigan savollar</a></li>
-                  </ul>
-              </div>
+            </div>
           </div>
           <!-- Navbar bottom end -->
         </div>
@@ -539,13 +567,15 @@
                 </div>
               </div>
 
-              
               <div class="main-slider-wrapper">
                 <div class="swiper-animation-wrapper">
-                  <img class="item-1" src="./assets/images/swiper/tablets.png" />
+                  <img
+                    class="item-1"
+                    src="./assets/images/swiper/tablets.png"
+                  />
                   <img class="item-2" src="./assets/images/swiper/laptop.jpg" />
                   <img class="item-3" src="./assets/images/swiper/ps.jpg" />
-                  <img class="item-4" src="./assets/images/swiper/banner.png"  /> 
+                  <img class="item-4" src="./assets/images/swiper/banner.png" />
                 </div>
               </div>
             </div>
@@ -824,6 +854,33 @@
       </div>
     </main>
     <!-- Main end -->
+
+    <!-- chat start -->
+    <div class="container">
+      <div class="chat-container">
+        <div class="chat-button-wrapper">
+          <button class="chat-btn" id="chat-btn">
+            <img src="/assets/images/home/chat.png" alt="image" />
+          </button>
+          <div class="chat-button-content">
+            <div class="chat-header">
+              <h2>Qo'llab quvvatlash xizmati</h2>
+            </div>
+            <hr />
+            <div class="chat-body">
+              <a href="#" class="btn online-chat" id="online-chat"
+                >To'g'ridan to'g'ri chat</a
+              >
+              <a href="#" class="btn telegram-chat" id="telegram-chat"
+                >Telegram</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- chat end -->
 
     <!-- Footer start -->
     <footer>

@@ -22,14 +22,14 @@ $(document).ready(function () {
   });
 });
 
-
-const mainSliderWrapper = document.querySelector(".main-slider-wrapper .swiper-animation-wrapper .item-4")
+const mainSliderWrapper = document.querySelector(
+  ".main-slider-wrapper .swiper-animation-wrapper .item-4"
+);
 setTimeout(() => {
-  mainSliderWrapper.style.position = 'absolute'
-  mainSliderWrapper.style.right = '0'
-  mainSliderWrapper.style.zIndex = '9'
-}, 4000)
-
+  mainSliderWrapper.style.position = "absolute";
+  mainSliderWrapper.style.right = "0";
+  mainSliderWrapper.style.zIndex = "9";
+}, 4000);
 
 // home slider custom js end
 // ================================================================================================
@@ -104,29 +104,50 @@ onlineAssessmentTelInput.addEventListener("input", (e) => {
 });
 // ================================================================================================
 // ================================================================================================
-// NAV-SIDEBAR link dropdown 
-const drpButtons = document.querySelectorAll('.link-dropdown .nav-drp-button')
-drpButtons.forEach(drpButton => {
-  drpButton.addEventListener('click', (e) => {
-    e.stopPropagation()
-    const arrow = drpButton.querySelector('.arrow')
-    const drpContent = drpButton.nextElementSibling
-    const height = drpContent.getAttribute("data-height")
+// NAV-SIDEBAR link dropdown
+const drpButtons = document.querySelectorAll(".link-dropdown .nav-drp-button");
+drpButtons.forEach((drpButton) => {
+  drpButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const arrow = drpButton.querySelector(".arrow");
+    const drpContent = drpButton.nextElementSibling;
+    const height = drpContent.getAttribute("data-height");
 
-    if (drpContent.classList.contains('show')) {
-      drpContent.classList.remove('show')
-      drpContent.style.maxHeight = '0'
-      arrow.style.transform = 'rotate(0deg)'
+    if (drpContent.classList.contains("show")) {
+      drpContent.classList.remove("show");
+      drpContent.style.maxHeight = "0";
+      arrow.style.transform = "rotate(0deg)";
       setTimeout(() => {
-        drpContent.style.display = 'none'
-      }, 500)
+        drpContent.style.display = "none";
+      }, 500);
     } else {
-      drpContent.classList.add('show')
-      drpContent.style.display = 'block'
-      arrow.style.transform = 'rotate(180deg)'
+      drpContent.classList.add("show");
+      drpContent.style.display = "block";
+      arrow.style.transform = "rotate(180deg)";
       setTimeout(() => {
-        drpContent.style.maxHeight = height +'px'
-      }, 100)
+        drpContent.style.maxHeight = height + "px";
+      }, 100);
     }
-  })
-})
+  });
+});
+
+// chat
+document.getElementById("chat-btn").addEventListener("click", function () {
+  const content = document.querySelector(".chat-button-content");
+
+  // Toggle visibility with transition
+  if (content.style.opacity === "1") {
+    content.style.opacity = "0";
+    content.style.transform = "translateY(20px)";
+    setTimeout(() => {
+      content.style.display = "none"; // Hide the element after the transition ends
+    }, 300); // Match the transition time (0.3s)
+  } else {
+    content.style.display = "block"; // Make it visible before the transition
+    setTimeout(() => {
+      content.style.opacity = "1"; // Fade in
+      content.style.transform = "translateY(0)"; // Slide in
+    }, 10); // Tiny delay for the transition to take effect
+  }
+});
+
