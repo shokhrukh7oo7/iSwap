@@ -756,6 +756,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
   flex-wrap: nowrap;
   overflow: hidden;
   position: relative;
+  aspect-ratio: 16/9;
 }
 .main-slider-wrapper .swiper-animation-wrapper img {
   width: 100%;
