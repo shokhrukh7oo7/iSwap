@@ -593,12 +593,13 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   width: 100%;
 }
 #main-body-content .main-content .mobile-menu {
-  padding: 100px 0 50px;
+  margin: 81px 0 30px;
+  border-top: 1px solid rgba(43, 43, 43, 0.5);
+  display: none;
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
   gap: 10px;
 }
 #main-body-content .main-content .mobile-menu .mobile-menu-wrapper .user-menu-item a {
@@ -607,6 +608,9 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .user-menu-item a span img {
+  width: clamp(50px, 6vw, 70px) !important;
 }
 #main-body-content .main-content .mobile-menu .mobile-menu-wrapper .user-menu-item a .user-name-wrapper .user-name {
   margin: 0;
@@ -620,20 +624,34 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   font-size: clamp(14px, 1.5vw, 18px);
   font-weight: 500;
 }
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .left-menu-item a {
+  color: #2b2b2b;
+  padding: 10px;
+  font-size: clamp(12px, 1.5vw, 17px);
+  font-weight: 500;
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .left-menu-item a span img {
+  width: clamp(25px, 4vw, 40px);
+}
 #main-body-content .main-content .mobile-menu .mobile-menu-wrapper .mobile-menu-item {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+
 @media (max-width: 1200px) {
-  #main-body-content .main-content-wrapper .left-menu {
+  .main-content-wrapper .left-menu {
     width: 100%;
     max-width: 350px;
   }
-  #main-body-content .main-content-wrapper .left-menu.show-left-menu {
+  .main-content-wrapper .left-menu.show-left-menu {
     width: 40%;
   }
 }
 @media (max-width: 992px) {
-  #main-body-content .main-content-wrapper .left-menu {
+  .main-content-wrapper .left-menu {
     display: none;
     max-height: 0;
     position: fixed;
@@ -644,27 +662,71 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
     width: 100%;
     max-width: 350px;
   }
-  #main-body-content .main-content-wrapper .left-menu.show-left-menu {
+  .main-content-wrapper .left-menu.show-left-menu {
     width: 40%;
+  }
+  #main-body-content .main-content .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  #main-body-content .main-content .mobile-menu .mobile-menu-wrapper .mobile-menu-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 }
 @media (max-width: 768px) {
-  #main-body-content .main-content-wrapper {
+  .main-content-wrapper {
     position: relative;
   }
-  #main-body-content .main-content-wrapper .left-menu.as-dropdown {
+  .main-content-wrapper .left-menu.as-dropdown {
     display: block;
   }
-  #main-body-content .main-content-wrapper .left-menu.show-left-menu {
+  .main-content-wrapper .left-menu.show-left-menu {
     width: 55%;
+  }
+  #main-body-content .main-content .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  #main-body-content .main-content .mobile-menu .mobile-menu-wrapper .mobile-menu-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 30px;
   }
 }
 @media (max-width: 450px) {
-  #main-body-content .main-content-wrapper .left-menu.show-left-menu {
+  .main-content-wrapper .left-menu.show-left-menu {
     width: 100%;
   }
+  #main-body-content .main-content .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  #main-body-content .main-content .mobile-menu .mobile-menu-wrapper .mobile-menu-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 }
-
 .footer-top-wrapper {
   background-color: rgb(0, 140, 238);
   padding: 80px 0;

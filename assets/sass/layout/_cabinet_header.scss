@@ -608,9 +608,13 @@ header#main-header {
     // height: calc(100vh - 126px);
     .mobile-menu {
       // background-color: $blue;
-      padding: 100px 0 50px;
-      @include flex(column, center, center);
+      margin: 81px 0 30px;
+      border-top: 1px solid $grey;
+      display: none;
       .mobile-menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         .user-menu-item {
           a {
             display: flex;
@@ -618,6 +622,11 @@ header#main-header {
             justify-content: center;
             align-items: center;
             gap: 10px;
+            span {
+              img {
+                width: clamp(50px, 6vw, 70px) !important;
+              }
+            }
             .user-name-wrapper {
               .user-name {
                 margin: 0;
@@ -634,72 +643,136 @@ header#main-header {
             }
           }
         }
+        .left-menu-item {
+          a {
+            color: #2b2b2b;
+            padding: 10px;
+            font-size: clamp(12px, 1.5vw, 17px);
+            font-weight: 500;
+            span {
+              img {
+                width: clamp(25px, 4vw, 40px);
+              }
+            }
+          }
+        }
         .mobile-menu-item {
           display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
         }
       }
     }
   }
+}
 
-  @media (max-width: 1200px) {
-    .main-content-wrapper {
-      .left-menu {
+@media (max-width: 1200px) {
+  .main-content-wrapper {
+    .left-menu {
+      width: 100%;
+      max-width: 350px;
+      &.show-left-menu {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content-wrapper {
+    .left-menu {
+      display: none;
+      max-height: 0;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      height: auto;
+      overflow: auto;
+      width: 100%;
+      max-width: 350px;
+      &.show-left-menu {
+        width: 40%;
+      }
+    }
+  }
+
+  #main-body-content {
+    .main-content {
+      .mobile-menu {
+        @include flex(column, center, center);
+        .mobile-menu-wrapper {
+          .mobile-menu-item {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    position: relative;
+
+    .left-menu {
+      // display: none;
+      // max-height: 0;
+      // position: fixed;
+      // z-index: 999;
+      // left: 0;
+      // height: auto;
+      // overflow: auto;
+      &.as-dropdown {
+        display: block;
+      }
+
+      &.show-left-menu {
+        width: 55%;
+      }
+    }
+  }
+  #main-body-content {
+    .main-content {
+      .mobile-menu {
+        @include flex(column, center, center);
+        .mobile-menu-wrapper {
+          .mobile-menu-item {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+            gap: 10px 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .main-content-wrapper {
+    .left-menu {
+      &.show-left-menu {
         width: 100%;
-        max-width: 350px;
-        &.show-left-menu {
-          width: 40%;
-        }
       }
     }
   }
-
-  @media (max-width: 992px) {
-    .main-content-wrapper {
-      .left-menu {
-        display: none;
-        max-height: 0;
-        position: fixed;
-        z-index: 999;
-        left: 0;
-        height: auto;
-        overflow: auto;
-        width: 100%;
-        max-width: 350px;
-        &.show-left-menu {
-          width: 40%;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .main-content-wrapper {
-      position: relative;
-
-      .left-menu {
-        // display: none;
-        // max-height: 0;
-        // position: fixed;
-        // z-index: 999;
-        // left: 0;
-        // height: auto;
-        // overflow: auto;
-        &.as-dropdown {
-          display: block;
-        }
-
-        &.show-left-menu {
-          width: 55%;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 450px) {
-    .main-content-wrapper {
-      .left-menu {
-        &.show-left-menu {
-          width: 100%;
+  #main-body-content {
+    .main-content {
+      .mobile-menu {
+        @include flex(column, center, center);
+        .mobile-menu-wrapper {
+          .mobile-menu-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
         }
       }
     }
