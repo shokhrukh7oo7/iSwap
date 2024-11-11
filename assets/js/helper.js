@@ -22,14 +22,14 @@ $(document).ready(function () {
   });
 });
 
-const mainSliderWrapper = document.querySelector(
-  ".main-slider-wrapper .swiper-animation-wrapper .item-4"
-);
-setTimeout(() => {
-  mainSliderWrapper.style.position = "absolute";
-  mainSliderWrapper.style.right = "0";
-  mainSliderWrapper.style.zIndex = "9";
-}, 4000);
+// const mainSliderWrapper = document.querySelector(
+//   ".main-slider-wrapper .swiper-animation-wrapper .item-4"
+// );
+// setTimeout(() => {
+//   mainSliderWrapper.style.position = "absolute";
+//   mainSliderWrapper.style.right = "0";
+//   mainSliderWrapper.style.zIndex = "9";
+// }, 4000);
 
 // home slider custom js end
 // ================================================================================================
