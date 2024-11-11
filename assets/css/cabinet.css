@@ -592,6 +592,37 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
   background-color: rgb(255, 255, 255);
   width: 100%;
 }
+#main-body-content .main-content .mobile-menu {
+  padding: 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .user-menu-item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .user-menu-item a .user-name-wrapper .user-name {
+  margin: 0;
+  font-size: clamp(18px, 4vw, 26px);
+  font-weight: 500;
+  color: rgb(43, 43, 43);
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .user-menu-item a .user-name-wrapper .user-summ {
+  margin: 0;
+  color: rgb(206, 53, 81);
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 500;
+}
+#main-body-content .main-content .mobile-menu .mobile-menu-wrapper .mobile-menu-item {
+  display: grid;
+}
 @media (max-width: 1200px) {
   #main-body-content .main-content-wrapper .left-menu {
     width: 100%;

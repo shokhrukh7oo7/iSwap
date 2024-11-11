@@ -606,6 +606,39 @@ header#main-header {
     background-color: $white;
     width: 100%;
     // height: calc(100vh - 126px);
+    .mobile-menu {
+      // background-color: $blue;
+      padding: 100px 0 50px;
+      @include flex(column, center, center);
+      .mobile-menu-wrapper {
+        .user-menu-item {
+          a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            .user-name-wrapper {
+              .user-name {
+                margin: 0;
+                font-size: clamp(18px, 4vw, 26px);
+                font-weight: 500;
+                color: $black;
+              }
+              .user-summ {
+                margin: 0;
+                color: rgb(206, 53, 81);
+                font-size: clamp(14px, 1.5vw, 18px);
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .mobile-menu-item {
+          display: grid;
+        }
+      }
+    }
   }
 
   @media (max-width: 1200px) {
@@ -660,7 +693,6 @@ header#main-header {
         }
       }
     }
-
   }
 
   @media (max-width: 450px) {

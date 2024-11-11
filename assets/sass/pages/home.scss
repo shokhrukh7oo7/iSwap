@@ -34,78 +34,113 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: nowrap;
   overflow: hidden;
   position: relative;
+  height: 80vh;
+}
 
-  .anim-img {
-    transition: width 4s ease;
+.anim-img {
+  width: 100%;
+  transition: width 4s ease;
+  position: absolute;
+}
+
+.anim-img img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+/* Media query для маленьких экранов */
+@media (max-width: 768px) {
+  .swiper-animation-wrapper {
+    height: 50vh;
   }
 
-  img {
-    height: 80vh;
-    object-fit: cover;
+  .anim-img img {
+    height: 50vh;
   }
 
-  /* Анимация для первого изображения */
+  /* Ускоренная анимация для маленьких экранов */
   .anim-img:nth-child(1) {
-    animation: slide1 4s linear forwards;
+    animation: slide1-small 2s ease-in-out forwards;
+    right: -100%;
   }
-
-  @keyframes slide1 {
-    0% {
-      width: 100%;
-    }
-    100% {
-      width: 25%;
-    }
-  }
-
-  /* Анимация для второго изображения */
   .anim-img:nth-child(2) {
-    animation: slide2 4s linear forwards;
-    animation-delay: 4s;
+    animation: slide2-small 2s ease-in-out forwards;
+    animation-delay: 2s;
+    right: -100%;
   }
-
-  @keyframes slide2 {
-    0% {
-      width: 75%;
-    }
-    100% {
-      width: 25%;
-    }
-  }
-
-  /* Анимация для третьего изображения */
   .anim-img:nth-child(3) {
-    animation: slide3 4s linear forwards;
-    animation-delay: 8s;
+    animation: slide3-small 2s ease-in-out forwards;
+    animation-delay: 4s;
+    right: -100%;
   }
-
-  @keyframes slide3 {
-    0% {
-      width: 50%;
-    }
-    100% {
-      width: 25%;
-    }
-  }
-
-  /* Анимация для четвертого изображения */
   .anim-img:nth-child(4) {
-    animation: slide4 4s linear forwards;
-    animation-delay: 12s;
+    animation: slide4-small 2s ease-in-out forwards;
+    animation-delay: 6s;
+    right: -100%;
   }
 
-  @keyframes slide4 {
-    0% {
-      width: 100%;
-    }
-    100% {
-      width: 100%;
-    }
+  /* Определения анимации для маленьких экранов */
+  @keyframes slide1-small {
+    0% { right: -100%; }
+    100% { right: 0; }
+  }
+
+  @keyframes slide2-small {
+    0% { right: -100%; }
+    100% { right: -25%; }
+  }
+
+  @keyframes slide3-small {
+    0% { right: -100%; }
+    100% { right: -50%; }
+  }
+
+  @keyframes slide4-small {
+    0% { right: -100%; }
+    100% { right: 0; }
   }
 }
+
+/* Оригинальные анимации для больших экранов */
+.anim-img:nth-child(1) {
+  animation: slide1 3s ease-in-out forwards;
+  right: -100%;
+}
+@keyframes slide1 {
+  0% { right: -100%; }
+  100% { right: 0; }
+}
+.anim-img:nth-child(2) {
+  animation: slide2 3s ease-in-out forwards;
+  animation-delay: 3s;
+  right: -100%;
+}
+@keyframes slide2 {
+  0% { right: -100%; }
+  100% { right: -25%; }
+}
+.anim-img:nth-child(3) {
+  animation: slide3 3s ease-in-out forwards;
+  animation-delay: 6s;
+  right: -100%;
+}
+@keyframes slide3 {
+  0% { right: -100%; }
+  100% { right: -50%; }
+}
+.anim-img:nth-child(4) {
+  animation: slide4 3s ease-in-out forwards;
+  animation-delay: 9s;
+  right: -100%;
+}
+@keyframes slide4 {
+  0% { right: -100%; }
+  100% { right: 0; }
+}
+
 // chat start
 .chat-button-wrapper {
   position: relative;
