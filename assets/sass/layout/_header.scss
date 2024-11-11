@@ -414,6 +414,7 @@ header#main-header {
     // LINE SECTION END
 
     .bottom-nav {
+      display: none;
       margin: 10px 0;
       .bottom-nav-items {
         @include flex(row, start, center, wrap, 0);

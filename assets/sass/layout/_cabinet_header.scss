@@ -608,9 +608,30 @@ header#main-header {
     // height: calc(100vh - 126px);
   }
 
+  @media (max-width: 1200px) {
+    .main-content-wrapper {
+      .left-menu {
+        width: 100%;
+        max-width: 350px;
+        &.show-left-menu {
+          width: 40%;
+        }
+      }
+    }
+  }
+
   @media (max-width: 992px) {
     .main-content-wrapper {
       .left-menu {
+        display: none;
+        max-height: 0;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        height: auto;
+        overflow: auto;
+        width: 100%;
+        max-width: 350px;
         &.show-left-menu {
           width: 40%;
         }
@@ -623,14 +644,13 @@ header#main-header {
       position: relative;
 
       .left-menu {
-        display: none;
-        max-height: 0;
-        position: fixed;
-        z-index: 999;
-        left: 0;
-        height: auto;
-        overflow: auto;
-
+        // display: none;
+        // max-height: 0;
+        // position: fixed;
+        // z-index: 999;
+        // left: 0;
+        // height: auto;
+        // overflow: auto;
         &.as-dropdown {
           display: block;
         }

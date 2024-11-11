@@ -410,6 +410,7 @@ header#main-header nav .line {
   bottom: 0;
 }
 header#main-header nav .bottom-nav {
+  display: none;
   margin: 10px 0;
 }
 header#main-header nav .bottom-nav .bottom-nav-items {

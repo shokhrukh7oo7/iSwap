@@ -277,7 +277,7 @@ function navDropdownHandler(e) {
       leftMenu.style.height = "120vh"
     }, 100)
     setTimeout(() => {
-      leftMenu.style.overflow = "visible"
+      leftMenu.style.overflow = "auto"
     }, 500)
   } else {
     leftMenu.style.maxHeight = "0"
@@ -285,7 +285,7 @@ function navDropdownHandler(e) {
     leftMenu.style.display = "none"
   }
 }
-if (window.innerWidth < 768) {
+if (window.innerWidth < 992) {
   mainBodyContentToggler.addEventListener("click", navDropdownHandler)
 } else {
   mainBodyContentToggler.removeEventListener("click", navDropdownHandler)
