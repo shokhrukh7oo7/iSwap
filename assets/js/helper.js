@@ -131,23 +131,16 @@ drpButtons.forEach((drpButton) => {
   });
 });
 
-// chat
-document.getElementById("chat-btn").addEventListener("click", function () {
-  const content = document.querySelector(".chat-button-content");
+// ========== chat
+const openChatBtn = document.getElementById("chat-btn");
+const closeChatBtn = document.getElementById("chat-close-btn");
+const chatContent = document.querySelector(".chat-btn-content");
 
-  // Toggle visibility with transition
-  if (content.style.opacity === "1") {
-    content.style.opacity = "0";
-    content.style.transform = "translateY(20px)";
-    setTimeout(() => {
-      content.style.display = "none"; // Hide the element after the transition ends
-    }, 300); // Match the transition time (0.3s)
-  } else {
-    content.style.display = "block"; // Make it visible before the transition
-    setTimeout(() => {
-      content.style.opacity = "1"; // Fade in
-      content.style.transform = "translateY(0)"; // Slide in
-    }, 10); // Tiny delay for the transition to take effect
-  }
+openChatBtn.addEventListener("click", () => {
+  chatContent.style.display =
+    chatContent.style.display === "block" ? "none" : "block";
 });
 
+closeChatBtn.addEventListener("click", () => {
+  chatContent.style.display = "none";
+});

@@ -84,23 +84,39 @@
 
   /* Определения анимации для маленьких экранов */
   @keyframes slide1-small {
-    0% { right: -100%; }
-    100% { right: 0; }
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0;
+    }
   }
 
   @keyframes slide2-small {
-    0% { right: -100%; }
-    100% { right: -25%; }
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: -25%;
+    }
   }
 
   @keyframes slide3-small {
-    0% { right: -100%; }
-    100% { right: -50%; }
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: -50%;
+    }
   }
 
   @keyframes slide4-small {
-    0% { right: -100%; }
-    100% { right: 0; }
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0;
+    }
   }
 }
 
@@ -110,8 +126,12 @@
   right: -100%;
 }
 @keyframes slide1 {
-  0% { right: -100%; }
-  100% { right: 0; }
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
 .anim-img:nth-child(2) {
   animation: slide2 3s ease-in-out forwards;
@@ -119,8 +139,12 @@
   right: -100%;
 }
 @keyframes slide2 {
-  0% { right: -100%; }
-  100% { right: -25%; }
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: -25%;
+  }
 }
 .anim-img:nth-child(3) {
   animation: slide3 3s ease-in-out forwards;
@@ -128,8 +152,12 @@
   right: -100%;
 }
 @keyframes slide3 {
-  0% { right: -100%; }
-  100% { right: -50%; }
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: -50%;
+  }
 }
 .anim-img:nth-child(4) {
   animation: slide4 3s ease-in-out forwards;
@@ -137,73 +165,70 @@
   right: -100%;
 }
 @keyframes slide4 {
-  0% { right: -100%; }
-  100% { right: 0; }
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 // chat start
-.chat-button-wrapper {
-  position: relative;
-  display: inline-block;
+.chat-container {
+  position: fixed;
+  bottom: 10%;
+  right: 6.5%;
+  z-index: 1;
   width: 100%;
-  .chat-btn {
-    position: fixed;
-    bottom: 6%;
-    right: 6%;
-    z-index: 100;
-    background-color: $light-blue;
-    border-radius: 16px;
-    border: 1px solid $blue;
-    padding: 10px;
-    cursor: pointer;
-    img {
-      width: 50px;
-      height: 50px;
-    }
-  }
 
-  .chat-button-content {
-    position: fixed;
-    bottom: 5%; /* Positioned below the button */
-    right: 5%;
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    z-index: 99;
-    border-radius: 16px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-20px); /* Initially positioned above */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
-    .chat-header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      h2 {
-        text-align: center;
-        color: $black;
-        margin: 0;
-        @include fontSize(12px, 1.5vw, 16px, 500);
+  .chat-wrapper {
+    position: relative;
+    @include flex(column, center, end);
+    .chat-btn-content {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      background-color: $white;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 330px;
+      height: 315px;
+      box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      display: none;
+      .chat-content-header {
+        padding: 10px 20px;
+        border-bottom: 1px solid $grey;
+        @include flex(row, space-between, center);
+        .chat-content-header-title {
+          @include fontSize(13px, 1.5vw, 18px, 500);
+          margin: 0;
+        }
       }
-      i {
-        cursor: pointer;
-        font-size: 16px;
+      .chat-content-body {
+        padding: 40px 20px;
+        @include flex(column, center, center);
+        .chat-body-btn {
+          background-color: $blue;
+          color: $white;
+          width: 100%;
+          @include flex(column, center, center);
+          @include flex(13px, 1.5vw, 16px, 400);
+        }
       }
     }
-    .chat-body a {
-      background-color: $blue;
-      color: $white;
-      display: block;
-      width: 100%;
-      max-width: 200px;
-      margin: 10px auto;
-      @include fontSize(12px, 1.5vw, 16px, 500);
+    .chat-btn {
+      background-color: rgba(97, 190, 255, 0.95);
+      border-radius: 16px;
+      border-color: transparent;
+      padding: 10px;
+      z-index: 2;
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
-
 // chat end
 
 // Main slider custom css end
@@ -898,6 +923,20 @@
 
   header#main-header nav .bottom-nav .bottom-nav-items {
     gap: 0px 30px;
+  }
+  .chat-container {
+    .chat-wrapper .chat-btn-content {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      background-color: $white;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 280px;
+      height: 325px;
+      box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      display: none;
+    }
   }
 }
 
