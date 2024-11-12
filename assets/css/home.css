@@ -171,9 +171,7 @@ header#main-header nav .top-nav .search-wrapper input:focus {
   border: none;
   box-shadow: 0 0 0 0.1rem rgb(0, 140, 238);
 }
-header#main-header nav .top-nav .search-wrapper button {
-  outline: none;
-  border: none;
+header#main-header nav .top-nav .search-wrapper span {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -190,7 +188,7 @@ header#main-header nav .top-nav .search-wrapper button {
   padding: 0 12px;
   cursor: pointer;
 }
-header#main-header nav .top-nav .search-wrapper button img {
+header#main-header nav .top-nav .search-wrapper span img {
   width: 28px;
 }
 header#main-header nav .top-nav .dropdown {

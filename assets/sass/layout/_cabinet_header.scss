@@ -608,8 +608,7 @@ header#main-header {
     // height: calc(100vh - 126px);
     .mobile-menu {
       // background-color: $blue;
-      margin: 81px 0 30px;
-      border-top: 1px solid $grey;
+      padding: 85px 0 30px;
       display: none;
       .mobile-menu-wrapper {
         display: flex;
@@ -643,7 +642,7 @@ header#main-header {
             }
           }
         }
-        .left-menu-item {
+        .mobile-menu-item {
           a {
             color: #2b2b2b;
             padding: 10px;
