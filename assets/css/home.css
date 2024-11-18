@@ -188,7 +188,14 @@ header#main-header nav .top-nav .search-wrapper span {
   padding: 0 12px;
   cursor: pointer;
 }
-header#main-header nav .top-nav .search-wrapper span img {
+header#main-header nav .top-nav .search-wrapper button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+}
+header#main-header nav .top-nav .search-wrapper button img {
   width: 28px;
 }
 header#main-header nav .top-nav .dropdown {

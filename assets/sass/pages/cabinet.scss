@@ -1,6 +1,5 @@
 @import "../cabinet_global";
 
-
 // cabinet table start
 .cabinet-table {
   height: 100vh;
@@ -801,6 +800,72 @@ table th {
 }
 
 // cabinet report end
+
+// promokod start
+.cabinet-promokod {
+  height: 100vh;
+  background-color: $blue;
+  padding: 200px 0 100px;
+  .cabinet-promokod-wrapper {
+    background-color: $white;
+    border-radius: 30px;
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+    .promokod-header-title {
+      margin-bottom: 10px;
+      @include flex(row, space-between, center, wrap);
+    }
+    .promokod-not-found {
+      color: $red;
+      text-decoration: underline;
+      font-size: clamp(12px, 1.5vw, 18px);
+      font-weight: 400;
+    }
+    .card-container {
+      border-radius: 30px;
+      padding: 20px;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 10px;
+      position: relative;
+      .card-top-image {
+        img {
+          width: 100%;
+          max-width: 241px;
+          height: 135px;
+          object-fit: contain;
+        }
+      }
+      .card-bottom-content {
+        .card-title {
+          margin-bottom: 0;
+          color: rgba(43, 43, 43, 0.5);
+          font-size: clamp(13px, 2vw, 18px);
+          font-weight: 400;
+        }
+        a {
+          margin-bottom: 0;
+          color: $blue;
+          font-size: clamp(13px, 2vw, 18px);
+          font-weight: 600;
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// promokod end
 
 // responsive cabinet
 @media (max-width: 1200px) {
