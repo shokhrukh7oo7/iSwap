@@ -330,10 +330,15 @@ const cabinetReportWrapper = document.querySelector(
 );
 const reportWrapper = document.querySelectorAll(".report-table-item");
 const reportTable = document.getElementById("report-table-info");
+const enterSum = document.querySelector(".enter-sum-wrapper");
 
 reportWrapper.forEach((item) => {
   item.addEventListener("click", () => {
     reportTable.style.display = "flex";
     cabinetReportWrapper.style.display = "none;";
   });
+});
+
+reportTable.addEventListener("click", () => {
+  enterSum.style.display = "block";
 });
