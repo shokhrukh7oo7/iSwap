@@ -617,10 +617,16 @@ table th {
           padding: 15px 25px;
           border-bottom: 1px solid rgba(34, 60, 80, 0.25);
           @include flex(row, space-between, center);
+          position: relative;
           .report-table-data {
             margin: 0;
             color: $black;
             @include fontSize(12px, 2vw, 20px, 400);
+            &::after {
+              position: absolute;
+              content: "";
+              inset: 0;
+            }
           }
           .report-table-summ {
             margin: 0;
@@ -638,6 +644,40 @@ table th {
         }
         .report-table-item:last-child {
           border-bottom: none;
+        }
+      }
+      .report-table-info {
+        margin: 20px 0;
+        @include flex(column, center, start);
+        .report-table-info-item-wrapper {
+          width: 100%;
+          @include flex(column, center, start);
+          .table-info-date {
+            margin: 0;
+            padding: 0 20px;
+            color: rgb(43, 43, 43);
+            font-size: clamp(14px, 2vw, 18px);
+            font-weight: 400;
+          }
+          .report-table-info-item {
+            width: 100%;
+            border-radius: 8px;
+            padding: 15px 20px;
+            box-shadow: 2px 2px 10px 0px rgba(34, 60, 80, 0.25);
+            @include flex(row, space-between, center);
+            .report-table-info-left-title {
+              margin: 0;
+              color: $black;
+              font-size: clamp(12px, 2vw, 20px);
+              font-weight: 400;
+            }
+            .report-table-info-right-title {
+              margin: 0;
+              color: $green;
+              font-size: clamp(14px, 2vw, 20px);
+              font-weight: 600;
+            }
+          }
         }
       }
     }
@@ -1062,6 +1102,13 @@ table th {
         .cabinet-report-table-wrapper {
           .report-table-item {
             padding: 15px 12px;
+          }
+        }
+        .report-table-info {
+          .report-table-info-item-wrapper {
+            .report-table-info-item {
+              padding: 15px 12px;
+            }
           }
         }
       }

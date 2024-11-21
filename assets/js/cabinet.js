@@ -39,17 +39,19 @@ menuItems.forEach((item) => {
 
 // ================================================================================================
 
-document.querySelectorAll('.top-nav .dropdown-menu .dropdown-item img').forEach(function (img) {
-  img.addEventListener('click', function (event) {
-    // Получаем текущий src изображения в button
-    let currentFlag = document.getElementById('current-flag');
-    let currentSrc = currentFlag.src;
+document
+  .querySelectorAll(".top-nav .dropdown-menu .dropdown-item img")
+  .forEach(function (img) {
+    img.addEventListener("click", function (event) {
+      // Получаем текущий src изображения в button
+      let currentFlag = document.getElementById("current-flag");
+      let currentSrc = currentFlag.src;
 
-    // Меняем местами src изображения в button и нажатого элемента
-    currentFlag.src = event.target.src;
-    event.target.src = currentSrc;
+      // Меняем местами src изображения в button и нажатого элемента
+      currentFlag.src = event.target.src;
+      event.target.src = currentSrc;
+    });
   });
-});
 // CABINET HEADER AND SIDEBAR JS END
 
 // ================================================================================================
@@ -247,19 +249,23 @@ const filtrOpenBtn = document.getElementById("cabinet-report-filter-btn");
 const filtrModal = document.querySelector(".cabinet-report-filtr-modal");
 const filtrCloseBtn = document.querySelectorAll(".filtr-btn");
 const filtrNextBtn = document.getElementById("filter-next-btn");
-const filtrModalBody = document.querySelector(".cabinet-report-filtr-modal-body");
+const filtrModalBody = document.querySelector(
+  ".cabinet-report-filtr-modal-body"
+);
 
-const filtrNotFound = document.querySelector(".cabinet-report-filtr-modal-not-found");
+const filtrNotFound = document.querySelector(
+  ".cabinet-report-filtr-modal-not-found"
+);
 const filtrBackBtn = document.getElementById("filter-back-btn");
 
 filtrNextBtn.addEventListener("click", () => {
   filtrNotFound.style.display = "flex";
   filtrModalBody.style.display = "none";
-})
+});
 filtrBackBtn.addEventListener("click", () => {
   filtrNotFound.style.display = "none";
   filtrModalBody.style.display = "block";
-})
+});
 
 // ==============================================
 filtrOpenBtn.addEventListener("click", () => {
@@ -286,33 +292,48 @@ document.addEventListener("keydown", (e) => {
 // REPORT SECTION FILTER MODAL JS END
 
 // ==============================================
-const mainBodyContentToggler = document.querySelector("#main-body-content-toggler")
-const leftMenu = document.querySelector(".left-menu")
-
+const mainBodyContentToggler = document.querySelector(
+  "#main-body-content-toggler"
+);
+const leftMenu = document.querySelector(".left-menu");
 
 function navDropdownHandler(e) {
-  e.stopPropagation()
+  e.stopPropagation();
 
-  leftMenu.classList.toggle("as-dropdown")
+  leftMenu.classList.toggle("as-dropdown");
   if (leftMenu.classList.contains("as-dropdown")) {
-    leftMenu.style.display = "block"
-    leftMenu.style.maxHeight = "100%"
-    leftMenu.style.overflow = "auto"
+    leftMenu.style.display = "block";
+    leftMenu.style.maxHeight = "100%";
+    leftMenu.style.overflow = "auto";
     setTimeout(() => {
-      leftMenu.style.maxHeight = "100%"
-      leftMenu.style.height = "120vh"
-    }, 100)
+      leftMenu.style.maxHeight = "100%";
+      leftMenu.style.height = "120vh";
+    }, 100);
     setTimeout(() => {
-      leftMenu.style.overflow = "auto"
-    }, 500)
+      leftMenu.style.overflow = "auto";
+    }, 500);
   } else {
-    leftMenu.style.maxHeight = "0"
-    leftMenu.style.overflow = "hidden"
-    leftMenu.style.display = "none"
+    leftMenu.style.maxHeight = "0";
+    leftMenu.style.overflow = "hidden";
+    leftMenu.style.display = "none";
   }
 }
 if (window.innerWidth < 992) {
-  mainBodyContentToggler.addEventListener("click", navDropdownHandler)
+  mainBodyContentToggler.addEventListener("click", navDropdownHandler);
 } else {
-  mainBodyContentToggler.removeEventListener("click", navDropdownHandler)
+  mainBodyContentToggler.removeEventListener("click", navDropdownHandler);
 }
+
+// ====================== report ============================
+const cabinetReportWrapper = document.querySelector(
+  ".cabinet-report-table-wrapper"
+);
+const reportWrapper = document.querySelectorAll(".report-table-item");
+const reportTable = document.getElementById("report-table-info");
+
+reportWrapper.forEach((item) => {
+  item.addEventListener("click", () => {
+    reportTable.style.display = "flex";
+    cabinetReportWrapper.style.display = "none;";
+  });
+});
