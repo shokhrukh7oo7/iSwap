@@ -882,6 +882,50 @@ table th {
           }
         }
       }
+      .cabinet-report-filtr-modal-receipt {
+        background-color: $light-grey;
+        .receipt-body-wrapper {
+          #bot {
+            #table {
+              padding: 10px;
+              table {
+                border-radius: 0;
+                tr {
+                  .tableitem {
+                    text-align: start;
+                    p {
+                      margin: 0;
+                      padding: 0;
+                      @include fontSize(13px, 1vw, 15px, 400);
+                    }
+                  }
+                  .table-item-bold {
+                    text-align: end;
+                    p {
+                      margin: 0;
+                      padding: 0;
+                      @include fontSize(13px, 1vw, 15px, 700);
+                    }
+                  }
+                  td {
+                    padding: 0.39em;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .receipt-btns {
+          padding: 10px 0;
+          @include flex(row, space-evenly, center, wrap, 20px);
+          .receipt-btn {
+            padding: 0;
+            color: $black;
+            @include fontSize(13px, 1.5vw, 15px, 400);
+            @include flex(column, start, center, wrap, 5px);
+          }
+        }
+      }
     }
   }
 }
@@ -1099,6 +1143,29 @@ table th {
   }
   .cabinet-report {
     height: 100%;
+  }
+  .cabinet-report-filtr-modal-receipt {
+    background-color: $light-grey;
+    .receipt-body-wrapper {
+      #bot {
+        #table {
+          padding: 10px;
+          table {
+            border-radius: 0;
+            tr {
+              border-radius: 0;
+              margin: 0;
+              border-bottom: 0;
+              @include flex(row, space-between, center);
+              td {
+                border-bottom: 0;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1818,6 +1818,57 @@ table th {
   font-size: clamp(13px, 1.5vw, 17px);
   font-weight: 400;
 }
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt {
+  background-color: #eee;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table {
+  padding: 10px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table {
+  border-radius: 0;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr .tableitem {
+  text-align: start;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr .tableitem p {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 400;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr .table-item-bold {
+  text-align: end;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr .table-item-bold p {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 700;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr td {
+  padding: 0.39em;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-btns {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-btns .receipt-btn {
+  padding: 0;
+  color: rgb(43, 43, 43);
+  font-size: clamp(13px, 1.5vw, 15px);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
 
 .cabinet-promokod {
   height: 100vh;
@@ -2004,6 +2055,30 @@ table th {
   }
   .cabinet-report {
     height: 100%;
+  }
+  .cabinet-report-filtr-modal-receipt {
+    background-color: #eee;
+  }
+  .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table {
+    padding: 10px;
+  }
+  .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table {
+    border-radius: 0;
+  }
+  .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr {
+    border-radius: 0;
+    margin: 0;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .cabinet-report-filtr-modal-receipt .receipt-body-wrapper #bot #table table tr td {
+    border-bottom: 0;
+    padding: 0;
   }
 }
 @media (max-width: 576px) {

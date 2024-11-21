@@ -323,6 +323,63 @@ if (window.innerWidth < 992) {
 } else {
   mainBodyContentToggler.removeEventListener("click", navDropdownHandler);
 }
+// ====================== Filtr modal ============================
+
+// FILTR DOWNLOAD - SHARE - PRINT JS START
+const shareBtn = document.getElementById("share-btn");
+
+async function shareHandler() {
+  navigator.share({
+    title: "From Shokhrukh",
+    text: "This is a message from Shokhrukh",
+    url: "https://t.me/shokhrukh274/",
+  });
+}
+
+shareBtn.addEventListener("click", shareHandler);
+// FILTR DOWNLOAD - SHARE - PRINT JS END
+
+// FILTR DOWNLOAD - RECEIPT START
+function downloadAsPDF() {
+  const preview = document.getElementById("table");
+  const otp = {
+    margin: 1,
+    fileName: "document.pdf",
+    image: {
+      type: "jpeg",
+      quality: 1,
+    },
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      logging: true,
+      allowTaint: true,
+    },
+    jsPDF: {
+      unit: "in",
+      format: "letter",
+      orientation: "portrait",
+    },
+  };
+  if (preview) {
+    setTimeout(() => {
+      html2pdf()
+        .set(otp)
+        .from(preview)
+        .save()
+        .catch((err) => console.error("Error generating PDF:", err));
+    }, 1000);
+  } else {
+    alert("Файл не найдет");
+  }
+}
+const downloadBtn = document.getElementById("download-btn");
+if (downloadBtn) {
+  downloadBtn.onclick = downloadAsPDF;
+} else {
+  alert("Файл не найдет");
+}
+// FILTR DOWNLOAD - RECEIPT END
 
 // ====================== report ============================
 const cabinetReportWrapper = document.querySelector(
