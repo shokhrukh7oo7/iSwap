@@ -1,0 +1,68 @@
+@media print {
+  header {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .left-menu {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .mobile-menu {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-table {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-products {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-location {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .location-overlay {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-sold {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-limit {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-get-money {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-profile-setting {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report {
+    padding: 0;
+    background-color: transparent;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-header-wrapper {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filter-wrapper {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal {
+    width: 100%;
+    height: 100vh;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-header {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-body {
+    display: none;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt {
+    background-color: transparent;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-body-wrapper table tbody tr td {
+    padding: 20px !important;
+  }
+  #main-body-content .main-content-wrapper .main-content .cabinet-report .cabinet-report-wrapper .cabinet-report-filtr-modal .cabinet-report-filtr-modal-receipt .receipt-btns {
+    display: none;
+  }
+}

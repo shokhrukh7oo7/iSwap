@@ -1,0 +1,82 @@
+@media print {
+    header {
+      display: none;
+    }
+    #main-body-content {
+      .main-content-wrapper {
+        .left-menu {
+          display: none;
+        }
+        .main-content {
+          .mobile-menu {
+            display: none;
+          }
+          .cabinet-table {
+            display: none;
+          }
+          .cabinet-products {
+            display: none;
+          }
+          .cabinet-location {
+            display: none;
+          }
+          .location-overlay {
+            display: none;
+          }
+          .cabinet-sold {
+            display: none;
+          }
+          .cabinet-limit {
+            display: none;
+          }
+          .cabinet-get-money {
+            display: none;
+          }
+          .cabinet-profile-setting {
+            display: none;
+          }
+          .cabinet-report {
+            padding: 0;
+            background-color: transparent;
+            .cabinet-report-wrapper {
+              width: 100%;
+              height: 100vh;
+              .cabinet-report-header-wrapper {
+                display: none;
+              }
+              .cabinet-report-filter-wrapper {
+                display: none;
+              }
+              .cabinet-report-filtr-modal {
+                width: 100%;
+                height: 100vh;
+                .cabinet-report-filtr-modal-header {
+                  display: none;
+                }
+                .cabinet-report-filtr-modal-body {
+                  display: none;
+                }
+                .cabinet-report-filtr-modal-receipt {
+                  background-color: transparent;
+                  .receipt-body-wrapper {
+                    table {
+                      tbody {
+                        tr {
+                          td {
+                            padding: 20px !important;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .receipt-btns {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

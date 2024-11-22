@@ -381,6 +381,20 @@ if (downloadBtn) {
 }
 // FILTR DOWNLOAD - RECEIPT END
 
+// CABINET FILTR MODAL RECEIPT CHANGE START
+const receiptBtn = document.getElementById("enter-sum-btn");
+const receiptTable = document.querySelector(
+  ".cabinet-report-filtr-modal-receipt"
+);
+const modalBody = document.querySelector(".cabinet-report-filtr-modal-body");
+
+receiptBtn.addEventListener("click", () => {
+  receiptTable.style.display = "block";
+  modalBody.style.display = "none";
+});
+
+// CABINET FILTR MODAL RECEIPT CHANGE END
+
 // ====================== report ============================
 const cabinetReportWrapper = document.querySelector(
   ".cabinet-report-table-wrapper"
