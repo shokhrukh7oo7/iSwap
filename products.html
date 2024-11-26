@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- BOOTSTRAP CUSTOM CSS START -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- SWIPER START -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <!-- SWIPER END -->
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./assets/css/product.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <!-- FAVICON CSS -->
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/header/iSwap03 1-modified.png"
+    />
+
+    <script src="main.js" type="module"></script>
+  </head>
+  <body>
+    <!-- Header start -->
+    <header id="main-header">
+      <nav>
+        <div class="container">
+          <!-- Navbar top start -->
+          <div class="top-nav">
+            <!-- Menu burger start -->
+            <span id="main-body-content-toggler">
+              <img src="./assets/images/header/Burger.svg" alt="image" />
+            </span>
+            <!-- Menu burger end -->
+
+            <!-- Logo start -->
+            <div class="logo-wrapper">
+              <a href="./index.html"
+                ><img
+                  src="./assets/images/header/iSwap03 1-modified.png"
+                  alt="logo"
+              /></a>
+            </div>
+            <!-- Logo end -->
+
+            <!-- Location start -->
+            <div class="location-wrapper">
+              <div class="selected-location">
+                <img src="./assets/images/header/Location.svg" alt="image" />
+                <p class="location-city">
+                  <span data-i18n="toshkent">Toshkent</span>
+                  <span>shahri</span>
+                </p>
+              </div>
+              <div class="locations-dropdown-content">
+                <p class="location-city">
+                  <a href="assets/pages/cabinet.html">Hello world</a>
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Toshkent
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Samarqand
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Jizzax
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Sirdaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qashqadaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Surxandaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Xorazm
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Buxoro
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Andijon
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Farg'ona
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Namangan
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qoraqalpog'iston
+                  <span>respublikasi</span>
+                </p>
+              </div>
+            </div>
+            <!-- Location end -->
+
+            <!-- Search start -->
+            <div class="search-wrapper">
+              <input
+                type="search"
+                placeholder="iSwapdan qidirish"
+                class="form-control"
+              />
+              <button type="submit" class="search-btn">
+                <img src="./assets/images/header/search.svg" alt="image" />
+              </button>
+            </div>
+            <!-- Search end -->
+
+            <!-- Language start -->
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  id="current-flag"
+                  src="./assets/images/header/flag.svg"
+                  alt="img"
+                />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="./assets/images/header/ru.svg" alt="image"
+                  /></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="./assets/images/header/en.svg" alt="image"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Language end -->
+
+            <!-- Notification start -->
+            <!-- <div class="add-to-cart-wrapper">
+                      <img src="./assets/images/header/bell.svg" alt="image" />
+                    </div> -->
+            <!-- Notification end -->
+
+            <!-- Add to cart start -->
+            <div class="add-to-cart-wrapper">
+              <img src="./assets/images/header/Mask group.svg" alt="image" />
+              <p class="cart-count">5+</p>
+            </div>
+            <!-- Add to cart end -->
+
+            <!-- Enter start -->
+            <div class="enter-wrapper">
+              <a
+                href="./assets/pages/enter.html"
+                class="enter-title"
+                id="show-btn"
+                >Kirish</a
+              >
+
+              <!-- modal start -->
+              <div class="enter-modal hidden" id="modal">
+                <button class="btn close-btn" id="close-btn">
+                  <i class="fas fa-close"></i>
+                </button>
+                <div class="modal-header">
+                  <h3>Kabinetga kirish</h3>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-control-wrapper">
+                      <label for="enter-phone">Telefon raqam</label>
+                      <input
+                        id="enter-phone"
+                        type="tel"
+                        placeholder="+998 9x-xxx-xx-xx"
+                      />
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-wrapper password-wrapper">
+                      <label for="pass">Parol</label>
+                      <span id="show-password-eye">
+                        <i class="fa-regular fa-eye-slash"></i>
+                      </span>
+                      <input id="pass" type="password" placeholder="Password" />
+                      <p class="error"></p>
+                    </div>
+                    <a class="forgot-password">Parolni unutdingizmi?</a>
+                    <div class="form-control-wrapper">
+                      <button type="submit">Kirish</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- modal end -->
+
+              <!-- forgot modal start -->
+
+              <!-- forgot modal end -->
+
+              <!-- overlay -->
+              <div class="overlay hidden" id="overlay">
+                <div class="modal-image-1">
+                  <img src="./assets/images/home/Logo (2).png" alt="" />
+                </div>
+                <div class="modal-image-2">
+                  <img src="./assets/images/home/Logo (2).png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Enter end -->
+          </div>
+          <!-- Navbar top end -->
+          <!-- <div class="line"></div> -->
+          <!-- Navbar bottom start -->
+          <div class="bottom-nav">
+            <ul class="bottom-nav-items">
+              <li class="item"><a href="#">Trade in haqida</a></li>
+              <li class="item">
+                <a href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a>
+              </li>
+              <li class="item"><a href="#assessment">Texnikani baholash</a></li>
+              <li class="item"><a href="#preferences">Afzalliklarimiz</a></li>
+              <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
+            </ul>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Trade in haqida
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li>
+                  <a class="dropdown-item" href="#preferences"
+                    >Trade in haqida</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel-box"
+                    >Qabul qiladigan mahsulotlarimiz</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#assessment"
+                    >Texnikani baholash</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#preferences"
+                    >Afzalliklarimiz</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#faqSection"
+                    >Ko'p beriladigan savollar</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Navbar bottom end -->
+        </div>
+      </nav>
+    </header>
+    <!-- Header start -->
+
+    <!-- Main start -->
+    <main id="main-body-content">
+      <div class="main-content-wrapper">
+        <div class="left-menu">
+          <!-- Left menu items -->
+          <div class="left-menu-item link-dropdown">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Narxi
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="from-to-wrapper">
+                      <div class="item">
+                        <p class="from-to-title">to</p>
+                        <input
+                          type="text"
+                          placeholder="150 000"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="item">
+                        <p class="from-to-title">gacha</p>
+                        <input
+                          type="text"
+                          placeholder="999 000 000"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="item">
+                        <button class="from-to-title from-to-btn">ok</button>
+                      </div>
+                    </div>
+
+                    <div class="input-range-wrapper">
+                      <input type="range" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- -------------------------- -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Ishlab chiqaruvchi
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Apple</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Realme</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Samsung</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Tecno Mobile</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">ViVo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- -------------------------- -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Model
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <!-- -------------------------- -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Rang
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Qizil</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Qora</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Oq</p>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" class="custom-checkbox" />
+                      <p class="checkbox-title">Kul rang</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content">
+          <section class="product-filtr-wrapper">
+            <div class="container">
+              <div class="row mt-4">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-lg-5-custom mb-3">
+                  <div class="card">
+                    <div class="products-card-header">
+                      <div class="trade-in">Trade in</div>
+                      <div class="heart"><i class="fas fa-heart"></i></div>
+                      <img
+                        src="/assets/images/swiper/laptop.png"
+                        alt="Image of Mackbook M1 Pro Max (2022)"
+                      />
+                    </div>
+                    <div class="products-card-body">
+                      <h2>Mackbook M1 Pro Max (2022)</h2>
+                      <p class="price">6 526 000 so'm</p>
+                      <button class="btn btn-card installment">
+                        526 000 so'm x 12 oy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-lg-5-custom mb-3">
+                  <div class="card">
+                    <div class="products-card-header">
+                      <div class="trade-in">Trade in</div>
+                      <div class="heart"><i class="fas fa-heart"></i></div>
+                      <img src="/assets/images/swiper/phone.png" alt="image" />
+                    </div>
+                    <div class="products-card-body">
+                      <h2>Iphone 13 Pro Max</h2>
+                      <p class="price">3 526 000 so'm</p>
+                      <button class="btn btn-card installment">
+                        326 000 so'm x 12 oy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-lg-5-custom mb-3">
+                  <div class="card">
+                    <div class="products-card-header">
+                      <div class="trade-in">Trade in</div>
+                      <div class="heart"><i class="fas fa-heart"></i></div>
+                      <img src="/assets/images/swiper/laptop.png" alt="image" />
+                    </div>
+                    <div class="products-card-body">
+                      <h2>Mackbook M1 Pro Max (2022)</h2>
+                      <p class="price">6 526 000 so'm</p>
+                      <button class="btn btn-card installment">
+                        526 000 so'm x 12 oy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-lg-5-custom mb-3">
+                  <div class="card">
+                    <div class="products-card-header">
+                      <div class="trade-in">Trade in</div>
+                      <div class="heart"><i class="fas fa-heart"></i></div>
+                      <img src="/assets/images/swiper/phone.png" alt="image" />
+                    </div>
+                    <div class="products-card-body">
+                      <h2>Iphone 13 Pro Max</h2>
+                      <p class="price">3 526 000 so'm</p>
+                      <button class="btn btn-card installment">
+                        326 000 so'm x 12 oy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- Main end -->
+
+    <!-- BOOTSTRAP CUSTOM JS START -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP CUSTOM JS END -->
+
+    <!-- font-awesome cdn js start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font-awesome cdn js end -->
+
+    <!-- MAIN CUSTOM JS START -->
+    <script src="./assets/js/header.js"></script>
+    <!-- MAIN CUSTOM JS END -->
+  </body>
+</html>

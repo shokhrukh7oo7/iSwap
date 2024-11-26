@@ -1,0 +1,170 @@
+@import "../global";
+
+#main-body-content {
+  .main-content-wrapper {
+    .left-menu {
+      .left-menu-item {
+        .accordion {
+          .accordion-item {
+            .accordion-header {
+              color: #2b2b2b;
+              font-size: clamp(14px, 1.5vw, 20px);
+              font-weight: 500;
+              .accordion-button {
+                &:not(.collapsed) {
+                  background-color: transparent;
+                }
+                &:focus {
+                  box-shadow: 0 0 0 0.15rem rgb(245, 245, 245);
+                }
+              }
+            }
+
+            .accordion-body {
+              .from-to-wrapper {
+                @include flex(row, center, end);
+                .item {
+                  .from-to-title {
+                    color: #2b2b2b;
+                    font-weight: 400;
+                    margin: 0;
+                    padding-left: 10px;
+                    font-size: clamp(14px, 1.5vw, 18px);
+                  }
+                  input {
+                    color: #2b2b2b;
+                    font-weight: 400;
+                    font-size: clamp(14px, 1.5vw, 16px);
+                    &::placeholder {
+                      font-weight: 400;
+                      font-size: clamp(14px, 1.5vw, 16px);
+                    }
+                  }
+                  .from-to-btn {
+                    background-color: $red;
+                    border: none;
+                    padding: 5px 10px;
+                    height: 38px;
+                    border-radius: 0.37rem;
+                    color: $white;
+                  }
+                }
+              }
+              .input-range-wrapper {
+                width: 100%;
+                margin-top: 20px;
+                input {
+                  width: 100%;
+                }
+              }
+
+              .checkbox-wrapper {
+                margin-bottom: 10px;
+                position: relative;
+                @include flex(row, start, center);
+                input {
+                  height: 22px;
+                  width: 22px;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    cursor: pointer;
+                    inset: 0;
+                  }
+                }
+                .checkbox-title {
+                  font-weight: 400;
+                  margin: 0;
+                  font-size: clamp(14px, 1.5vw, 16px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .product-filtr-wrapper {
+      height: 100%;
+      background-color: rgb(0, 140, 238);
+      padding: 200px 0 100px;
+      .card {
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+        padding: 16px 22px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: normal;
+        flex-wrap: nowrap;
+        gap: 10px;
+        .trade-in {
+          position: absolute;
+          top: 10px;
+          left: -28px;
+          background-color: #ef4444;
+          color: white;
+          font-size: 17px;
+          padding: 4px 25px;
+          transform: rotate(-45deg);
+        }
+        .heart {
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: #ef4444;
+          font-size: 24px;
+          padding: 3px 10px;
+          cursor: pointer;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1.5 / 1;
+          object-fit: contain;
+          margin-bottom: 16px;
+        }
+        h2 {
+          color: $black;
+          margin: 0 0 0 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 1;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          font-size: clamp(15px, 1.8vw, 18px);
+          font-weight: 500;
+        }
+        .price {
+          color: $blue;
+          margin: 8px 0 0 8px;
+          font-size: clamp(15px, 2vw, 22px);
+          font-weight: 700;
+        }
+        .installment {
+          border: 1px solid $red;
+          border-radius: 30px;
+          color: $red;
+          margin-top: 8px;
+          width: 100%;
+          font-size: clamp(13px, 1.5vw, 15px);
+          font-weight: 500;
+          &:hover {
+            border-color: $blue;
+            color: $blue;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            inset: 0;
+          }
+        }
+      }
+    }
+  }
+}
