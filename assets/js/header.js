@@ -58,7 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// ==================
+// ================================================================================================
+// mobile filter js
+const mobileFiltrBtn = document.getElementById("mobile-filtr");
+const filtrMenu = document.querySelector(".filtr-menu");
+const mainContentFiltr = document.querySelector(".main-content");
+const filtrCloseBtn = document.getElementById("filtr-close-btn");
+
+mobileFiltrBtn.addEventListener("click", () => {
+  filtrMenu.style.transform = "translateX(0)";
+  mainContentFiltr.style["grid-template-columns"] = "100% 0";
+  filtrCloseBtn.style.display = "flex";
+});
+
+filtrCloseBtn.addEventListener("click", () => {
+  filtrMenu.style.transform = "translateX(-400px)";
+  mainContentFiltr.style["grid-template-columns"] = "0 100%";
+});
+
+// ================================================================================================
+
 // image switcher
 const leftImgs = document.querySelectorAll(".product-info-wrapper-left img");
 const rightImg = document.querySelector(".product-info-wrapper-right img");
@@ -75,7 +94,8 @@ leftImgs.forEach((img) => {
 rightImg.addEventListener("click", (e) => {
   e.target.requestFullscreen();
 });
-// =========================================
+// ================================================================================================
+
 // product info step (range)
 // Функция обновления степов
 const steps = document.querySelectorAll(".step");
@@ -121,3 +141,4 @@ steps.forEach((step, index) => {
 });
 // Вызвать инициализацию
 initializeTimeline();
+// ================================================================================================

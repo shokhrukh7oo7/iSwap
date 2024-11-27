@@ -5,8 +5,19 @@
     .main-content {
       display: grid;
       grid-template-columns: 25% 75%;
+      overflow: hidden;
       .filtr-menu {
-        padding-top: 70px;
+        padding-top: 80px;
+        .filtr-close-btn {
+          margin: 10px 0;
+          justify-content: end;
+          align-items: end;
+          display: none;
+          width: 100%;
+          &:active {
+            border: transparent;
+          }
+        }
         .accordion {
           .accordion-item {
             .accordion-header {
@@ -90,9 +101,47 @@
         height: 100vh;
         background-color: rgb(0, 140, 238);
         padding: 100px 0 100px;
+
+        .filtr-mobile-wrapper {
+          padding: 0 100px;
+          margin: 20px 0;
+          @include flex(row, space-between, center);
+          ul {
+            padding: 10px;
+            list-style: none;
+            -ms-flex-wrap: nowrap !important;
+            flex-wrap: nowrap !important;
+            overflow: auto;
+            white-space: nowrap;
+            margin: 0;
+            li {
+              @include fontSize(12px, 1.5vw, 16px);
+              a {
+                color: $white;
+              }
+              & + li::before {
+                content: "";
+                display: inline-block;
+                padding: 5px;
+                height: 12px;
+                background-image: url("/assets/images/home/arrow.svg");
+                background-repeat: no-repeat;
+                margin-left: 5px;
+              }
+            }
+          }
+          .mobile-filtr {
+            display: none;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+
         .card {
           background-color: rgb(255, 255, 255);
-          border-radius: 30px;
+          border-radius: 24px;
           box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
           padding: 16px 22px;
           width: 100%;
@@ -113,6 +162,7 @@
             color: white;
             font-size: 17px;
             padding: 4px 25px;
+            font-size: clamp(13px, 1.8vw, 18px);
             transform: rotate(-45deg);
           }
           .heart {
@@ -145,7 +195,7 @@
           .price {
             color: $blue;
             margin: 8px 0 0 8px;
-            font-size: clamp(15px, 2vw, 22px);
+            font-size: clamp(15px, 1.5vw, 22px);
             font-weight: 700;
           }
           .installment {
@@ -154,7 +204,7 @@
             color: $red;
             margin-top: 8px;
             width: 100%;
-            font-size: clamp(13px, 1.3vw, 16px);
+            font-size: clamp(10px, 1.3vw, 16px);
             font-weight: 500;
             &:hover {
               border-color: $blue;
@@ -502,6 +552,20 @@
   }
 }
 
+@media (max-width: 1200px) {
+  #main-body-content {
+    .main-content-wrapper {
+      .main-content {
+        .product-filtr-wrapper {
+          .filtr-mobile-wrapper {
+            padding: 0 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   #main-body-content {
     .filtr-menu {
@@ -510,6 +574,15 @@
     .main-content-wrapper {
       .main-content {
         grid-template-columns: 0 100%;
+        .product-filtr-wrapper {
+          .filtr-mobile-wrapper {
+            padding: 0 50px;
+            .mobile-filtr {
+              display: block;
+            }
+          }
+        }
+
         .product-filtr-info {
           .product-information-wrapper {
             background-color: transparent;
@@ -538,15 +611,22 @@
 @media (max-width: 768px) {
   #main-body-content {
     .main-content-wrapper {
-      .product-filtr-info {
-        .product-information-wrapper {
-          padding: 20px 30px;
-          .product-info-wrapper {
-            .product-info-wrapper-right {
-              .card {
-                padding: 15px 25px;
-                img {
-                  padding: 30px 20px 0;
+      .main-content {
+        .product-filtr-wrapper {
+          .filtr-mobile-wrapper {
+            padding: 0 15px;
+          }
+        }
+        .product-filtr-info {
+          .product-information-wrapper {
+            padding: 20px 30px;
+            .product-info-wrapper {
+              .product-info-wrapper-right {
+                .card {
+                  padding: 15px 25px;
+                  img {
+                    padding: 30px 20px 0;
+                  }
                 }
               }
             }
@@ -560,47 +640,52 @@
 @media (max-width: 576px) {
   #main-body-content {
     .main-content-wrapper {
-      .product-filtr-info {
-        .product-information-wrapper {
-          padding: 0;
-          .product-info-wrapper {
-            .product-info-wrapper-left {
-              @include flex(column, space-between, center);
-            }
-            .product-info-wrapper-right {
-              .card {
-                padding: 15px 10px;
+      .main-content {
+        .product-filtr-info {
+          .product-information-wrapper {
+            padding: 0;
+            .product-info-wrapper {
+              .product-info-wrapper-left {
+                @include flex(column, space-between, center);
+              }
+              .product-info-wrapper-right {
+                .card {
+                  padding: 15px 10px;
+                }
               }
             }
-          }
-          .payment-partner-wrapper {
-            .pay-range-wrapper {
-              .timeline {
-                padding: 15px 20px;
+            .payment-partner-wrapper {
+              .pay-range-wrapper {
+                .timeline {
+                  padding: 15px 20px;
+                }
               }
-            }
-            .partner-card-wrapper {
-              .logo-wrapper {
-                a {
-                  img {
-                    max-width: 100px;
+              .partner-card-wrapper {
+                .logo-wrapper {
+                  a {
+                    img {
+                      max-width: 100px;
+                    }
                   }
                 }
               }
             }
-          }
-          .product-characteristic-wrapper {
-            padding: 15px 20px;
-          }
-          .payment-partner-wrapper {
-            .partner-card-wrapper {
-              padding: 15px 10px;
+            .product-characteristic-wrapper {
+              padding: 15px 20px;
+            }
+            .payment-partner-wrapper {
+              .partner-card-wrapper {
+                padding: 15px 10px;
+              }
             }
           }
         }
-      }
-      .product-filtr-wrapper {
-        height: 100%;
+        .product-filtr-wrapper {
+          height: 100%;
+          .card {
+            padding: 10px 5px;
+          }
+        }
       }
     }
   }
