@@ -142,6 +142,27 @@ steps.forEach((step, index) => {
 // Вызвать инициализацию
 initializeTimeline();
 // ================================================================================================
+// product item increment and decrement js
+const increment = document.querySelector(".increment");
+const decrement = document.querySelector(".decrement");
+const counter = document.querySelector(".counter-number");
+
+let count = 0;
+
+increment.addEventListener("click", () => {
+  count--;
+  updateCounter();
+});
+
+decrement.addEventListener("click", () => {
+  count++;
+  updateCounter();
+});
+function updateCounter() {
+  counter.textContent = count;
+}
+
+// ================================================================================================
 const rangeInput = document.querySelectorAll(".range-input input"),
   priceInput = document.querySelectorAll(".from-to-wrapper input"),
   range = document.querySelector(".slider .progress");
@@ -183,4 +204,3 @@ rangeInput.forEach((input) => {
     }
   });
 });
-

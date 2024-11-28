@@ -3,9 +3,9 @@
 #main-body-content {
   .main-content-wrapper {
     .main-content {
-      display: grid;
-      grid-template-columns: 25% 75%;
-      overflow: hidden;
+      // display: grid;
+      // grid-template-columns: 25% 75%;
+      // overflow: hidden;
       .filtr-menu {
         padding-top: 80px;
         .filtr-close-btn {
@@ -149,7 +149,7 @@
       .product-filtr-wrapper {
         height: 100vh;
         background-color: rgb(0, 140, 238);
-        padding: 100px 0 100px;
+        // padding: 100px 0 100px;
 
         .filtr-mobile-wrapper {
           padding: 0 100px;
@@ -598,6 +598,116 @@
             }
           }
         }
+
+        .product-information-wrapper-two {
+          background-color: rgb(255, 255, 255);
+          padding: 30px 50px;
+          border-radius: 32px;
+          h1 {
+            font-weight: 600;
+            margin: 20px 0;
+            color: $black;
+            font-size: clamp(25px, 3.5vw, 40px);
+          }
+
+          .one-click-count {
+            margin: 30px 0;
+            @include flex(row, normal, center, nowrap, 30px);
+            .image-wrapper {
+              border-radius: 16px;
+              box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+              img {
+                width: 100%;
+                max-width: 200px;
+              }
+            }
+            .counter-wrapper {
+              @include flex(column, center, start);
+              .counter-title {
+                color: $black;
+                font-weight: 400;
+                margin: 0;
+                font-size: clamp(16px, 3vw, 28px);
+              }
+              .counter {
+                background-color: $blue;
+                border-radius: 12px;
+                padding: 10px 30px;
+                @include flex(row, center, center, nowrap, 40px);
+                ::selection {
+                  background-color: transparent;
+                }
+                .increment {
+                  color: $white;
+                  margin: 0;
+                  cursor: pointer;
+                  font-size: clamp(22px, 3vw, 30px);
+                }
+                .counter-number {
+                  color: $white;
+                  margin: 0;
+                  font-size: clamp(22px, 3vw, 30px);
+                }
+                .decrement {
+                  color: $white;
+                  margin: 0;
+                  cursor: pointer;
+                  font-size: clamp(22px, 3vw, 30px);
+                }
+              }
+            }
+          }
+
+          .one-click-sum-wrapper {
+            @include flex(row, center, center);
+            .sale-price {
+              font-weight: 600;
+              margin: 20px 0;
+              color: $blue;
+              font-size: clamp(18px, 3.5vw, 28px);
+              text-decoration: line-through;
+            }
+            img {
+              width: 100%;
+              max-width: 100px;
+            }
+            .price {
+              font-weight: 600;
+              margin: 20px 0;
+              color: $blue;
+              font-size: clamp(20px, 4vw, 35px);
+            }
+          }
+
+          .input-wrapper {
+            .input-title {
+              font-weight: 600;
+              margin: 20px 0;
+              color: $black;
+              font-size: clamp(18.75px, 2vw, 25px);
+            }
+            .input-container {
+              @include flex(row, normal, end, nowrap, 50px);
+              input {
+                width: 100%;
+                max-width: 380px;
+                padding: 20px;
+                font-size: clamp(18.75px, 2vw, 25px);
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                border-radius: 15px;
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+              button {
+                background-color: $red;
+                padding: 10px 30px;
+                color: $white;
+                font-size: clamp(16.5px, 2vw, 22px);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -727,6 +837,57 @@
             .payment-partner-wrapper {
               .partner-card-wrapper {
                 padding: 15px 10px;
+              }
+            }
+          }
+
+          .product-information-wrapper-two {
+            padding: 30px 20px;
+            .one-click-count {
+              justify-content: center;
+              gap: 20px;
+              .image-wrapper {
+                border-radius: 16px;
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                img {
+                  width: 100%;
+                  max-width: 100px;
+                }
+              }
+              .counter-wrapper {
+                @include flex(column, center, start);
+                .counter {
+                  padding: 5px 20px;
+                  @include flex(row, center, center, nowrap, 20px);
+                }
+              }
+            }
+
+            .one-click-sum-wrapper {
+              @include flex(column, center, center, nowrap, 0);
+              .sale-price {
+                margin: 0;
+              }
+              img {
+                width: 100%;
+                max-width: 60px;
+                transform: rotate(90deg);
+              }
+              .price {
+                margin: 0;
+              }
+            }
+
+            .input-wrapper {
+              .input-title {
+                font-weight: 400;
+                margin: 10px 0;
+              }
+              .input-container {
+                @include flex(column, start, start, nowrap, 10px);
+                input {
+                  padding: 15px;
+                }
               }
             }
           }
