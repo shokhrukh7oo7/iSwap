@@ -101,6 +101,14 @@ rightImg.addEventListener("click", (e) => {
 const steps = document.querySelectorAll(".step");
 const numbers = document.querySelectorAll(".number");
 const line = document.querySelector(".line");
+const partnerCards = document.querySelectorAll(".partner-card-wrapper");
+
+// Функция для отображения соответствующего партнера
+function showPartnerCard(partnerIndex) {
+  partnerCards.forEach((card) => {
+    card.style.display = card.dataset.partner === String(partnerIndex) ? "block" : "none";
+  });
+}
 
 // Функция для обновления активного шага
 function updateActiveStep(stepIndex) {
@@ -118,29 +126,39 @@ function updateActiveStep(stepIndex) {
   }
   // Обновить линию
   updateLine(stepIndex);
+  // Показать соответствующую карточку партнера
+  showPartnerCard(stepIndex);
 }
+
 // Функция для обновления линии
 function updateLine(stepIndex) {
   const percentage = (stepIndex / (steps.length - 1)) * 100;
   line.style.background = `linear-gradient(to right, #007bff ${percentage}%, #d3d3d3 ${percentage}%)`;
 }
+
 // Инициализация состояния при загрузке
 function initializeTimeline() {
   const activeStep = Array.from(steps).findIndex((step) =>
     step.classList.contains("active")
   );
-  updateLine(activeStep >= 0 ? activeStep : 0);
+  const defaultStep = activeStep >= 0 ? activeStep : 0;
+  updateLine(defaultStep);
+  showPartnerCard(defaultStep);
 }
+
 // Добавить обработчики кликов на номера
 numbers.forEach((number, index) => {
   number.addEventListener("click", () => updateActiveStep(index));
 });
+
 // Добавить обработчики кликов на степы
 steps.forEach((step, index) => {
   step.addEventListener("click", () => updateActiveStep(index));
 });
+
 // Вызвать инициализацию
 initializeTimeline();
+
 // ================================================================================================
 // product item increment and decrement js
 const increment = document.querySelector(".increment");
