@@ -539,7 +539,9 @@
 
         <div class="main-content">
           <section class="filtr-menu">
-            <button class="btn filtr-close-btn" id="filtr-close-btn"><i class="fas fa-close"></i></button>
+            <button class="btn filtr-close-btn" id="filtr-close-btn">
+              <i class="fas fa-close"></i>
+            </button>
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -562,7 +564,7 @@
                   <div class="accordion-body">
                     <div class="from-to-wrapper">
                       <div class="item">
-                        <p class="from-to-title">to</p>
+                        <p class="from-to-title">dan</p>
                         <input
                           type="text"
                           placeholder="150 000"
@@ -583,7 +585,28 @@
                     </div>
 
                     <div class="input-range-wrapper">
-                      <input type="range" />
+                      <!-- <input type="range" /> -->
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="range-input">
+                        <input
+                          type="range"
+                          class="range-min"
+                          min="0"
+                          max="10000"
+                          value="2500"
+                          step="100"
+                        />
+                        <input
+                          type="range"
+                          class="range-max"
+                          min="0"
+                          max="10000"
+                          value="7500"
+                          step="100"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -714,20 +737,20 @@
 
           <div class="main-content-wrapper">
             <section class="product-filtr-wrapper">
-                <div class="filtr-mobile-wrapper">
-                    <ul class="breadcrumb">
-                      <li>
-                        <a href="#">Bosh sahifa</a>
-                      </li>
-                      <li>
-                        <a href="#"> Telefon va gadjetlar </a>
-                      </li>
-                    </ul>
-      
-                    <button class="btn mobile-filtr" id="mobile-filtr">
-                      <img src="/assets/images/home/filtr.svg" alt="image">
-                    </button>
-                </div>
+              <div class="filtr-mobile-wrapper">
+                <ul class="breadcrumb">
+                  <li>
+                    <a href="#">Bosh sahifa</a>
+                  </li>
+                  <li>
+                    <a href="#"> Telefon va gadjetlar </a>
+                  </li>
+                </ul>
+
+                <button class="btn mobile-filtr" id="mobile-filtr">
+                  <img src="/assets/images/home/filtr.svg" alt="image" />
+                </button>
+              </div>
 
               <div class="container">
                 <div class="row">
@@ -822,7 +845,7 @@
               </div>
             </section>
 
-            <section class="product-filtr-info">
+            <section class="product-filtr-info" style="display: none;">
               <div class="container">
                 <div class="product-information-wrapper">
                   <div class="row">
@@ -979,6 +1002,55 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="product-filtr-info" >
+              <div class="container">
+                <div class="product-information-wrapper">
+                  <h1>Bir klikda xarid qilish</h1>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="one-click-count">
+                        <div class="image-wrapper">
+                          <img
+                            src="/assets/images/swiper/phone.png"
+                            alt="image"
+                          />
+                        </div>
+                        <div class="counter">
+                          <p class="counter-title">Iphone 13 Pro Max</p>
+                          <div class="counter" id="counter">
+                            <p class="increment">-</p>
+                            <p class="counter-number">0</p>
+                            <p class="decrement">+</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="one-click-sum-wrapper">
+                        <p class="sale-price">5 000 000 so'm</p>
+                        <img
+                          src="/assets/images/home/click-arrow.svg"
+                          alt="image"
+                        />
+                        <p class="price">4 000 000 so'm</p>
+                      </div>
+                    </div>
+
+                    <form class="input-wrapper">
+                      <p class="input-title">Promo kod bormi:</p>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="sdvsdvsfvsfv"
+                      />
+                      <button>Rasmiylashtirish</button>
+                    </form>
                   </div>
                 </div>
               </div>
