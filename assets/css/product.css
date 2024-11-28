@@ -1552,6 +1552,49 @@ header#main-header nav .bottom-nav .dropdown:focus {
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .input-container .otp-input-wrapper .input-btn .right-btn .red-btn {
   background-color: rgb(206, 53, 81);
 }
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper {
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-image img {
+  width: 100%;
+  border-radius: 40px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: clamp(14px, 2vw, 20px);
+  cursor: pointer;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content img {
+  width: 100%;
+  max-width: 120px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content .banner-header {
+  color: rgb(43, 43, 43);
+  font-weight: 700;
+  width: 100%;
+  max-width: 350px;
+  font-size: clamp(20px, 4vw, 36px);
+  text-align: center;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content .banner-btn {
+  color: rgb(255, 255, 255);
+  padding: 10px 50px;
+  background-color: rgb(206, 53, 81);
+  font-size: clamp(14px, 2vw, 20px);
+}
 
 @media (max-width: 1200px) {
   #main-body-content .main-content-wrapper .main-content .product-filtr-wrapper .filtr-mobile-wrapper {
@@ -1584,6 +1627,20 @@ header#main-header nav .bottom-nav .dropdown:focus {
   }
   #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper .payment-partner-wrapper {
     background-color: rgb(255, 255, 255);
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper {
+    position: relative;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-image img {
+    width: 100%;
+    border-radius: 40px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content {
+    margin: 0 auto 50px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content img {
+    width: 100%;
+    max-width: 120px;
   }
 }
 @media (max-width: 768px) {
@@ -1700,6 +1757,21 @@ header#main-header nav .bottom-nav .dropdown:focus {
     padding: 0;
     max-width: 40px;
     height: 60px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper {
+    position: relative;
+    padding: 40px 30px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-image img {
+    width: 100%;
+    border-radius: 40px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content {
+    margin: 0 auto;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper .banner-content img {
+    width: 100%;
+    max-width: 80px;
   }
   #main-body-content .main-content-wrapper .main-content .product-filtr-wrapper {
     height: 100%;

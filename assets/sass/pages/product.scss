@@ -794,6 +794,47 @@
             }
           }
         }
+
+        .banner-wrapper {
+          border-radius: 40px;
+          background-color: $white;
+          position: relative;
+          .banner-image {
+            img {
+              width: 100%;
+              border-radius: 40px;
+            }
+          }
+          i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: clamp(14px, 2vw, 20px);
+            cursor: pointer;
+          }
+          .banner-content {
+            margin: 0 auto;
+            @include flex(column, center, center, nowrap, 20px);
+            img {
+              width: 100%;
+              max-width: 120px;
+            }
+            .banner-header {
+              color: $black;
+              font-weight: 700;
+              width: 100%;
+              max-width: 350px;
+              font-size: clamp(20px, 4vw, 36px);
+              text-align: center;
+            }
+            .banner-btn {
+              color: $white;
+              padding: 10px 50px;
+              background-color: $red;
+              font-size: clamp(14px, 2vw, 20px);
+            }
+          }
+        }
       }
     }
   }
@@ -847,6 +888,22 @@
             }
             .payment-partner-wrapper {
               background-color: $white;
+            }
+          }
+          .banner-wrapper {
+            position: relative;
+            .banner-image {
+              img {
+                width: 100%;
+                border-radius: 40px;
+              }
+            }
+            .banner-content {
+              margin: 0 auto 50px;
+              img {
+                width: 100%;
+                max-width: 120px;
+              }
             }
           }
         }
@@ -996,6 +1053,23 @@
                     height: 60px;
                   }
                 }
+              }
+            }
+          }
+          .banner-wrapper {
+            position: relative;
+            padding: 40px 30px;
+            .banner-image {
+              img {
+                width: 100%;
+                border-radius: 40px;
+              }
+            }
+            .banner-content {
+              margin: 0 auto;
+              img {
+                width: 100%;
+                max-width: 80px;
               }
             }
           }
