@@ -707,6 +707,92 @@
               }
             }
           }
+
+          .input-container {
+            .input-card-wrapper {
+              .input-card-title {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $black;
+                font-size: clamp(18.75px, 2vw, 25px);
+              }
+              input {
+                width: 100%;
+                max-width: 430px;
+                padding: 20px;
+                font-size: clamp(15px, 2vw, 22px);
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                border-radius: 15px;
+                &::placeholder {
+                  color: $grey;
+                }
+              }
+            }
+
+            .otp-input-wrapper {
+              .input-card-title {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $black;
+                font-size: clamp(18.75px, 2vw, 25px);
+              }
+              .otp-input {
+                @include flex(row, normal, center, nowrap, 20px);
+                input {
+                  width: 100%;
+                  max-width: 65px;
+                  padding: 20px;
+                  font-size: clamp(15px, 2vw, 22px);
+                  box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                  border-radius: 15px;
+                  text-align: center;
+                  border-radius: 12px;
+                  &::placeholder {
+                    color: $grey;
+                  }
+                }
+              }
+              .input-btn {
+                margin: 20px 0;
+                @include flex(row, normal, start, nowrap, 25px);
+                .left-btn {
+                  button {
+                    margin: 5px 0;
+                    background-color: $red;
+                    padding: 10px 20px;
+                    color: $white;
+                    font-size: clamp(11.5px, 2vw, 22px);
+                  }
+                  .resend {
+                    color: $red;
+                    margin: 5px 0;
+                    text-align: end;
+                    font-size: clamp(13px, 1.2vw, 17px);
+                  }
+                  .grey-btn {
+                    background-color: $otp-button;
+                  }
+                  .grey-title {
+                    color: $otp-button;
+                  }
+                }
+                .right-btn {
+                  button {
+                    margin: 5px 0;
+                    background-color: $otp-button;
+                    padding: 10px 20px;
+                    color: $white;
+                    font-size: clamp(11.5px, 2vw, 22px);
+                  }
+                  .red-btn {
+                    background-color: $red;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -788,6 +874,16 @@
                   img {
                     padding: 30px 20px 0;
                   }
+                }
+              }
+            }
+          }
+
+          .product-information-wrapper-two {
+            .input-container {
+              .input-card-wrapper {
+                input {
+                  max-width: 768px;
                 }
               }
             }
@@ -890,12 +986,53 @@
                 }
               }
             }
+
+            .input-container {
+              .otp-input-wrapper {
+                .otp-input {
+                  input {
+                    padding: 0;
+                    max-width: 40px;
+                    height: 60px;
+                  }
+                }
+              }
+            }
           }
         }
         .product-filtr-wrapper {
           height: 100%;
           .card {
             padding: 10px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  #main-body-content {
+    .main-content-wrapper {
+      .main-content {
+        .product-filtr-info {
+          .product-information-wrapper-two {
+            .input-container {
+              .otp-input-wrapper {
+                .input-btn {
+                  .left-btn {
+                    button {
+                      text-wrap: nowrap;
+                    }
+                  }
+                  .right-btn {
+                    button {
+                      text-wrap: nowrap;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

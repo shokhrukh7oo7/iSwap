@@ -1053,6 +1053,83 @@
                         <button class="btn">Rasmiylashtirish</button>
                       </div>
                     </form>
+
+                    <form class="input-container">
+                      <div class="row">
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Karta raqami:</p>
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="5615615656164551"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Amal qilish muddati:</p>
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="XX/XX/XXXX"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="otp-input-wrapper">
+                            <p class="input-card-title">Tasdiqlash kodi:</p>
+                            <div class="otp-input">
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(1)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(2)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(3)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(4)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                            </div>
+
+                            <div class="input-btn">
+                              <div class="left-btn">
+                                <button class="btn">SMS jo'natish</button>
+                                <p class="resend">qayta jo'natish</p>
+                                <!-- <button class="btn grey-btn">SMS jo'natish</button>
+                                <p class="resend grey-title">qayta jo'natish</p> -->
+                              </div>
+                              <div class="right-btn">
+                                <button class="btn">Davom etish</button>
+                                <!-- <button class="btn red-btn">Davom etish</button> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>

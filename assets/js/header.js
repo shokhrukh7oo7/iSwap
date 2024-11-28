@@ -204,3 +204,22 @@ rangeInput.forEach((input) => {
     }
   });
 });
+// ================================================================================================
+// product input otp (one click) section
+let digitValidate = function (ele) {
+  ele.value = ele.value.replace(/[^0-9]/g, "");
+};
+let tabChange = function (val) {
+  let ele = document.querySelectorAll(".otp");
+  if (ele[val - 1] && ele[val - 1].value != "") {
+    if (ele[val]) {
+      // Проверяем, существует ли ele[val]
+      ele[val].focus();
+    }
+  } else if (ele[val - 1] && ele[val - 1].value == "") {
+    if (ele[val - 2]) {
+      // Проверяем, существует ли ele[val - 2]
+      ele[val - 2].focus();
+    }
+  }
+};
