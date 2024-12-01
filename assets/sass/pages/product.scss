@@ -799,6 +799,9 @@
           border-radius: 40px;
           background-color: $white;
           position: relative;
+          width: 100%;
+          max-width: 1140px;
+          margin: 0 auto;
           .banner-image {
             img {
               width: 100%;
