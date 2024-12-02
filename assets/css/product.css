@@ -1475,8 +1475,8 @@ header#main-header nav .bottom-nav .dropdown:focus {
   flex-direction: row;
   justify-content: normal;
   align-items: start;
-  flex-wrap: nowrap;
-  gap: 80px;
+  flex-wrap: wrap;
+  gap: clamp(10px, 5vw, 80px);
 }
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo {
   display: flex;
@@ -1512,6 +1512,12 @@ header#main-header nav .bottom-nav .dropdown:focus {
   color: rgb(0, 140, 238);
   font-weight: 500;
   font-size: clamp(19px, 3vw, 30px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .partner-name {
+  margin: 0;
+  color: rgb(0, 140, 238);
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 32px);
 }
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-form {
   display: flex;
