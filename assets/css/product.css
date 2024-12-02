@@ -1419,6 +1419,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
   align-items: center;
   flex-wrap: nowrap;
   gap: 10px;
+  margin-top: 70px;
 }
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .one-click-sum-wrapper .sale-price {
   font-weight: 600;
@@ -1467,6 +1468,58 @@ header#main-header nav .bottom-nav .dropdown:focus {
   padding: 10px 30px;
   color: rgb(255, 255, 255);
   font-size: clamp(16.5px, 2vw, 22px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 80px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo img {
+  width: 100%;
+  max-width: 204px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo .loading-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo .loading-wrapper img {
+  width: 60px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo .loading-wrapper .your-limit {
+  color: #24907B;
+  font-weight: 500;
+  margin: 0;
+  font-size: clamp(17px, 2vw, 22px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .input-title {
+  margin: 0;
+  color: rgb(0, 140, 238);
+  font-weight: 500;
+  font-size: clamp(19px, 3vw, 30px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 50px;
 }
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .input-container .input-card-wrapper .input-card-title {
   font-weight: 400;
@@ -1552,6 +1605,75 @@ header#main-header nav .bottom-nav .dropdown:focus {
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .input-container .otp-input-wrapper .input-btn .right-btn .red-btn {
   background-color: rgb(206, 53, 81);
 }
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .limit-btn {
+  background-color: rgb(206, 53, 81);
+  width: 100%;
+  max-width: 150px;
+  font-size: clamp(15px, 2vw, 22px);
+  color: rgb(255, 255, 255);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(10px, 5vw, 80px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-left {
+  width: 100%;
+  max-width: 500px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-left .intend-phone-number {
+  font-weight: 400;
+  margin: 10px 0;
+  padding-left: 20px;
+  color: rgb(43, 43, 43);
+  font-size: clamp(18.75px, 2vw, 25px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-left input {
+  width: 100%;
+  max-width: 460px;
+  padding: 15px;
+  font-size: clamp(15px, 2vw, 22px);
+  box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+  border-radius: 15px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-left .intend-register-title {
+  font-weight: 400;
+  margin: 10px 0;
+  padding-left: 20px;
+  color: rgba(43, 43, 43, 0.5);
+  font-size: clamp(15px, 2vw, 20px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-middle {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: clamp(10px, 4vw, 55px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-middle .intend-phone-number {
+  font-weight: 400;
+  margin: 10px 0;
+  padding-left: 20px;
+  color: rgb(43, 43, 43);
+  font-size: clamp(18.75px, 2vw, 25px);
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-middle input {
+  width: 100%;
+  max-width: 460px;
+  padding: 15px;
+  font-size: clamp(15px, 2vw, 22px);
+  box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+  border-radius: 15px;
+}
+#main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper .intend-register-right .intend-register-bbn {
+  padding: 15px 35px;
+  background-color: rgb(206, 53, 81);
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  font-size: clamp(15px, 2vw, 22px);
+}
 #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper {
   border-radius: 40px;
   background-color: rgb(255, 255, 255);
@@ -1599,6 +1721,11 @@ header#main-header nav .bottom-nav .dropdown:focus {
   font-size: clamp(14px, 2vw, 20px);
 }
 
+@media (max-width: 1400px) {
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper {
+    gap: clamp(10px, 3vw, 10px);
+  }
+}
 @media (max-width: 1200px) {
   #main-body-content .main-content-wrapper .main-content .product-filtr-wrapper .filtr-mobile-wrapper {
     padding: 0 70px;
@@ -1631,6 +1758,12 @@ header#main-header nav .bottom-nav .dropdown:focus {
   #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper .payment-partner-wrapper {
     background-color: rgb(255, 255, 255);
   }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .one-click-sum-wrapper {
+    margin-top: 10px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .intend-register-wrapper {
+    gap: 10px;
+  }
   #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper {
     position: relative;
   }
@@ -1661,6 +1794,14 @@ header#main-header nav .bottom-nav .dropdown:focus {
   }
   #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .input-container .input-card-wrapper input {
     max-width: 768px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 }
 @media (max-width: 576px) {
@@ -1760,6 +1901,54 @@ header#main-header nav .bottom-nav .dropdown:focus {
     padding: 0;
     max-width: 40px;
     height: 60px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo img {
+    max-width: 150px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo .loading-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .intend-logo .loading-wrapper img {
+    width: 40px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend .input-title {
+    font-weight: 500;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form .input-btn {
+    width: 100%;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form .input-btn .left-btn {
+    width: 100%;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form .input-btn .left-btn .btn {
+    width: 100%;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form .input-btn .right-btn {
+    width: 100%;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-two .for-intend-container .otp-input-wrapper .intend-form .input-btn .right-btn .btn {
+    width: 100%;
   }
   #main-body-content .main-content-wrapper .main-content .product-filtr-info .banner-wrapper {
     position: relative;

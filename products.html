@@ -1144,7 +1144,7 @@
                                 class="otp form-control"
                                 type="text"
                                 oninput="digitValidate(this)"
-                                onkeyup="tabChange(1)"
+                                onkeyup="tabChange(this, 0)"
                                 maxlength="1"
                                 placeholder="1"
                               />
@@ -1152,7 +1152,7 @@
                                 class="otp form-control"
                                 type="text"
                                 oninput="digitValidate(this)"
-                                onkeyup="tabChange(2)"
+                                onkeyup="tabChange(this, 1)"
                                 maxlength="1"
                                 placeholder="1"
                               />
@@ -1160,7 +1160,7 @@
                                 class="otp form-control"
                                 type="text"
                                 oninput="digitValidate(this)"
-                                onkeyup="tabChange(3)"
+                                onkeyup="tabChange(this, 2)"
                                 maxlength="1"
                                 placeholder="1"
                               />
@@ -1168,7 +1168,7 @@
                                 class="otp form-control"
                                 type="text"
                                 oninput="digitValidate(this)"
-                                onkeyup="tabChange(4)"
+                                onkeyup="tabChange(this, 3)"
                                 maxlength="1"
                                 placeholder="1"
                               />
@@ -1195,7 +1195,297 @@
               </div>
             </section>
 
-            <section class="product-filtr-info py-4">
+            <!-- one click city input start -->
+            <section class="product-filtr-info py-4" >
+              <div class="container">
+                <div class="product-information-wrapper-two">
+                  <h1>Bir klikda xarid qilish</h1>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="one-click-count">
+                        <div class="image-wrapper">
+                          <img
+                            src="/assets/images/swiper/phone.png"
+                            alt="image"
+                          />
+                        </div>
+                        <div class="counter-wrapper">
+                          <p class="counter-title">Iphone 13 Pro Max</p>
+                          <div class="counter" id="counter">
+                            <p class="increment">-</p>
+                            <p class="counter-number">0</p>
+                            <p class="decrement">+</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <div class="one-click-sum-wrapper">
+                        <p class="price">5 000 000 so'm</p>
+                      </div>
+                    </div>
+
+
+                    <form class="input-container">
+                      <div class="row">
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Viloyat:</p>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Toshkent shahar"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Tuman:</p>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Yunusobod tumani"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Telefon raqami:</p>
+                            <input
+                              type="tel"
+                              class="form-control"
+                              placeholder="Toshkent shahar"
+                            />
+                          </div>
+                        </div>
+
+
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Karta raqami:</p>
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="5615615656164551"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="input-card-wrapper">
+                            <p class="input-card-title">Amal qilish muddati:</p>
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="XX/XX/XXXX"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="otp-input-wrapper">
+                            <p class="input-card-title">Tasdiqlash kodi:</p>
+                            <div class="otp-input">
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(this, 0)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(this, 1)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(this, 2)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                              <input
+                                class="otp form-control"
+                                type="text"
+                                oninput="digitValidate(this)"
+                                onkeyup="tabChange(this, 3)"
+                                maxlength="1"
+                                placeholder="1"
+                              />
+                            </div>
+
+                            <div class="input-btn">
+                              <div class="left-btn">
+                                <button class="btn">SMS jo'natish</button>
+                                <p class="resend">qayta jo'natish</p>
+                                <!-- <button class="btn grey-btn">SMS jo'natish</button>
+                                <p class="resend grey-title">qayta jo'natish</p> -->
+                              </div>
+                              <div class="right-btn">
+                                <button class="btn">Davom etish</button>
+                                <!-- <button class="btn red-btn">Davom etish</button> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- one click city input start -->
+
+            <!-- one click for intend start -->
+            <section class="product-filtr-info py-4" >
+              <div class="container">
+                <div class="product-information-wrapper-two">
+                  <h1>Bir klikda xarid qilish</h1>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="one-click-count">
+                        <div class="image-wrapper">
+                          <img
+                            src="/assets/images/swiper/phone.png"
+                            alt="image"
+                          />
+                        </div>
+                        <div class="counter-wrapper">
+                          <p class="counter-title">Iphone 13 Pro Max</p>
+                          <div class="counter" id="counter">
+                            <p class="increment">-</p>
+                            <p class="counter-number">0</p>
+                            <p class="decrement">+</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <div class="one-click-sum-wrapper">
+                        <p class="sale-price">5 000 000 so'm</p>
+                        <img
+                          src="/assets/images/home/click-arrow.svg"
+                          alt="image"
+                        />
+                        <p class="price">4 000 000 so'm</p>
+                      </div>
+                    </div>
+
+                    <div class="input-wrapper for-intend">
+                      <div class="intend-logo">
+                        <img src="./assets/images/home/intend.png" alt="imagee">
+                        <div class="loading-wrapper">
+                          <p class="your-limit">Limitingiz: 15 000 000 so‘m</p>
+                          <img src="./assets/images/home/loading.png" alt="image">
+                        </div>
+                      </div>
+                      <p class="input-title">400 000 so‘mdan 12 oyga</p>
+                    </div>
+
+                    <form class="input-container for-intend-container">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="otp-input-wrapper">
+                            <p class="input-card-title">Tasdiqlash kodi:</p>
+                            <div class="intend-form">
+                              <div class="otp-input">
+                                <input
+                                  class="otp form-control"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(this, 0)"
+                                  maxlength="1"
+                                  placeholder="1"
+                                />
+                                <input
+                                  class="otp form-control"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(this, 1)"
+                                  maxlength="1"
+                                  placeholder="1"
+                                />
+                                <input
+                                  class="otp form-control"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(this, 2)"
+                                  maxlength="1"
+                                  placeholder="1"
+                                />
+                                <input
+                                  class="otp form-control"
+                                  type="text"
+                                  oninput="digitValidate(this)"
+                                  onkeyup="tabChange(this, 3)"
+                                  maxlength="1"
+                                  placeholder="1"
+                                />
+                              </div>
+  
+                              <div class="input-btn">
+                                <div class="left-btn">
+                                  <button class="btn">SMS yuborish</button>
+                                  <p class="resend">qayta jo'natish</p>
+                                  <!-- <button class="btn grey-btn">SMS yuborish</button>
+                                  <p class="resend grey-title">qayta jo'natish</p> -->
+                                  <!-- <button class="btn grey-title">SMS yuborish</button>
+                                  <p class="resend grey-title">qayta jo'natish</p> -->
+                                </div>
+                                <div class="right-btn">
+                                  <button class="btn">Rasmiylashtirish</button>
+                                  <!-- <button class="btn red-btn">Rasmiylashtirish</button> -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+
+                    <a href="#" class="btn limit-btn">Limit olish</a>
+
+                    <div class="intend-register-wrapper">
+                        <div class="intend-register-left">
+                          <p class="intend-phone-number">Telefon raqam</p>
+                          <input type="tel" placeholder="+998 9x-xxx-xx-xx" class="form-control">
+                          <p class="intend-register-title">Siz ro'yxatdan o'tmagansiz, iltimos ro'yxatdan o'ting.</p>
+                        </div>
+                        <div class="intend-register-right">
+                          <a href="#" class="btn intend-register-bbn">Ro'yxatdan o'tish</a>
+                        </div>
+                    </div>
+
+                    <div class="intend-register-wrapper">
+                      <div class="intend-register-left">
+                        <p class="intend-phone-number">Telefon raqam</p>
+                        <input type="tel" placeholder="+998 9x-xxx-xx-xx" class="form-control">
+                        <p class="intend-register-title">Siz ro'yxatdan o'tmagansiz, iltimos ro'yxatdan o'ting.</p>
+                      </div>
+
+                      <div class="intend-register-middle">
+                        <p class="intend-phone-number">Telefon raqam</p>
+                        <input type="tel" placeholder="+998 9x-xxx-xx-xx" class="form-control">
+                      </div>
+
+                      <div class="intend-register-right">
+                        <a href="#" class="btn intend-register-bbn">Ro'yxatdan o'tish</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- one click for intend end -->
+
+
+            <section class="product-filtr-info py-4" style="display: none">
               <div class="container">
                 <div class="banner-wrapper">
                   <div class="row">
@@ -1228,7 +1518,7 @@
               </div>
             </section>
 
-            <section class="product-filtr-info py-4">
+            <section class="product-filtr-info py-4" style="display: none">
               <div class="container">
                 <div class="banner-wrapper">
                   <div class="row">

@@ -161,24 +161,30 @@ initializeTimeline();
 
 // ================================================================================================
 // product item increment and decrement js
-const increment = document.querySelector(".increment");
-const decrement = document.querySelector(".decrement");
-const counter = document.querySelector(".counter-number");
+const increments = document.querySelectorAll(".increment");
+const decrements = document.querySelectorAll(".decrement");
+const counters = document.querySelectorAll(".counter-number");
 
-let count = 0;
-
-increment.addEventListener("click", () => {
-  count--;
-  updateCounter();
+increments.forEach((inc, index) => {
+  inc.addEventListener("click", () => {
+    // Увеличиваем значение конкретного счетчика
+    const counter = counters[index];
+    let count = parseInt(counter.textContent) || 0;
+    count--;
+    counter.textContent = count;
+  });
 });
 
-decrement.addEventListener("click", () => {
-  count++;
-  updateCounter();
+decrements.forEach((dec, index) => {
+  dec.addEventListener("click", () => {
+    // Уменьшаем значение конкретного счетчика
+    const counter = counters[index];
+    let count = parseInt(counter.textContent) || 0;
+    count++;
+    counter.textContent = count;
+  });
 });
-function updateCounter() {
-  counter.textContent = count;
-}
+
 
 // ================================================================================================
 const rangeInput = document.querySelectorAll(".range-input input"),
@@ -224,20 +230,45 @@ rangeInput.forEach((input) => {
 });
 // ================================================================================================
 // product input otp (one click) section
+// let digitValidate = function (ele) {
+//   ele.value = ele.value.replace(/[^0-9]/g, "");
+// };
+// let tabChange = function (val) {
+//   let ele = document.querySelectorAll(".otp");
+//   if (ele[val - 1] && ele[val - 1].value != "") {
+//     if (ele[val]) {
+//       // Проверяем, существует ли ele[val]
+//       ele[val].focus();
+//     }
+//   } else if (ele[val - 1] && ele[val - 1].value == "") {
+//     if (ele[val - 2]) {
+//       // Проверяем, существует ли ele[val - 2]
+//       ele[val - 2].focus();
+//     }
+//   }
+// };
 let digitValidate = function (ele) {
-  ele.value = ele.value.replace(/[^0-9]/g, "");
+  ele.value = ele.value.replace(/[^0-9]/g, ""); // Только цифры
 };
-let tabChange = function (val) {
-  let ele = document.querySelectorAll(".otp");
-  if (ele[val - 1] && ele[val - 1].value != "") {
-    if (ele[val]) {
-      // Проверяем, существует ли ele[val]
-      ele[val].focus();
+
+let tabChange = function (ele, index) {
+  // Находим ближайшую родительскую секцию для текущего инпута
+  let section = ele.closest(".otp-input");
+  if (!section) return; // Защита от ошибок, если секция не найдена
+
+  // Получаем все инпуты в этой секции
+  let inputs = section.querySelectorAll(".otp");
+
+  // Если текущий инпут заполнен, переходим к следующему
+  if (inputs[index] && inputs[index].value != "") {
+    if (inputs[index + 1]) {
+      inputs[index + 1].focus();
     }
-  } else if (ele[val - 1] && ele[val - 1].value == "") {
-    if (ele[val - 2]) {
-      // Проверяем, существует ли ele[val - 2]
-      ele[val - 2].focus();
+  }
+  // Если текущий инпут пуст, возвращаем фокус на предыдущий
+  else if (inputs[index] && inputs[index].value == "") {
+    if (inputs[index - 1]) {
+      inputs[index - 1].focus();
     }
   }
 };
