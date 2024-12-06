@@ -969,6 +969,376 @@
           }
         }
 
+        .product-information-wrapper-three {
+          background-color: rgb(255, 255, 255);
+          padding: 30px 50px;
+          border-radius: 32px;
+          h1 {
+            font-weight: 600;
+            margin: 20px 0;
+            color: $black;
+            font-size: clamp(25px, 3.5vw, 40px);
+          }
+
+          .one-click-count {
+            margin: 30px 0;
+            @include flex(row, normal, center, nowrap, 30px);
+            .image-wrapper {
+              border-radius: 16px;
+              box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+              img {
+                width: 100%;
+                max-width: 200px;
+              }
+            }
+            .counter-wrapper {
+              @include flex(column, center, start);
+              .counter-title {
+                color: $black;
+                font-weight: 400;
+                margin: 0;
+                font-size: clamp(16px, 3vw, 28px);
+              }
+              .counter {
+                background-color: $blue;
+                border-radius: 12px;
+                padding: 10px 30px;
+                @include flex(row, center, center, nowrap, 40px);
+                ::selection {
+                  background-color: transparent;
+                }
+                .increment {
+                  color: $white;
+                  margin: 0;
+                  cursor: pointer;
+                  font-size: clamp(22px, 3vw, 30px);
+                }
+                .counter-number {
+                  color: $white;
+                  margin: 0;
+                  font-size: clamp(22px, 3vw, 30px);
+                }
+                .decrement {
+                  color: $white;
+                  margin: 0;
+                  cursor: pointer;
+                  font-size: clamp(22px, 3vw, 30px);
+                }
+              }
+            }
+          }
+
+          .one-click-sum-wrapper {
+            @include flex(row, center, center);
+            margin-top: 70px;
+            .sale-price {
+              font-weight: 600;
+              margin: 20px 0;
+              color: $blue;
+              font-size: clamp(18px, 3.5vw, 28px);
+              text-decoration: line-through;
+            }
+            img {
+              width: 100%;
+              max-width: 100px;
+            }
+            .price {
+              font-weight: 600;
+              margin: 20px 0;
+              color: $blue;
+              font-size: clamp(20px, 4vw, 35px);
+            }
+          }
+
+          .input-wrapper {
+            .input-title {
+              font-weight: 600;
+              margin: 20px 0;
+              color: $black;
+              font-size: clamp(18.75px, 2vw, 25px);
+            }
+            .input-container {
+              @include flex(row, normal, end, nowrap, 50px);
+              input {
+                width: 100%;
+                max-width: 380px;
+                padding: 20px;
+                font-size: clamp(18.75px, 2vw, 25px);
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                border-radius: 15px;
+                &:focus {
+                  box-shadow: none;
+                }
+              }
+              button {
+                background-color: $red;
+                padding: 10px 30px;
+                color: $white;
+                font-size: clamp(16.5px, 2vw, 22px);
+              }
+            }
+          }
+          .for-intend {
+            margin: 30px 0;
+            @include flex(row, normal, start, wrap, clamp(10px, 5vw, 80px));
+            .intend-logo {
+              @include flex(column, normal, start, nowrap, 15px);
+              img {
+                width: 100%;
+                max-width: 204px;
+              }
+              .loading-wrapper {
+                @include flex(row, center, center, nowrap, 20px);
+                img {
+                  width: 60px;
+                }
+                .your-limit {
+                  color: $dark-purple;
+                  font-weight: 500;
+                  margin: 0;
+                  font-size: clamp(17px, 2vw, 22px);
+                }
+              }
+            }
+            .input-title {
+              margin: 0;
+              color: $blue;
+              font-weight: 500;
+              font-size: clamp(19px, 3vw, 30px);
+            }
+            .partner-name {
+              margin: 0;
+              color: $blue;
+              font-weight: 700;
+              font-size: clamp(20px, 3vw, 32px);
+            }
+          }
+          .for-intend-oferta {
+            margin: 30px 0;
+            @include flex(column, normal, start, wrap, clamp(10px, 5vw, 80px));
+            .intend-logo-name {
+              @include flex(row, normal, start, wrap, clamp(0px, 5vw, 100px));
+              .intend-logo {
+                @include flex(column, normal, start, nowrap, 15px);
+                img {
+                  width: 100%;
+                  max-width: 204px;
+                }
+                .loading-wrapper {
+                  @include flex(row, center, center, nowrap, 20px);
+                  img {
+                    width: 60px;
+                  }
+                  .your-limit {
+                    color: $dark-green;
+                    font-weight: 500;
+                    margin: 0;
+                    font-size: clamp(17px, 2vw, 22px);
+                  }
+                }
+              }
+            }
+            .limit-oferta-wrapper {
+              @include flex(row, normal, start, wrap, 10px);
+              .limit-oferta-content {
+                .limit-title {
+                  color: $black;
+                  font-weight: 400;
+                  font-size: clamp(18px, 2.5vw, 27px);
+                }
+                .oferta-title {
+                  color: $grey;
+                  font-weight: 400;
+                  font-size: clamp(12px, 1.5vw, 20px);
+                  width: 100%;
+                  max-width: 450px;
+                  span {
+                    color: $red;
+                  }
+                }
+              }
+              .limit-oferta-btn {
+                .intend-register-btn {
+                  color: $white;
+                  background-color: $red;
+                  font-weight: 400;
+                  padding: 10px 35px;
+                  font-size: clamp(15px, 1.5vw, 22px);
+                  border-radius: 15px;
+                }
+              }
+            }
+            .input-title {
+              margin: 0;
+              color: $blue;
+              font-weight: 500;
+              font-size: clamp(19px, 3vw, 30px);
+            }
+            .partner-name {
+              margin: 0;
+              color: $blue;
+              font-weight: 700;
+              font-size: clamp(20px, 3vw, 32px);
+            }
+          }
+          .intend-form {
+            @include flex(row, normal, start, nowrap, 50px);
+          }
+
+          .input-container {
+            .input-card-wrapper {
+              .input-card-title {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $black;
+                font-size: clamp(18.75px, 2vw, 25px);
+              }
+              input {
+                width: 100%;
+                max-width: 430px;
+                padding: 20px;
+                font-size: clamp(15px, 2vw, 22px);
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                border-radius: 15px;
+                &::placeholder {
+                  color: $grey;
+                }
+              }
+            }
+
+            .otp-input-wrapper {
+              .input-card-title {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $black;
+                font-size: clamp(18.75px, 2vw, 25px);
+              }
+              .otp-input {
+                @include flex(row, normal, center, nowrap, 20px);
+                input {
+                  width: 100%;
+                  max-width: 65px;
+                  padding: 20px;
+                  font-size: clamp(15px, 2vw, 22px);
+                  box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                  border-radius: 15px;
+                  text-align: center;
+                  border-radius: 12px;
+                  &::placeholder {
+                    color: $grey;
+                  }
+                }
+              }
+              .input-btn {
+                margin: 20px 0;
+                @include flex(row, normal, start, nowrap, 25px);
+                .left-btn {
+                  button {
+                    margin: 5px 0;
+                    background-color: $red;
+                    padding: 10px 20px;
+                    color: $white;
+                    font-size: clamp(11.5px, 2vw, 22px);
+                  }
+                  .resend {
+                    color: $red;
+                    margin: 5px 0;
+                    text-align: end;
+                    font-size: clamp(13px, 1.2vw, 17px);
+                  }
+                  .grey-btn {
+                    background-color: $otp-button;
+                  }
+                  .grey-title {
+                    color: $otp-button;
+                  }
+                }
+                .right-btn {
+                  button {
+                    margin: 5px 0;
+                    background-color: $otp-button;
+                    padding: 10px 20px;
+                    color: $white;
+                    font-size: clamp(11.5px, 2vw, 22px);
+                  }
+                  .red-btn {
+                    background-color: $red;
+                  }
+                }
+              }
+            }
+          }
+          .limit-btn {
+            background-color: $red;
+            width: 100%;
+            max-width: 150px;
+            font-size: clamp(15px, 2vw, 22px);
+            color: $white;
+            // @include flex(column, start, start);
+          }
+          .intend-register-wrapper {
+            margin: 20px 0;
+            @include flex(row, normal, center, wrap, clamp(10px, 5vw, 80px));
+            .intend-register-left {
+              width: 100%;
+              max-width: 500px;
+              .intend-phone-number {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $black;
+                font-size: clamp(18.75px, 2vw, 25px);
+              }
+              input {
+                width: 100%;
+                max-width: 460px;
+                padding: 15px;
+                font-size: clamp(15px, 2vw, 22px);
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                border-radius: 15px;
+              }
+              .intend-register-title {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $grey;
+                font-size: clamp(15px, 2vw, 20px);
+              }
+            }
+            .intend-register-middle {
+              width: 100%;
+              max-width: 500px;
+              margin-bottom: clamp(10px, 4vw, 55px);
+              .intend-phone-number {
+                font-weight: 400;
+                margin: 10px 0;
+                padding-left: 20px;
+                color: $black;
+                font-size: clamp(18.75px, 2vw, 25px);
+              }
+              input {
+                width: 100%;
+                max-width: 460px;
+                padding: 15px;
+                font-size: clamp(15px, 2vw, 22px);
+                box-shadow: 2px 5px 10px 0px rgba(34, 60, 80, 0.25);
+                border-radius: 15px;
+              }
+            }
+            .intend-register-right {
+              .intend-register-bbn {
+                padding: 15px 35px;
+                background-color: $red;
+                color: $white;
+                border-radius: 15px;
+                font-size: clamp(15px, 2vw, 22px);
+              }
+            }
+          }
+        }
+
         .banner-wrapper {
           border-radius: 40px;
           background-color: $white;
