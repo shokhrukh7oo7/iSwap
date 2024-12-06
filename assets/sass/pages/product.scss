@@ -710,7 +710,7 @@
           }
           .for-intend {
             margin: 30px 0;
-            @include flex(row, normal, start, wrap,  clamp(10px, 5vw, 80px));
+            @include flex(row, normal, start, wrap, clamp(10px, 5vw, 80px));
             .intend-logo {
               @include flex(column, normal, start, nowrap, 15px);
               img {
@@ -727,6 +727,74 @@
                   font-weight: 500;
                   margin: 0;
                   font-size: clamp(17px, 2vw, 22px);
+                }
+              }
+            }
+            .input-title {
+              margin: 0;
+              color: $blue;
+              font-weight: 500;
+              font-size: clamp(19px, 3vw, 30px);
+            }
+            .partner-name {
+              margin: 0;
+              color: $blue;
+              font-weight: 700;
+              font-size: clamp(20px, 3vw, 32px);
+            }
+          }
+          .for-intend-oferta {
+            margin: 30px 0;
+            @include flex(column, normal, start, wrap, clamp(10px, 5vw, 80px));
+            .intend-logo-name {
+              @include flex(row, normal, start, wrap, clamp(0px, 5vw, 100px));
+              .intend-logo {
+                @include flex(column, normal, start, nowrap, 15px);
+                img {
+                  width: 100%;
+                  max-width: 204px;
+                }
+                .loading-wrapper {
+                  @include flex(row, center, center, nowrap, 20px);
+                  img {
+                    width: 60px;
+                  }
+                  .your-limit {
+                    color: $dark-green;
+                    font-weight: 500;
+                    margin: 0;
+                    font-size: clamp(17px, 2vw, 22px);
+                  }
+                }
+              }
+            }
+            .limit-oferta-wrapper {
+              @include flex(row, normal, start, wrap, 10px);
+              .limit-oferta-content {
+                .limit-title {
+                  color: $black;
+                  font-weight: 400;
+                  font-size: clamp(18px, 2.5vw, 27px);
+                }
+                .oferta-title {
+                  color: $grey;
+                  font-weight: 400;
+                  font-size: clamp(12px, 1.5vw, 20px);
+                  width: 100%;
+                  max-width: 450px;
+                  span {
+                    color: $red;
+                  }
+                }
+              }
+              .limit-oferta-btn {
+                .intend-register-btn {
+                  color: $white;
+                  background-color: $red;
+                  font-weight: 400;
+                  padding: 10px 35px;
+                  font-size: clamp(15px, 1.5vw, 22px);
+                  border-radius: 15px;
                 }
               }
             }
@@ -1173,13 +1241,16 @@
             .input-wrapper {
               .input-title {
                 font-weight: 400;
-                margin: 10px 0;
+                // margin: 10px 0;
               }
               .input-container {
                 @include flex(column, start, start, nowrap, 10px);
                 input {
                   padding: 15px;
                 }
+              }
+              .partner-name {
+                font-weight: 500;
               }
             }
 
