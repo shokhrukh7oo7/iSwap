@@ -1521,6 +1521,23 @@
               }
             }
           }
+
+          .product-information-wrapper-three {
+            .input-container {
+              .input-card-wrapper {
+                input {
+                  max-width: 768px;
+                }
+              }
+            }
+            .for-intend-container {
+              .otp-input-wrapper {
+                .intend-form {
+                  @include flex(column, center, start);
+                }
+              }
+            }
+          }
         }
       }
     }

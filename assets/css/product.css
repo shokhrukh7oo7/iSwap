@@ -2328,6 +2328,17 @@ header#main-header nav .bottom-nav .dropdown:focus {
     flex-wrap: nowrap;
     gap: 10px;
   }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-three .input-container .input-card-wrapper input {
+    max-width: 768px;
+  }
+  #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper-three .for-intend-container .otp-input-wrapper .intend-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
 }
 @media (max-width: 576px) {
   #main-body-content .main-content-wrapper .main-content .product-filtr-info .product-information-wrapper {
