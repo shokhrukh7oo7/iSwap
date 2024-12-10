@@ -729,6 +729,11 @@ header#main-header nav .bottom-nav .dropdown:focus {
   font-weight: 500;
 }
 
+@media (max-width: 576px) {
+  .footer-top-wrapper {
+    padding: 20px 0;
+  }
+}
 #main-body-content .main-content-wrapper .main-content .filtr-menu {
   padding-top: 80px;
 }

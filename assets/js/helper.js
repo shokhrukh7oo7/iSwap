@@ -2,21 +2,24 @@ $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     loop: true,
     nav: true,
-    margin: 50,
     autoplay: true,
     autoplayTimeout: 3000,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
+        margin: 20,
       },
       450: {
         items: 2,
+        margin: 30,
       },
       768: {
         items: 3,
+        margin: 40,
       },
       1200: {
         items: 4,
+        margin: 50,
       },
     },
   });

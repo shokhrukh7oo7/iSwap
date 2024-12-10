@@ -7,6 +7,7 @@
 
   .welcome-content {
     padding: 20px 0;
+    height: 121px;
     @include flex(row, center, center, nowrap);
 
     img {
@@ -18,7 +19,7 @@
     .welcome-title {
       color: $white;
       margin: 0;
-      @include fontSize(13px, 2.5vw, 26px, 500);
+      @include fontSize(24px, 2.5vw, 26px, 500);
     }
   }
 }
@@ -53,12 +54,18 @@
 
 /* Media query для маленьких экранов */
 @media (max-width: 768px) {
+  // .swiper-animation-wrapper {
+  //   height: 50vh;
+  // }
   .swiper-animation-wrapper {
-    height: 50vh;
+    height: 27vh;
   }
 
+  // .anim-img img {
+  //   height: 50vh;
+  // }
   .anim-img img {
-    height: 50vh;
+    height: 30vh;
   }
 
   /* Ускоренная анимация для маленьких экранов */
@@ -243,6 +250,7 @@
 
   .assessment-header-wrapper {
     .online-assessment-header {
+      color: $blue;
       @include fontSize(22px, 4vw, 56px, 500);
       text-align: center;
     }
@@ -280,7 +288,8 @@
         input {
           padding: 10px 30px;
           max-width: 854px;
-          height: 60px;
+          height: clamp(26px, 5.5vw, 60px);
+          @include fontSize(14px, 2vw, 18px, 400);
         }
 
         &.sms-input-wrapper {
@@ -292,7 +301,7 @@
 
           button {
             width: 100%;
-            height: 60px;
+            height: clamp(26px, 5.5vw, 60px);
           }
         }
       }
@@ -312,11 +321,12 @@
     .assessment-btn {
       border: transparent;
       background-color: $red;
-      padding: 8px 30px;
+      // padding: 8px 30px;
+      padding: clamp(8px, 1vw, 8px) clamp(5px, 1vw, 30px);
       border-radius: 0.375rem;
       color: $white;
       height: 60px;
-      width: 100%;
+      // width: 100%;
       @include fontSize(14px, 2vw, 18px, 400);
       @include flex(row, center, center, nowrap);
 
@@ -396,7 +406,7 @@
     .item {
       @include flex(column, center, center);
       box-shadow: $inside-box-shadow-black;
-      border-radius: 26px;
+      border-radius: clamp(14px, 4vw, 40px);
       width: 100%;
       max-width: 450px;
       aspect-ratio: 350 / 420;
@@ -469,7 +479,7 @@
   margin: 40px 0;
 
   .product-evalution-header {
-    @include fontSize(22px, 4vw, 56px, 700);
+    @include fontSize(36px, 4vw, 56px, 700);
     color: rgb(0, 140, 238);
     text-align: center;
     margin: 0 0 50px 0;
@@ -523,69 +533,81 @@
 // --------------------------------------------------------
 .our-preferences-wrapper {
   .our-preferences-header-wrapper {
-    padding: 40px 0;
+    padding: 40px 0 0;
 
     .our-preferences-header {
       color: $blue;
       text-align: center;
-      @include fontSize(22px, 4vw, 56px, 700);
+      @include fontSize(37px, 4vw, 56px, 700);
     }
 
     .our-preferences-description {
       color: $black;
       text-align: center;
-      @include fontSize(16px, 3vw, 36px, 400);
+      @include fontSize(15px, 3vw, 36px, 400);
     }
   }
 
-  .our-preferences-item {
-    padding: 30px 0;
-    @include flex(row, start, center, nowrap);
+  .our-preferences-content-wrapper {
+    .our-preferences-item {
+      padding: 30px 0;
+      @include flex(row, start, start, nowrap);
 
-    .preferences-green {
-      background-color: $green;
-      border-radius: 50%;
-      padding: 13.5px;
+      .preferences-green {
+        background-color: $green;
+        border-radius: 50%;
+        padding: 13.5px;
 
-      img {
-        width: 60px;
+        img {
+          width: 60px;
+        }
       }
-    }
 
-    .preferences-red {
-      background-color: $red;
-      border-radius: 50%;
-      padding: 13.5px;
+      .preferences-red {
+        background-color: $red;
+        border-radius: 50%;
+        padding: 13.5px;
 
-      img {
-        width: 60px;
+        img {
+          width: 60px;
+        }
       }
-    }
 
-    .preferences-orange {
-      background-color: $orange;
-      border-radius: 50%;
-      padding: 13.5px;
+      .preferences-orange {
+        background-color: $orange;
+        border-radius: 50%;
+        padding: 13.5px;
 
-      img {
-        width: 60px;
+        img {
+          width: 60px;
+        }
       }
-    }
 
-    .preferences-purple {
-      background-color: $purple;
-      border-radius: 50%;
-      padding: 13.5px;
+      .preferences-blue {
+        background-color: $blue;
+        border-radius: 50%;
+        padding: 13.5px;
 
-      img {
-        width: 60px;
+        img {
+          width: 60px;
+        }
       }
-    }
 
-    .our-perferences-item-title {
-      margin: 0;
-      color: $black;
-      @include fontSize(14px, 2vw, 22px, 500);
+      .preferences-purple {
+        background-color: $purple;
+        border-radius: 50%;
+        padding: 13.5px;
+
+        img {
+          width: 60px;
+        }
+      }
+
+      .our-perferences-item-title {
+        margin: 0;
+        color: $black;
+        @include fontSize(14px, 2vw, 22px, 500);
+      }
     }
   }
 }
@@ -684,8 +706,11 @@
   }
 
   .our-preferences-wrapper {
-    .our-preferences-item {
-      padding: 10px 0;
+    .our-preferences-content-wrapper {
+      padding: 0 20px;
+      .our-preferences-item {
+        padding: 10px 0;
+      }
     }
   }
 
@@ -694,7 +719,8 @@
 
     form {
       .input-wrapper {
-        @include flex(column, center, end);
+        // @include flex(column, center, end);
+        @include flex(row, center, end);
       }
     }
   }
@@ -740,14 +766,14 @@
     // padding-top: 150px;
 
     .welcome-content {
-      @include flex(column, center, center);
+      @include flex(row, center, center, wrap, 0);
     }
   }
 
   .banner-content-wrapper {
     .banner-header {
       width: 100%;
-      max-width: 200px;
+      max-width: 140px;
     }
   }
 
@@ -765,8 +791,10 @@
   }
 
   .our-preferences-wrapper {
-    .our-preferences-item {
-      padding: 0;
+    .our-preferences-content-wrapper {
+      .our-preferences-item {
+        padding: 0;
+      }
     }
   }
 }
@@ -825,7 +853,7 @@
       padding: 10px 0;
 
       img {
-        max-width: 200px;
+        max-width: 140px;
       }
     }
   }
@@ -845,8 +873,17 @@
     .form-wrapper {
       form {
         .input-wrapper {
+          .phone-number-assessment-input-wrapper {
+            input {
+              padding: 0 5px;
+              width: 100%;
+            }
+          }
           .send-action-wrapper {
-            width: 100%;
+            // width: 100%;
+            button {
+              width: 100%;
+            }
           }
         }
 
@@ -854,6 +891,13 @@
           width: 100%;
         }
       }
+    }
+  }
+
+  .product-evolution-wrapper {
+    .product-evalution-card-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      padding: 0 50px;
     }
   }
 
@@ -895,29 +939,33 @@
     }
   }
 
-  .our-preferences-wrapper .our-preferences-item {
-    text-align: center;
-    @include flex(column, center, center);
+  .our-preferences-wrapper {
+    .our-preferences-item {
+      .our-perferences-image-wrapper {
+        padding: 10px;
+        img {
+          max-width: 30px;
+        }
+      }
+    }
   }
 
   //   footer
   .footer-top-wrapper {
-    .footer-logo-wrapper {
-      text-align: center;
-    }
+    // .footer-logo-wrapper {
+    //   text-align: center;
+    // }
 
     .footer-social-wrapper {
-      @include flex(row, center, center, wrap, 20px);
+      @include flex(row, start, center, wrap, 20px);
     }
 
     .footer-about-us-wrapper {
-      text-align: center;
-      @include flex(column, center, center, wrap, 20px);
+      @include flex(column, center, start, wrap, 20px);
     }
 
     .footer-contact-wrapper {
-      text-align: center;
-      @include flex(column, center, center, wrap, 20px);
+      @include flex(column, center, start, wrap, 5px);
     }
   }
 
