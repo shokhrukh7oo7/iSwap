@@ -147,3 +147,21 @@ openChatBtn.addEventListener("click", () => {
 closeChatBtn.addEventListener("click", () => {
   chatContent.style.display = "none";
 });
+
+
+// mobile menu active js start
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.items-wrapper .item');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      // Удаляем класс "active" со всех элементов
+      items.forEach(i => i.classList.remove('active'));
+
+      // Добавляем класс "active" к текущему элементу
+      item.classList.add('active');
+    });
+  });
+});
+
+// mobile menu active js end

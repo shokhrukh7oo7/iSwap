@@ -806,7 +806,7 @@ header#main-header nav .bottom-nav .bottom-nav-items .item a {
 }
 
 .footer-bottom-wrapper {
-  padding: 15px 0;
+  padding: 15px 0 100px;
 }
 .footer-bottom-wrapper .footer-bottom-content-wrapper {
   display: flex;

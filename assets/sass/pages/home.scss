@@ -613,6 +613,62 @@
 }
 
 // --------------------------------------------------------
+// Mobile menu css start
+.mobile-bottom-menu-wrapper {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  padding: 15px 0;
+  border-top: 1px solid $light-grey;
+  z-index: 1000;
+
+  .items-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      position: relative;
+
+      img {
+        width: 32px;
+        transition: filter 0.3s ease;
+      }
+
+      a {
+        color: $black;
+        font-weight: 500;
+        font-size: clamp(12px, 1.5vw, 16px);
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      &.active {
+        a {
+          color: $blue;
+        }
+
+        img {
+          filter: brightness(0) saturate(100%) invert(29%) sepia(85%) saturate(3000%) hue-rotate(205deg) brightness(90%) contrast(101%);
+        }
+      }
+    }
+  }
+}
+
+// Mobile menu css end
+// --------------------------------------------------------
 // Responsive custom css start
 @media (max-width: 1400px) {
   .banner-content-wrapper {
@@ -800,6 +856,9 @@
 }
 
 @media (max-width: 576px) {
+  .mobile-bottom-menu-wrapper {
+    display: block;
+  }
   .chat-container {
     .chat-btn {
       img {
