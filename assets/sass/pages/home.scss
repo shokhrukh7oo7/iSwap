@@ -183,12 +183,15 @@
 // chat start
 .chat-container {
   position: fixed;
-  bottom: 10%;
-  right: 6.5%;
-  z-index: 1;
+  bottom: 5%;
+  right: 5%;
+  z-index: 999;
   width: 100%;
 
   .chat-wrapper {
+    width: 100%;
+    touch-action: none;
+    user-select: none;
     position: relative;
     @include flex(column, center, end);
     .chat-btn-content {
@@ -660,7 +663,8 @@
         }
 
         img {
-          filter: brightness(0) saturate(100%) invert(29%) sepia(85%) saturate(3000%) hue-rotate(205deg) brightness(90%) contrast(101%);
+          filter: brightness(0) saturate(100%) invert(29%) sepia(85%)
+            saturate(3000%) hue-rotate(205deg) brightness(90%) contrast(101%);
         }
       }
     }
@@ -856,6 +860,10 @@
 }
 
 @media (max-width: 576px) {
+  .chat-container {
+    bottom: 10%;
+    right: 5%;
+  }
   .mobile-bottom-menu-wrapper {
     display: block;
   }

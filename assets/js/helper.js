@@ -148,20 +148,54 @@ closeChatBtn.addEventListener("click", () => {
   chatContent.style.display = "none";
 });
 
-
 // mobile menu active js start
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.items-wrapper .item');
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".items-wrapper .item");
 
-  items.forEach(item => {
-    item.addEventListener('click', () => {
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
       // Удаляем класс "active" со всех элементов
-      items.forEach(i => i.classList.remove('active'));
+      items.forEach((i) => i.classList.remove("active"));
 
       // Добавляем класс "active" к текущему элементу
-      item.classList.add('active');
+      item.classList.add("active");
     });
   });
+
+  // target elements with the "draggable" class
+interact('.chat-wrapper')
+.draggable({
+  // enable inertial throwing
+  inertia: true,
+
+  // enable autoScroll
+  autoScroll: true,
+
+  // call this function on every dragmove event
+  onmove: dragMoveListener,
+  // call this function on every dragend event
+  onend: function (event) {
+  }
+
+});
+
+
+function dragMoveListener (event) {
+  var target = event.target,
+      // keep the dragged position in the data-x/data-y attributes
+      x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+      y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+  // translate the element
+  target.style.webkitTransform =
+  target.style.transform =
+    'translate(' + x + 'px, ' + y + 'px)';
+
+  // update the posiion attributes
+  target.setAttribute('data-x', x);
+  target.setAttribute('data-y', y);
+}
+
 });
 
 // mobile menu active js end

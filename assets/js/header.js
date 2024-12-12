@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const CONTENT_TOGGLER = document.querySelector("#main-body-content-toggler");
 const MAIN_BODY_CONTENT = document.querySelector("#main-body-content");
 const leftMenu = document.querySelector(".left-menu");
@@ -65,16 +67,20 @@ const filtrMenu = document.querySelector(".filtr-menu");
 const mainContentFiltr = document.querySelector(".main-content");
 const filtrCloseBtn = document.getElementById("filtr-close-btn");
 
-mobileFiltrBtn.addEventListener("click", () => {
-  filtrMenu.style.transform = "translateX(0)";
-  mainContentFiltr.style["grid-template-columns"] = "100% 0";
-  filtrCloseBtn.style.display = "flex";
-});
+if (mobileFiltrBtn) {
+  mobileFiltrBtn.addEventListener("click", () => {
+    filtrMenu.style.transform = "translateX(0)";
+    mainContentFiltr.style["grid-template-columns"] = "100% 0";
+    filtrCloseBtn.style.display = "flex";
+  });
+}
 
-filtrCloseBtn.addEventListener("click", () => {
-  filtrMenu.style.transform = "translateX(-400px)";
-  mainContentFiltr.style["grid-template-columns"] = "0 100%";
-});
+if(filtrCloseBtn) {
+  filtrCloseBtn.addEventListener("click", () => {
+    filtrMenu.style.transform = "translateX(-400px)";
+    mainContentFiltr.style["grid-template-columns"] = "0 100%";
+  });
+}
 
 // ================================================================================================
 
@@ -91,22 +97,25 @@ leftImgs.forEach((img) => {
     rightImg.src = img.src;
   });
 });
-rightImg.addEventListener("click", (e) => {
-  e.target.requestFullscreen();
-});
+if(rightImg) {
+  rightImg.addEventListener("click", (e) => {
+    e.target.requestFullscreen();
+  });
+}
 // ================================================================================================
 
 // product info step (range)
 // Функция обновления степов
 const steps = document.querySelectorAll(".step");
 const numbers = document.querySelectorAll(".number");
-const line = document.querySelector(".line");
+let line = document.querySelector(".line");
 const partnerCards = document.querySelectorAll(".partner-card-wrapper");
 
 // Функция для отображения соответствующего партнера
 function showPartnerCard(partnerIndex) {
   partnerCards.forEach((card) => {
-    card.style.display = card.dataset.partner === String(partnerIndex) ? "block" : "none";
+    card.style.display =
+      card.dataset.partner === String(partnerIndex) ? "block" : "none";
   });
 }
 
@@ -133,7 +142,9 @@ function updateActiveStep(stepIndex) {
 // Функция для обновления линии
 function updateLine(stepIndex) {
   const percentage = (stepIndex / (steps.length - 1)) * 100;
-  line.style.background = `linear-gradient(to right, #007bff ${percentage}%, #d3d3d3 ${percentage}%)`;
+  if(line) {
+    line.style.background = `linear-gradient(to right, #007bff ${percentage}%, #d3d3d3 ${percentage}%)`;
+  }
 }
 
 // Инициализация состояния при загрузке
@@ -184,7 +195,6 @@ decrements.forEach((dec, index) => {
     counter.textContent = count;
   });
 });
-
 
 // ================================================================================================
 const rangeInput = document.querySelectorAll(".range-input input"),
@@ -272,3 +282,5 @@ let tabChange = function (ele, index) {
     }
   }
 };
+
+});

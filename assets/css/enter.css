@@ -687,13 +687,13 @@ header#main-header nav .bottom-nav .dropdown:focus {
 .footer-top-wrapper .footer-contact-wrapper .phone-number {
   margin: 0;
   color: rgb(255, 255, 255);
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
   font-weight: 400;
 }
 .footer-top-wrapper .footer-contact-wrapper a {
   margin: 0;
   color: rgb(255, 255, 255);
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
   font-weight: 400;
 }
 .footer-top-wrapper .footer-contact-wrapper a:hover {
@@ -702,12 +702,12 @@ header#main-header nav .bottom-nav .dropdown:focus {
 .footer-top-wrapper .footer-contact-wrapper .address {
   margin: 0;
   color: rgb(255, 255, 255);
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
   font-weight: 400;
 }
 
 .footer-bottom-wrapper {
-  padding: 15px 0 100px;
+  padding: 15px 0;
 }
 .footer-bottom-wrapper .footer-bottom-content-wrapper {
   display: flex;
@@ -732,6 +732,9 @@ header#main-header nav .bottom-nav .dropdown:focus {
 @media (max-width: 576px) {
   .footer-top-wrapper {
     padding: 20px 0;
+  }
+  .footer-bottom-wrapper {
+    padding: 15px 0 100px;
   }
 }
 #enter-wrapper {
