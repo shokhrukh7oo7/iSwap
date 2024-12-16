@@ -33,8 +33,7 @@ header#main-header {
       .logo-wrapper {
         a {
           img {
-            width: 100%;
-            max-width: 60px;
+            width: clamp(40px, 4vw, 60px);
           }
         }
       }
@@ -122,7 +121,7 @@ header#main-header {
         input {
           background-color: $light-blue;
           border-radius: 15px;
-          height: 50px;
+          height: clamp(30px, 4vw, 50px);
           padding: 0 60px 0 50px;
 
           &::placeholder {
@@ -150,17 +149,25 @@ header#main-header {
         }
         button {
           position: absolute;
-          top: 10px;
+          top: clamp(0px, 0.5vw, 10px);
           right: 10px;
           border: none;
           background-color: transparent;
           img {
-            width: 28px;
+            width: clamp(20px, 1.5vw, 28px);
           }
         }
       }
 
       //  Search end
+
+      // phone start
+      .mobile-phone-wrapper {
+        img {
+          width: 24px;
+        }
+      }
+      // phone end
 
       //   Language start
       .dropdown {
@@ -172,7 +179,7 @@ header#main-header {
           border: none;
 
           img {
-            width: 45px;
+            width: clamp(25px, 3vw, 45px);
           }
 
           &::after {

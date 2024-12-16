@@ -982,7 +982,7 @@
         .add-to-cart-wrapper {
           display: none !important;
         }
-        .logo-wrapper {
+        #main-body-content-toggler {
           display: none !important;
         }
       }
@@ -1068,7 +1068,7 @@
   header#main-header {
     nav {
       .top-nav {
-        justify-content: space-evenly;
+        justify-content: center;
 
         .enter-wrapper {
           .overlay {
