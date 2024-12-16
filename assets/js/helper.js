@@ -64,10 +64,12 @@ function showConfirmationSections(show = true) {
 function fetchSubmitSmsForAssessment(e) {
   // NEEDED BACKEND FOR SENDING SMS
 }
-submitSmsForAssessmentBtn.addEventListener(
-  "click",
-  fetchSubmitSmsForAssessment
-);
+if(submitSmsForAssessmentBtn) {
+  submitSmsForAssessmentBtn.addEventListener(
+    "click",
+    fetchSubmitSmsForAssessment
+  );
+}
 
 function showTimerForAssessmentSMS(timerTime) {
   let counter = timerTime;
@@ -95,16 +97,18 @@ function fetchSMSforAssessmentNumber(e) {
   sumbitTelButton.disabled = true;
 }
 
-onlineAssessmentTelInput.addEventListener("input", (e) => {
-  if (e.target.value.length >= 9) {
-    sumbitTelButton.disabled = false;
-    sumbitTelButton.addEventListener("click", fetchSMSforAssessmentNumber);
-  } else {
-    sumbitTelButton.disabled = true;
-    sumbitTelButton.removeEventListener("click", fetchSMSforAssessmentNumber);
-    showConfirmationSections(false);
-  }
-});
+if(onlineAssessmentTelInput){
+  onlineAssessmentTelInput.addEventListener("input", (e) => {
+    if (e.target.value.length >= 9) {
+      sumbitTelButton.disabled = false;
+      sumbitTelButton.addEventListener("click", fetchSMSforAssessmentNumber);
+    } else {
+      sumbitTelButton.disabled = true;
+      sumbitTelButton.removeEventListener("click", fetchSMSforAssessmentNumber);
+      showConfirmationSections(false);
+    }
+  });
+}
 // ================================================================================================
 // ================================================================================================
 // NAV-SIDEBAR link dropdown
@@ -138,15 +142,19 @@ drpButtons.forEach((drpButton) => {
 const openChatBtn = document.getElementById("chat-btn");
 const closeChatBtn = document.getElementById("chat-close-btn");
 const chatContent = document.querySelector(".chat-btn-content");
+if(openChatBtn) {
+  openChatBtn.addEventListener("click", () => {
+    chatContent.style.display =
+      chatContent.style.display === "block" ? "none" : "block";
+  });
+}
 
-openChatBtn.addEventListener("click", () => {
-  chatContent.style.display =
-    chatContent.style.display === "block" ? "none" : "block";
-});
 
-closeChatBtn.addEventListener("click", () => {
-  chatContent.style.display = "none";
-});
+if(closeChatBtn) {
+  closeChatBtn.addEventListener("click", () => {
+    chatContent.style.display = "none";
+  });
+}
 
 // mobile menu active js start
 document.addEventListener("DOMContentLoaded", () => {
@@ -163,39 +171,90 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // target elements with the "draggable" class
-interact('.chat-wrapper')
-.draggable({
-  // enable inertial throwing
-  inertia: true,
+  interact(".chat-wrapper").draggable({
+    // enable inertial throwing
+    inertia: true,
 
-  // enable autoScroll
-  autoScroll: true,
+    // enable autoScroll
+    autoScroll: true,
 
-  // call this function on every dragmove event
-  onmove: dragMoveListener,
-  // call this function on every dragend event
-  onend: function (event) {
-  }
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {},
+  });
 
-});
-
-
-function dragMoveListener (event) {
-  var target = event.target,
+  function dragMoveListener(event) {
+    var target = event.target,
       // keep the dragged position in the data-x/data-y attributes
-      x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-      y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+      x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx,
+      y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
 
-  // translate the element
-  target.style.webkitTransform =
-  target.style.transform =
-    'translate(' + x + 'px, ' + y + 'px)';
+    // translate the element
+    target.style.webkitTransform = target.style.transform =
+      "translate(" + x + "px, " + y + "px)";
 
-  // update the posiion attributes
-  target.setAttribute('data-x', x);
-  target.setAttribute('data-y', y);
-}
-
+    // update the posiion attributes
+    target.setAttribute("data-x", x);
+    target.setAttribute("data-y", y);
+  }
 });
 
 // mobile menu active js end
+
+// popup js start
+// Получаем элементы попапа и кнопки закрытия
+const popup = document.getElementById("popup");
+const popupTwo = document.getElementById("popup-2");
+const popupThree = document.getElementById("popup-3");
+const popCloseButton = document.querySelectorAll(".pop-close-btn");
+const popOverlay = document.getElementById("popup-overlay");
+
+// Время бездействия (в миллисекундах)
+const idleTime = 22222222225000;
+// Таймер для отслеживания бездействия
+let idleTimer;
+// Функция для показа попапа
+function showPopup() {
+  popup.style.display = "flex"; // Убедитесь, что стили позволяют отображение
+  popupTwo.style.display = "flex"; // Убедитесь, что стили позволяют отображение
+  // popupThree.style.display = "flex"; // Убедитесь, что стили позволяют отображение
+  popOverlay.classList.remove("hidden");
+}
+// Функция для скрытия попапа
+function hidePopup() {
+  popup.style.display = "none";
+  popupTwo.style.display = "none";
+  popupThree.style.display = "none";
+  popOverlay.classList.add("hidden");
+}
+// Сброс таймера бездействия
+function resetIdleTimer() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(showPopup, idleTime);
+}
+popCloseButton.forEach((i) => {
+  i.addEventListener('click', () => {
+    hidePopup()
+  })
+})
+// Обработчики событий для активности пользователя
+document.addEventListener("mousemove", resetIdleTimer);
+document.addEventListener("keydown", resetIdleTimer);
+document.addEventListener("mousedown", resetIdleTimer);
+document.addEventListener("touchstart", resetIdleTimer);
+
+// Закрытие попапа при клике на кнопку
+// popCloseButton.addEventListener("click", hidePopup);
+if(popOverlay){
+  popOverlay.addEventListener("click", () => {
+    popup.style.display = "none";
+    popupTwo.style.display = "none";
+    popupThree.style.display = "none";
+    popOverlay.classList.add("hidden");
+  });
+}
+// Инициализация таймера при загрузке страницы
+resetIdleTimer();
+
+// popup js end

@@ -615,6 +615,106 @@
   }
 }
 
+// Popup sction start
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 105;
+  background: rgba(0, 0, 0, 0.75);
+}
+.hidden {
+  display: none;
+}
+
+#popup,
+#popup-2,
+#popup-3 {
+  display: none;
+  .popup-wrapper {
+    width: 100%;
+    max-width: 1420px;
+    background-color: $white;
+    border-radius: clamp(20px, 3.5vw, 50px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    @include flex(row, center, normal, nowrap);
+    .anim-wrapper {
+      video {
+        width: 100%;
+        max-width: 1019px;
+        height: 100%;
+        border-radius: clamp(20px, 3.5vw, 50px);
+      }
+    }
+    .anim-content-wrapper {
+      width: 100%;
+      max-width: 450px;
+      padding: 10px 20px;
+      text-align: center;
+      .pop-close-btn {
+        font-size: clamp(12px, 2vw, 21px);
+        margin: 0 0 0 90%;
+      }
+      .popup-content-container {
+        @include flex(column, center, center, nowrap, clamp(10px, 1.5vw, 30px));
+        .popup-top-header {
+          font-weight: 400;
+          color: $blue;
+          font-size: clamp(21px, 2.5vw, 32px);
+          line-height: clamp(25px, 4vw, 40px);
+        }
+        span {
+          font-weight: 600;
+          color: $blue;
+          font-size: clamp(21px, 2.5vw, 32px);
+          line-height: clamp(25px, 4vw, 40px);
+          p {
+            margin: 0;
+          }
+        }
+        form {
+          width: 100%;
+          @include flex(
+            column,
+            center,
+            center,
+            nowrap,
+            clamp(10px, 1.5vw, 30px)
+          );
+          input {
+            width: 100%;
+            background-color: $light-blue;
+            padding: 10px;
+            font-size: clamp(10px, 1.5vw, 20px);
+            &::placeholder {
+              text-align: center;
+              color: $grey;
+              font-size: clamp(10px, 1.5vw, 20px);
+            }
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          button {
+            font-weight: 500;
+            color: $white;
+            background-color: $red;
+            font-size: clamp(14px, 2vw, 24px);
+          }
+        }
+      }
+    }
+  }
+}
+// Popup sction end
+
 // --------------------------------------------------------
 // Mobile menu css start
 .mobile-bottom-menu-wrapper {
@@ -651,7 +751,11 @@
         font-weight: 500;
         font-size: clamp(12px, 1.5vw, 16px);
         transition: color 0.3s ease;
-
+        &::after {
+          position: absolute;
+          content: "";
+          inset: 0;
+        }
         &:hover {
           color: $blue;
         }
@@ -670,6 +774,69 @@
     }
   }
 }
+.mobile-catalog {
+  margin-top: 100px;
+  display: none;
+  .mobile-catalog-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mobile-catalog-header {
+      font-weight: 600;
+      font-size: clamp(22px, 2.5vw, 26px);
+    }
+
+    .mobile-filtr {
+      img {
+        filter: brightness(0);
+      }
+    }
+  }
+  .mobile-catalog-wrapper {
+    .catalog-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      border: 0.85px solid $blue;
+      border-radius: 8.5px;
+      min-height: clamp(110px, 8vw, 150px);
+      padding: 10px;
+      position: relative;
+      &:hover {
+        background-color: $light-blue;
+      }
+      .catalog-img-wrapper {
+        position: absolute;
+        top: -30px;
+        img {
+          width: 100%;
+          max-height: clamp(90px, 8vw, 110px);
+          object-fit: cover;
+        }
+      }
+      a {
+        padding-top: 10px;
+        color: $black;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: center;
+        min-height: 40px; /* Фиксированная минимальная высота для текста */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+          position: absolute;
+          content: "";
+          inset: 0;
+        }
+      }
+    }
+  }
+}
+// --------------------------------------------------------
 
 // Mobile menu css end
 // --------------------------------------------------------
@@ -704,7 +871,6 @@
         justify-content: space-evenly;
 
         .search-wrapper {
-          display: none !important;
         }
 
         .enter-wrapper {
@@ -741,6 +907,26 @@
     .footer-contact-wrapper {
       text-align: start;
       @include flex(column, center, start, wrap, 20px);
+    }
+  }
+
+  #popup,
+  #popup-2,
+  #popup-3 {
+    position: relative;
+    .popup-wrapper {
+      width: 100%;
+      max-width: 700px;
+      padding: clamp(30px, 3vw, 50px) clamp(10px, 1.5vw, 30px) 0;
+      @include flex(column, center, center, nowrap);
+      .anim-content-wrapper {
+        .pop-close-btn {
+          padding: 0;
+          position: absolute;
+          top: clamp(5px, 1vw, 10px);
+          right: clamp(10px, 1.5vw, 30px);
+        }
+      }
     }
   }
 }
@@ -790,11 +976,16 @@
   #main-header {
     nav {
       .top-nav {
-        .dropdown {
+        .enter-wrapper {
+          display: none !important;
+        }
+        .add-to-cart-wrapper {
+          display: none !important;
+        }
+        .logo-wrapper {
           display: none !important;
         }
       }
-
       .bottom-nav {
         .bottom-nav-items {
           display: none !important;
@@ -802,16 +993,6 @@
 
         .dropdown {
           display: block !important;
-        }
-      }
-    }
-  }
-
-  #main-body-content {
-    .main-content-wrapper {
-      .left-menu {
-        .left-menu-language {
-          display: block;
         }
       }
     }
@@ -880,14 +1061,14 @@
     }
   }
 
+  .mobile-catalog {
+    display: block;
+  }
+
   header#main-header {
     nav {
       .top-nav {
         justify-content: space-evenly;
-
-        .search-wrapper {
-          display: none !important;
-        }
 
         .enter-wrapper {
           .overlay {
@@ -899,16 +1080,6 @@
               max-width: 300px;
             }
           }
-        }
-      }
-    }
-  }
-
-  #main-body-content {
-    .main-content-wrapper {
-      .left-menu {
-        .search-wrapper {
-          display: block;
         }
       }
     }

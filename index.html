@@ -11,6 +11,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- font-awesome cdn js start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font-awesome cdn js end -->
 
     <!-- SWIPER START -->
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
@@ -868,55 +877,166 @@
       </div>
     </main>
     <!-- Main end -->
+    <div class="popup-overlay hidden" id="popup-overlay"></div>
+    <section class="popup" id="popup">
+      <div class="popup-wrapper">
+        <div class="anim-wrapper">
+          <video
+            src="./assets/popup/pop-1.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="anim-content-wrapper">
+          <button class="btn pop-close-btn" id="pop-close-btn">
+            <i class="fas fa-close"></i>
+          </button>
+          <div class="popup-content-container">
+            <h3 class="popup-top-header">
+              Hoziroq mahsulotingizni <span>baholating</span>
+            </h3>
+
+            <span>Qo'ng'iroq qilamiz va ma'lumot beramiz!</span>
+
+            <form>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Telefon raqam"
+              />
+              <button class="btn popup-btn">Baholash</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="popup-2" id="popup-2">
+      <div class="popup-wrapper">
+        <div class="anim-wrapper">
+          <video
+            src="./assets/popup/pop-2.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="anim-content-wrapper">
+          <button class="btn pop-close-btn" id="pop-close-btn">
+            <i class="fas fa-close"></i>
+          </button>
+          <div class="popup-content-container">
+            <h3 class="popup-top-header">
+              O'z mahsulotingizni <span>maksimal darajada baholating!</span>
+            </h3>
+            <span
+              >Raqamingizni qoldiring
+              <p>va biz Sizga</p>
+              qo'ng'iroq qilamiz!</span
+            >
+
+            <form>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Telefon raqam"
+              />
+              <button class="btn popup-btn">Baholash</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="popup-3" id="popup-3">
+      <div class="popup-wrapper">
+        <div class="anim-wrapper">
+          <video
+            src="./assets/popup/pop-5.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="anim-content-wrapper">
+          <button class="btn pop-close-btn" id="pop-close-btn">
+            <i class="fas fa-close"></i>
+          </button>
+          <div class="popup-content-container">
+            <h3 class="popup-top-header">
+              Barcha yaqinlaringiz yangi telefonli bo'ldi,
+              <span>Siz hali ham eskisidamisiz?</span>
+            </h3>
+            <h3 class="popup-top-header">
+              O'z telefoningizni haziroq
+              <span>baholating va yangi telefonga ega bo'ling!</span>
+            </h3>
+
+            <form>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Telefon raqam"
+              />
+              <button class="btn popup-btn">Baholash</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Mobile menu start -->
     <!-- <div class="container"> -->
-      <div class="mobile-bottom-menu-wrapper">
-        <div class="items-wrapper">
-          <div class="item active">
-            <img src="./assets/images/header/mob-main.svg" alt="image">
-            <a href="#">Asosiy</a>
-          </div>
-          <div class="item">
-            <img src="./assets/images/header/mob-katalog.svg" alt="image">
-            <a href="#">Katalog</a>
-          </div>
-          <div class="item">
-            <img src="./assets/images/header/mob-korzina.svg" alt="image">
-            <a href="#">Savat</a>
-          </div>
-          <div class="item">
-            <img src="./assets/images/header/mob-user.svg" alt="image">
-            <a href="#">Kirish</a>
-          </div>
+    <div class="mobile-bottom-menu-wrapper">
+      <div class="items-wrapper">
+        <div class="item active">
+          <img src="./assets/images/header/mob-main.svg" alt="image" />
+          <a href="./index.html">Asosiy</a>
         </div>
+        <div class="item">
+          <img src="./assets/images/header/mob-katalog.svg" alt="image" />
+          <a href="./mobile-catalog.html">Katalog</a>
+        </div>
+        <div class="item">
+          <img src="./assets/images/header/mob-korzina.svg" alt="image" />
+          <a href="#">Savat</a>
+        </div>
+        <div class="item">
+          <img src="./assets/images/header/mob-user.svg" alt="image" />
+          <a href="./assets/pages/enter.html">Kirish</a>
+        </div>
+      </div>
       <!-- </div> -->
     </div>
     <!-- Mobile menu end -->
 
     <!-- chat start -->
-      <div class="chat-container">
-        <div class="chat-wrapper" id="chat-wrapper">
-          <div class="chat-btn-content" id="chat-btn-content">
-            <div class="chat-content-header">
-              <h3 class="chat-content-header-title">
-                Qo'llab quvvatlash xizmati
-              </h3>
-              <button class="btn chat-close-btn" id="chat-close-btn">
-                <i class="fas fa-close"></i>
-              </button>
-            </div>
-
-            <div class="chat-content-body">
-              <button class="btn chat-body-btn">To'gridan to'gri chat</button>
-              <button class="btn chat-body-btn">Telegram</button>
-            </div>
+    <div class="chat-container">
+      <div class="chat-wrapper" id="chat-wrapper">
+        <div class="chat-btn-content" id="chat-btn-content">
+          <div class="chat-content-header">
+            <h3 class="chat-content-header-title">
+              Qo'llab quvvatlash xizmati
+            </h3>
+            <button class="btn chat-close-btn" id="chat-close-btn">
+              <i class="fas fa-close"></i>
+            </button>
           </div>
-          <button class="chat-btn" id="chat-btn">
-            <img src="./assets/images/home/chat.png" alt="image" />
-          </button>
+
+          <div class="chat-content-body">
+            <button class="btn chat-body-btn">To'gridan to'gri chat</button>
+            <button class="btn chat-body-btn">Telegram</button>
+          </div>
         </div>
+        <button class="chat-btn" id="chat-btn">
+          <img src="./assets/images/home/chat.png" alt="image" />
+        </button>
       </div>
+    </div>
     <!-- chat end -->
 
     <!-- Footer start -->
@@ -1010,20 +1130,8 @@
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 
-    <script src="./assets/js/helper.js"></script>
     <!-- owl carousel end -->
-
-    <!-- font-awesome cdn js start -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- font-awesome cdn js end -->
-
-
+    <script src="./assets/js/helper.js"></script>
     <!-- MAIN CUSTOM JS START -->
     <script src="./assets/js/header.js"></script>
     <!-- MAIN CUSTOM JS END -->

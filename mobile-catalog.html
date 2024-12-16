@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iSwap</title>
+    <!-- BOOTSTRAP CUSTOM CSS START -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- font-awesome cdn js start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font-awesome cdn js end -->
+
+    <!-- SWIPER START -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <!-- SWIPER END -->
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <!-- FAVICON CSS -->
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/header/iSwap03 1-modified.png"
+    />
+
+    <script src="main.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <header id="main-header">
+      <nav>
+        <div class="container">
+          <!-- Navbar top start -->
+          <div class="top-nav">
+            <!-- Menu burger start -->
+            <span id="main-body-content-toggler">
+              <img src="./assets/images/header/Burger.svg" alt="image" />
+            </span>
+            <!-- Menu burger end -->
+
+            <!-- Logo start -->
+            <div class="logo-wrapper">
+              <a href="./index.html"
+                ><img
+                  src="./assets/images/header/iSwap03 1-modified.png"
+                  alt="logo"
+              /></a>
+            </div>
+            <!-- Logo end -->
+
+            <!-- Location start -->
+            <div class="location-wrapper">
+              <div class="selected-location">
+                <img src="./assets/images/header/Location.svg" alt="image" />
+                <p class="location-city">
+                  <span data-i18n="toshkent">Toshkent</span>
+                  <span>shahri</span>
+                </p>
+              </div>
+              <div class="locations-dropdown-content">
+                <p class="location-city">
+                  <a href="assets/pages/cabinet.html">Hello world</a>
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Toshkent
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Samarqand
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Jizzax
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Sirdaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qashqadaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Surxandaryo
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Xorazm
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Buxoro
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Andijon
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Farg'ona
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Namangan
+                  <span data-i18n="viloyati"></span>
+                </p>
+                <p class="location-city">
+                  Qoraqalpog'iston
+                  <span>respublikasi</span>
+                </p>
+              </div>
+            </div>
+            <!-- Location end -->
+
+            <!-- Search start -->
+            <div class="search-wrapper">
+              <input
+                type="search"
+                placeholder="iSwapdan qidirish"
+                class="form-control"
+              />
+              <button type="submit" class="search-btn">
+                <img src="./assets/images/header/search.svg" alt="image" />
+              </button>
+            </div>
+            <!-- Search end -->
+
+            <!-- Language start -->
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  id="current-flag"
+                  src="./assets/images/header/flag.svg"
+                  alt="img"
+                />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="./assets/images/header/ru.svg" alt="image"
+                  /></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="./assets/images/header/en.svg" alt="image"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Language end -->
+
+            <!-- Notification start -->
+            <!-- <div class="add-to-cart-wrapper">
+                <img src="./assets/images/header/bell.svg" alt="image" />
+              </div> -->
+            <!-- Notification end -->
+
+            <!-- Add to cart start -->
+            <div class="add-to-cart-wrapper">
+              <img src="./assets/images/header/Mask group.svg" alt="image" />
+              <p class="cart-count">5+</p>
+            </div>
+            <!-- Add to cart end -->
+
+            <!-- Enter start -->
+            <div class="enter-wrapper">
+              <a
+                href="./assets/pages/enter.html"
+                class="enter-title"
+                id="show-btn"
+                >Kirish</a
+              >
+
+              <!-- modal start -->
+              <div class="enter-modal hidden" id="modal">
+                <button class="btn close-btn" id="close-btn">
+                  <i class="fas fa-close"></i>
+                </button>
+                <div class="modal-header">
+                  <h3>Kabinetga kirish</h3>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-control-wrapper">
+                      <label for="enter-phone">Telefon raqam</label>
+                      <input
+                        id="enter-phone"
+                        type="tel"
+                        placeholder="+998 9x-xxx-xx-xx"
+                      />
+                      <p class="error"></p>
+                    </div>
+                    <div class="form-control-wrapper password-wrapper">
+                      <label for="pass">Parol</label>
+                      <span id="show-password-eye">
+                        <i class="fa-regular fa-eye-slash"></i>
+                      </span>
+                      <input id="pass" type="password" placeholder="Password" />
+                      <p class="error"></p>
+                    </div>
+                    <a class="forgot-password">Parolni unutdingizmi?</a>
+                    <div class="form-control-wrapper">
+                      <button type="submit">Kirish</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- modal end -->
+
+              <!-- forgot modal start -->
+
+              <!-- forgot modal end -->
+
+              <!-- overlay -->
+              <div class="overlay hidden" id="overlay">
+                <div class="modal-image-1">
+                  <img src="./assets/images/home/Logo (2).png" alt="" />
+                </div>
+                <div class="modal-image-2">
+                  <img src="./assets/images/home/Logo (2).png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Enter end -->
+          </div>
+          <!-- Navbar top end -->
+          <!-- <div class="line"></div> -->
+          <!-- Navbar bottom start -->
+          <div class="bottom-nav">
+            <ul class="bottom-nav-items">
+              <li class="item"><a href="#">Trade in haqida</a></li>
+              <li class="item">
+                <a href="#carousel-box">Qabul qiladigan mahsulotlarimiz</a>
+              </li>
+              <li class="item"><a href="#assessment">Texnikani baholash</a></li>
+              <li class="item"><a href="#preferences">Afzalliklarimiz</a></li>
+              <li class="item"><a href="#">Ko'p beriladigan savollar</a></li>
+            </ul>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Trade in haqida
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li>
+                  <a class="dropdown-item" href="#preferences"
+                    >Trade in haqida</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel-box"
+                    >Qabul qiladigan mahsulotlarimiz</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#assessment"
+                    >Texnikani baholash</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#preferences"
+                    >Afzalliklarimiz</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#faqSection"
+                    >Ko'p beriladigan savollar</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Navbar bottom end -->
+        </div>
+      </nav>
+    </header>
+    <!-- Header start -->
+
+    <!-- mobile Katalog start  -->
+    <section class="mobile-catalog" id="mobile-catalog">
+      <div class="container">
+        <div class="mobile-catalog-header-wrapper">
+            <h1 class="mobile-catalog-hader">Katalog</h1>
+
+            <button class="btn mobile-filtr" id="mobile-filtr">
+                <img src="./assets/images/home/filtr.svg" alt="image">
+            </button>
+        </div>
+
+        <div class="mobile-catalog-wrapper">
+          <div class="row">
+            <div class="col-4 p-2 my-3">
+              <div class="catalog-item">
+                <div class="catalog-img-wrapper">
+                  <img src="./assets/images/swiper/phone-3.png" alt="image" />
+                </div>
+                <a href="#">Telefon va gadjetlar</a>
+              </div>
+            </div>
+            <div class="col-4 p-2 my-3">
+              <div class="catalog-item">
+                <div class="catalog-img-wrapper">
+                  <img src="./assets/images/swiper/earpods.png" alt="image" />
+                </div>
+                <a href="#">Aksessuarlar</a>
+              </div>
+            </div>
+            <div class="col-4 p-2 my-3">
+              <div class="catalog-item">
+                <div class="catalog-img-wrapper">
+                  <img src="./assets/images/swiper/phone-2.png" alt="image" />
+                </div>
+                <a href="#">Maishiy texnikalar</a>
+              </div>
+            </div>
+            <div class="col-4 p-2 my-3">
+              <div class="catalog-item">
+                <div class="catalog-img-wrapper">
+                  <img src="./assets/images/swiper/phone-3.png" alt="image" />
+                </div>
+                <a href="#">Kichik maishiy texikalar</a>
+              </div>
+            </div>
+            <div class="col-4 p-2 my-3">
+              <div class="catalog-item">
+                <div class="catalog-img-wrapper">
+                  <img src="./assets/images/swiper/phone-2.png" alt="image" />
+                </div>
+                <a href="#">Oshxona buyumlari</a>
+              </div>
+            </div>
+            <div class="col-4 p-2 my-3">
+              <div class="catalog-item">
+                <div class="catalog-img-wrapper">
+                  <img src="./assets/images/swiper/phone-3.png" alt="image" />
+                </div>
+                <a href="#">Kichik oshxona buyumlari</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- mobile Katalog end  -->
+
+    <!-- Mobile menu start -->
+    <!-- <div class="container"> -->
+    <div class="mobile-bottom-menu-wrapper">
+      <div class="items-wrapper">
+        <div class="item active">
+          <img src="./assets/images/header/mob-main.svg" alt="image" />
+          <a href="#">Asosiy</a>
+        </div>
+        <div class="item">
+          <img src="./assets/images/header/mob-katalog.svg" alt="image" />
+          <a href="#">Katalog</a>
+        </div>
+        <div class="item">
+          <img src="./assets/images/header/mob-korzina.svg" alt="image" />
+          <a href="#">Savat</a>
+        </div>
+        <div class="item">
+          <img src="./assets/images/header/mob-user.svg" alt="image" />
+          <a href="#">Kirish</a>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <!-- Mobile menu end -->
+
+    <!-- BOOTSTRAP CUSTOM JS START -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP CUSTOM JS END -->
+
+    <!-- SWIPER JS START -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- SWIPER JS END -->
+
+    <!-- owl carousel start -->
+    <!-- <script src="./assets/js/jquery.js"></script> -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <!-- owl carousel end -->
+    <script src="./assets/js/helper.js"></script>
+    <!-- MAIN CUSTOM JS START -->
+    <script src="./assets/js/header.js"></script>
+    <!-- MAIN CUSTOM JS END -->
+  </body>
+</html>
