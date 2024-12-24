@@ -801,21 +801,21 @@ header#main-header nav .bottom-nav .dropdown:focus {
   }
   /* Ускоренная анимация для маленьких экранов */
   .anim-img:nth-child(1) {
-    animation: slide1-small 2s ease-in-out forwards;
+    animation: slide1-small 2s ease-out forwards;
     right: -100%;
   }
   .anim-img:nth-child(2) {
-    animation: slide2-small 2s ease-in-out forwards;
+    animation: slide2-small 2s ease-out forwards;
     animation-delay: 2s;
     right: -100%;
   }
   .anim-img:nth-child(3) {
-    animation: slide3-small 2s ease-in-out forwards;
+    animation: slide3-small 2s ease-out forwards;
     animation-delay: 4s;
     right: -100%;
   }
   .anim-img:nth-child(4) {
-    animation: slide4-small 2s ease-in-out forwards;
+    animation: slide4-small 2s ease-out forwards;
     animation-delay: 6s;
     right: -100%;
   }
@@ -855,7 +855,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
 }
 /* Оригинальные анимации для больших экранов */
 .anim-img:nth-child(1) {
-  animation: slide1 3s ease-in-out forwards;
+  animation: slide1 3s ease-out forwards;
   right: -100%;
 }
 
@@ -868,7 +868,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
   }
 }
 .anim-img:nth-child(2) {
-  animation: slide2 3s ease-in-out forwards;
+  animation: slide2 3s ease-out forwards;
   animation-delay: 3s;
   right: -100%;
 }
@@ -882,7 +882,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
   }
 }
 .anim-img:nth-child(3) {
-  animation: slide3 3s ease-in-out forwards;
+  animation: slide3 3s ease-out forwards;
   animation-delay: 6s;
   right: -100%;
 }
@@ -896,7 +896,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
   }
 }
 .anim-img:nth-child(4) {
-  animation: slide4 3s ease-in-out forwards;
+  animation: slide4 3s ease-out forwards;
   animation-delay: 9s;
   right: -100%;
 }
