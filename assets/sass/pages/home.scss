@@ -19,7 +19,7 @@
     .welcome-title {
       color: $white;
       margin: 0;
-      @include fontSize(24px, 2.5vw, 26px, 500);
+      @include fontSize(24px, 2.5vw, 25px, 500);
     }
   }
 }
