@@ -2140,9 +2140,47 @@ table th {
     flex-wrap: nowrap;
     gap: 10px;
   }
+  .cabinet-banner-wrapper .cabinet-banner .banner-image-wrapper {
+    flex-direction: column;
+  }
 }
 @media (min-width: 1400px) {
   .col-lg-5-custom {
     width: 20%;
   }
+}
+.cabinet-banner-wrapper {
+  background-color: rgb(0, 140, 238);
+}
+.cabinet-banner-wrapper .cabinet-banner {
+  border-radius: 30px;
+  padding: clamp(15px, 1.5vw, 30px) clamp(15px, 1.5vw, 30px);
+  background-color: rgb(255, 255, 255);
+}
+.cabinet-banner-wrapper .cabinet-banner h1 {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 600;
+  color: rgb(43, 43, 43);
+}
+.cabinet-banner-wrapper .cabinet-banner .banner-image-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 30px);
+}
+.cabinet-banner-wrapper .cabinet-banner .banner-image-wrapper .left-banner {
+  width: 100%;
+}
+.cabinet-banner-wrapper .cabinet-banner .banner-image-wrapper .left-banner img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: clamp(19.5px, 3.5vw, 40px);
+}
+.cabinet-banner-wrapper .cabinet-banner .banner-image-wrapper .right-banner {
+  width: 100%;
+}
+.cabinet-banner-wrapper .cabinet-banner .banner-image-wrapper .right-banner img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: clamp(19.5px, 3.5vw, 40px);
 }

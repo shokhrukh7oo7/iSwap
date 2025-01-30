@@ -762,7 +762,7 @@ header#main-header nav .bottom-nav .dropdown:focus {
 .welcome-wrapper .welcome-content .welcome-title {
   color: rgb(255, 255, 255);
   margin: 0;
-  font-size: clamp(24px, 2.5vw, 26px);
+  font-size: clamp(24px, 2.5vw, 25px);
   font-weight: 500;
 }
 

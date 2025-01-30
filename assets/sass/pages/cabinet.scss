@@ -1247,6 +1247,13 @@ table th {
       }
     }
   }
+  .cabinet-banner-wrapper {
+    .cabinet-banner {
+      .banner-image-wrapper {
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1255,3 +1262,38 @@ table th {
   }
 }
 
+.cabinet-banner-wrapper {
+  background-color: $blue;
+  .cabinet-banner {
+    border-radius: 30px;
+    padding: clamp(15px, 1.5vw, 30px) clamp(15px, 1.5vw, 30px);
+    background-color: $white;
+    h1 {
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 600;
+      color: $black;
+    }
+    .banner-image-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: clamp(10px, 1.5vw, 30px);
+      .left-banner {
+        width: 100%;
+        img {
+          aspect-ratio: 1/1;
+          width: 100%;
+          border-radius: clamp(19.5px, 3.5vw, 40px);
+        }
+      }
+      .right-banner {
+        width: 100%;
+        img {
+          aspect-ratio: 1/1;
+          width: 100%;
+          border-radius: clamp(19.5px, 3.5vw, 40px);
+        }
+      }
+    }
+  }
+}
