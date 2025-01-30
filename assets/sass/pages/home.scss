@@ -1233,3 +1233,64 @@
 // }
 
 // Responsive custom css end
+header#main-header {
+  nav {
+    .top-nav {
+      .search-wrapper {
+        .suggestion-wrapper {
+          position: absolute;
+          z-index: 1010;
+          background-color: #fff;
+          width: 100%;
+          box-shadow: 0 4px 4px rgba(54, 55, 64, 0.25);
+          border-radius: 8px;
+          overflow-y: auto;
+          max-height: calc(90vh - 85.5px);
+          .suggest-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: normal;
+            gap: 10px;
+            padding: 15px;
+            margin: 0;
+            li {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 10px;
+              a {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 10px;
+                font-size: clamp(14px, 2vw, 18px);
+                font-weight: 400;
+                color: $black;
+                padding: 5px;
+                &:hover {
+                  background-color: $light-blue;
+                  border-radius: 8px;
+                }
+                img {
+                  width: 50px;
+                }
+              }
+            }
+          }
+        }
+        ::-webkit-scrollbar {
+          width: 10px;
+          background-color: $light-grey;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          width: 10px;
+          background-color: $light-blue;
+          border-radius: 8px;
+          border: 1px solid $white;
+        }
+      }
+    }
+  }
+}
